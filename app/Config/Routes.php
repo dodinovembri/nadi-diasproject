@@ -36,7 +36,17 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 // Routes Frontend Website
-$routes->get('/', [\App\Controllers\Frontend\Homecontrollerw::class, 'index']);
+$routes->get('/', [\App\Controllers\Frontend\Homecontroller::class, 'index']);
+$routes->get('about', [\App\Controllers\Frontend\Aboutcontroller::class, 'index']);
+$routes->get('account', [\App\Controllers\Frontend\Accountcontroller::class, 'index']);
+$routes->get('login', [\App\Controllers\Frontend\Authcontroller::class, 'login']);
+$routes->get('forgot', [\App\Controllers\Frontend\Authcontroller::class, 'forgot']);
+$routes->get('blog', [\App\Controllers\Frontend\Blogcontroller::class, 'index']);
+$routes->get('cart', [\App\Controllers\Frontend\Cartcontroller::class, 'index']);
+$routes->get('checkout', [\App\Controllers\Frontend\Checkoutcontroller::class, 'index']);
+$routes->get('contact', [\App\Controllers\Frontend\Contactcontroller::class, 'index']);
+$routes->get('product', [\App\Controllers\Frontend\Productcontroller::class, 'index']);
+$routes->get('wishlist', [\App\Controllers\Frontend\Wishlistcontroller::class, 'index']);
 
 // Routes Backend Website
 $routes->group('admin', static function ($routes) {

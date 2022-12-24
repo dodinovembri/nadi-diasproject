@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Controllers\Frontend;
-// namespace App\Controllers;
 
-class Homecontrollerw extends BaseController
+class Homecontroller extends BaseController
 {
     public function index()
     {
