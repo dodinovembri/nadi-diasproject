@@ -2,7 +2,7 @@
 
 namespace App\Controllers\Frontend;
 
-class Blogcontroller extends BaseController
+class Categorycontroller extends BaseController
 {
     public function __construct() {        
         $db = \Config\Database::connect();
@@ -17,6 +17,6 @@ class Blogcontroller extends BaseController
         $data['social_media'] = $this->social_media;
         $data['categories'] = $this->category;
         
-        return view('frontend/blog/index', $data);
+        return view('frontend/category/index', $data);
     }
 }

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dias Project - Ecommerce Website</title>
-    <meta name="keywords" content="Dias Project, Ecommerce Website" />
-    <meta name="description" content="Dias Project - Ecommerce Website">
-    <meta name="author" content="diasproject">
+    <title>Home - <?= $configuration->title ?></title>
+    <meta name="keywords" content="<?= $configuration->keywords ?>" />
+    <meta name="description" content="<?= $configuration->description ?>">
+    <meta name="author" content="<?= $configuration->author ?>">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.png">
     <script>
@@ -32,21 +32,16 @@
 </head>
 <body>
     <div class="page-wrapper">
-        <div class="top-notice bg-primary text-white">
-            <div class="container text-center">
-                <h5 class="d-inline-block">Get Up to <b>40% OFF</b> New-Season Styles</h5>
-                <a href="category.html" class="category">MEN</a>
-                <a href="category.html" class="category ml-2 mr-3">WOMEN</a>
-                <small>* Limited time only.</small>
-                <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+        <?php if ($configuration->text1_status == 1) { ?>
+            <div class="top-notice bg-primary text-white">
+                <div class="container text-center">
+                    <h5 class="d-inline-block"><?= $configuration->text1_text ?></h5>
+                    <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                </div>
+                <!-- End .container -->
             </div>
-            <!-- End .container -->
-        </div>
-        <!-- End .top-notice -->
-
+        <?php } ?>
         <?= $this->include('frontend/components/header') ?>
-        <!-- End .header -->
-
         <main class="main">
             <div class="home-slider slide-animate owl-carousel owl-theme show-nav-hover nav-big mb-2 text-uppercase" data-owl-options="{
 				'loop': false

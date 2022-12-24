@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>About - Dias Project</title>
-    <meta name="keywords" content="Dias Project, Ecommerce Website" />
-    <meta name="description" content="Dias Project - Ecommerce Website">
-    <meta name="author" content="diasproject">
+    <title>About - <?= $configuration->title ?></title>
+    <meta name="keywords" content="<?= $configuration->keywords ?>" />
+    <meta name="description" content="<?= $configuration->description ?>">
+    <meta name="author" content="<?= $configuration->author ?>">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.png">
     <script>

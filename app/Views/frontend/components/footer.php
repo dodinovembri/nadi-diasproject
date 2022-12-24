@@ -7,17 +7,16 @@
                         <h4 class="widget-title">Contact Info</h4>
                         <ul class="contact-info">
                             <li>
-                                <span class="contact-info-label">Address:</span>123 Street Name, City, England
+                                <span class="contact-info-label">Address:</span><?= $configuration->address ?>
                             </li>
                             <li>
-                                <span class="contact-info-label">Phone:</span><a href="tel:">(123)
-                                    456-7890</a>
+                                <span class="contact-info-label">Phone:</span><a href="tel:<?= $configuration->phone ?>"><?= $configuration->phone ?></a>
                             </li>
                             <li>
-                                <span class="contact-info-label">Email:</span> <a href="mailto:mail@example.com">mail@example.com</a>
+                                <span class="contact-info-label">Email:</span> <a href="mailto:<?= $configuration->email ?>"><?= $configuration->email ?></a>
                             </li>
                             <li>
-                                <span class="contact-info-label">Working Days/Hours:</span> Mon - Sun / 9:00 AM - 8:00 PM
+                                <span class="contact-info-label">Working Days/Hours:</span> <?= $configuration->working_days ?>
                             </li>
                         </ul>
                         <div class="social-icons">
@@ -99,7 +98,7 @@
         <div class="footer-bottom">
             <div class="container d-sm-flex align-items-center">
                 <div class="footer-left">
-                    <span class="footer-copyright">© Porto eCommerce. 2021. All Rights Reserved</span>
+                    <span class="footer-copyright"><?= $configuration->copyright ?></span>
                 </div>
 
                 <div class="footer-right ml-auto mt-1 mt-sm-0">

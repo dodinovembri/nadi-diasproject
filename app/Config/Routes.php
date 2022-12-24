@@ -45,6 +45,7 @@ $routes->get('blog', [\App\Controllers\Frontend\Blogcontroller::class, 'index'])
 $routes->get('cart', [\App\Controllers\Frontend\Cartcontroller::class, 'index']);
 $routes->get('checkout', [\App\Controllers\Frontend\Checkoutcontroller::class, 'index']);
 $routes->get('contact', [\App\Controllers\Frontend\Contactcontroller::class, 'index']);
+$routes->get('category', [\App\Controllers\Frontend\Categorycontroller::class, 'index']);
 $routes->get('product', [\App\Controllers\Frontend\Productcontroller::class, 'index']);
 $routes->get('wishlist', [\App\Controllers\Frontend\Wishlistcontroller::class, 'index']);
 
