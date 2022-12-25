@@ -1,0 +1,274 @@
+ERROR - 2022-12-25 00:27:21 --> mysqli_sql_exception: Column 'status' in where clause is ambiguous in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Homecontroller.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#10 {main}
+CRITICAL - 2022-12-25 00:27:21 --> Column 'status' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `is_featured` = 1
+AND `status` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `is_featured` = 1
+AND `status` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `is_featured` = 1
+AND `status` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `is_featured` = :is_featured:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Controllers\Frontend\Homecontroller.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-25 00:27:26 --> mysqli_sql_exception: Column 'status' in where clause is ambiguous in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Homecontroller.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#10 {main}
+CRITICAL - 2022-12-25 00:27:26 --> Column 'status' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `is_featured` = 1
+AND `status` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `is_featured` = 1
+AND `status` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `is_featured` = 1
+AND `status` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `is_featured` = :is_featured:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Controllers\Frontend\Homecontroller.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-25 00:27:43 --> mysqli_sql_exception: Column 'status' in where clause is ambiguous in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Homecontroller.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#10 {main}
+CRITICAL - 2022-12-25 00:27:43 --> Column 'status' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `is_featured` = 1
+AND `status` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `is_featured` = 1
+AND `status` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `is_featured` = 1
+AND `status` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `is_featured` = :is_featured:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Controllers\Frontend\Homecontroller.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-25 00:54:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as category_id' at line 6 in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Homecontroller.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#10 {main}
+CRITICAL - 2022-12-25 00:54:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as category_id' at line 6
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `product`.`is_featured` = 1
+AND `product`.`status` = 1
+AND category.id as category_id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `product`.`is_featured` = 1
+AND `product`.`status` = 1
+AND category.id as category_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `product`.`is_featured` = 1
+AND `product`.`status` = 1
+AND category.id as category_id')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`
+JOIN `category` ON `category`.`id` = `product`.`category_id`
+WHERE `product`.`is_featured` = :product.is_featured:
+AND `product`.`status` = :product.status:
+AND category.id as category_id', [...], false)
+ 5 APPPATH\Controllers\Frontend\Homecontroller.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-25 01:00:29 --> Undefined property: stdClass::$category_name
+in APPPATH\Views\frontend\home\index.php on line 179.
+ 1 APPPATH\Views\frontend\home\index.php(179): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$category_name', 'APPPATH\\Views\\frontend\\home\\index.php', 179)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\Homecontroller.php(27): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-25 03:18:23 --> Undefined property: mysqli::$category_name
+in APPPATH\Views\frontend\home\index.php on line 234.
+ 1 APPPATH\Views\frontend\home\index.php(234): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$category_name', 'APPPATH\\Views\\frontend\\home\\index.php', 234)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\Homecontroller.php(28): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-25 03:19:03 --> Undefined property: mysqli::$category_name
+in APPPATH\Views\frontend\home\index.php on line 234.
+ 1 APPPATH\Views\frontend\home\index.php(234): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$category_name', 'APPPATH\\Views\\frontend\\home\\index.php', 234)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\Homecontroller.php(28): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-25 03:20:15 --> Call to a member function getResult() on array
+in APPPATH\Views\frontend\components\header.php on line 31.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/components/header', null, true)
+ 4 APPPATH\Views\frontend\home\index.php(46): CodeIgniter\View\View->include('frontend/components/header')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 8 APPPATH\Controllers\Frontend\Homecontroller.php(28): view('frontend/home/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-25 03:21:12 --> Call to a member function getResult() on array
+in APPPATH\Views\frontend\components\header.php on line 31.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/components/header', null, true)
+ 4 APPPATH\Views\frontend\home\index.php(46): CodeIgniter\View\View->include('frontend/components/header')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 8 APPPATH\Controllers\Frontend\Homecontroller.php(28): view('frontend/home/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-25 03:35:11 --> Attempt to read property "icon" on string
+in APPPATH\Views\frontend\home\index.php on line 251.
+ 1 APPPATH\Views\frontend\home\index.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "icon" on string', 'APPPATH\\Views\\frontend\\home\\index.php', 251)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\Homecontroller.php(29): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-25 07:44:46 --> Undefined property: mysqli::$link
+in APPPATH\Views\frontend\components\header.php on line 32.
+ 1 APPPATH\Views\frontend\components\header.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$link', 'APPPATH\\Views\\frontend\\components\\header.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\components\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/components/header', null, true)
+ 5 APPPATH\Views\frontend\category\index.php(49): CodeIgniter\View\View->include('frontend/components/header')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\category\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/category/index', [], true)
+ 9 APPPATH\Controllers\Frontend\Categorycontroller.php(20): view('frontend/category/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Categorycontroller->index()
+11 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Categorycontroller))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-25 08:08:11 --> Undefined property: stdClass::$name
+in APPPATH\Views\frontend\home\index.php on line 314.
+ 1 APPPATH\Views\frontend\home\index.php(314): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$name', 'APPPATH\\Views\\frontend\\home\\index.php', 314)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\Homecontroller.php(32): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

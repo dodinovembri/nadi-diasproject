@@ -1,5 +1,5 @@
 ```sql
-CREATE TABLE `category`(
+CREATE TABLE `guarantee`(
 	`id` varchar(36) NOT NULL,
 	`status` tinyint NOT NULL,
 	`sort` int NULL,
@@ -7,9 +7,9 @@ CREATE TABLE `category`(
 	`modified_at` datetime NULL,
 	`creator_id` varchar(36) NULL,
 	`modifier_id` varchar(36) NULL,
-	`category_code` varchar(256) null,
-	`category_name` varchar(256) null,
-	`image` varchar(256) null,
+	`icon` varchar(256) NULL,
+	`name` varchar(256) null,
+	`description` text null,
 	PRIMARY KEY (`id`)
 )
 ```
