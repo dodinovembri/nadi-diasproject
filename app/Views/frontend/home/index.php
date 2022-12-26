@@ -278,8 +278,8 @@
                                         <img src="assets/images/blog/<?= $value->image ?>" alt="Post" width="225" height="280">
                                     </a>
                                     <div class="post-date">
-                                        <span class="day"><?= date("d", $value->date) ?></span>
-                                        <span class="month"><?= date("m", $value->date) ?></span>
+                                        <span class="day"><?= date('d', strtotime($value->date)) ?></span>
+                                        <span class="month"><?= date('m', strtotime($value->date)) ?></span>
                                     </div>
                                 </div>
                                 <div class="post-body">

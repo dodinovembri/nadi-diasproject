@@ -69,4 +69,11 @@ class Authcontroller extends BaseController
             return redirect()->to(base_url('ext-login'));
         }
     }
+
+    public function logout()
+    {
+        $session = session();
+        $session->destroy();
+        return redirect()->to('ext-login');
+    }
 }

@@ -50,9 +50,23 @@ $routes->get('wishlist', [\App\Controllers\Frontend\Wishlistcontroller::class, '
 // Routes Backend Website
 $routes->get('ext-login', 'App\Controllers\Extranet\Authcontroller::login');
 $routes->post('ext-auth', 'App\Controllers\Extranet\Authcontroller::auth');
+$routes->get('ext-logout', 'App\Controllers\Extranet\Authcontroller::logout');
 
 $routes->group('extranet', ['filter' => 'auth'], function($routes){
 	$routes->get('/', 'App\Controllers\Extranet\Homecontroller::index');
+	$routes->get('configuration', 'App\Controllers\Extranet\Configurationcontroller::index');
+	$routes->get('social-media', 'App\Controllers\Extranet\Socialmediacontroller::index');
+	$routes->get('category', 'App\Controllers\Extranet\Categorycontroller::index');
+	$routes->get('banner', 'App\Controllers\Extranet\Bannercontroller::index');
+	$routes->get('blog', 'App\Controllers\Extranet\Blogcontroller::index');
+	$routes->get('brand', 'App\Controllers\Extranet\Brandcontroller::index');
+	$routes->get('exclusive', 'App\Controllers\Extranet\Exlusivecontroller::index');
+	$routes->get('guarantee', 'App\Controllers\Extranet\Guaranteecontroller::index');
+	$routes->get('product', 'App\Controllers\Extranet\Productcontroller::index');
+	$routes->get('promotion', 'App\Controllers\Extranet\Promotioncontroller::index');
+	$routes->get('slider', 'App\Controllers\Extranet\Slidercontroller::index');
+	$routes->get('support', 'App\Controllers\Extranet\Supportcontroller::index');
+	$routes->get('user', 'App\Controllers\Extranet\Usercontroller::index');
 });
 
 /*

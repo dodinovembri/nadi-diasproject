@@ -11,7 +11,7 @@
     <meta name="author" content="<?= $configuration->author ?>">
 
 	<!-- Favicon -->
-	<link rel="icon" type="image/x-icon" href="<?= base_url('assets/images/icons/favicon.png') ?>">
+	<link rel="icon" type="image/x-icon" href="<?= base_url(base_url('assets/images/icons/favicon.png')) ?>">
 	<script>
 		WebFontConfig = {
 			google: {
