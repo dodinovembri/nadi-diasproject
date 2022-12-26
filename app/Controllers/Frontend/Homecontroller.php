@@ -28,6 +28,8 @@ class Homecontroller extends BaseController
         $data['exclusive'] = $db->table('exclusive')->get()->getFirstRow();
         $data['brands'] = $db->table('brand')->get()->getResult();
         $data['blogs'] = $db->table('blog')->get()->getResult();
+        $data['best_selling_products'] = $db->table('product')->where('product.status', 1)->get()->getResult();
+        $data['top_rated_products'] = $db->table('product')->where('product.status', 1)->get()->getResult();
         
         return view('frontend/home/index', $data);
     }

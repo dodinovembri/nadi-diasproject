@@ -23,3 +23,4 @@ CREATE TABLE `configuration`(
 	`copyright` varchar(256) null,
 	PRIMARY KEY (`id`)
 )
+```

@@ -31,7 +31,6 @@
     <link rel="stylesheet" href="assets/css/demo4.min.css">
     <link rel="stylesheet" type="text/css" href="assets/vendor/fontawesome-free/css/all.min.css">
 </head>
-
 <body>
     <div class="page-wrapper">
         <?php if ($configuration->text1_status == 1) { ?>
@@ -40,11 +39,11 @@
                     <h5 class="d-inline-block"><?= $configuration->text1_text ?></h5>
                     <button title="Close (Esc)" type="button" class="mfp-close">×</button>
                 </div>
-                <!-- End .container -->
             </div>
         <?php } ?>
         <?= $this->include('frontend/components/header') ?>
         <main class="main">
+            <!-- Slider -->
             <div class="home-slider slide-animate owl-carousel owl-theme show-nav-hover nav-big mb-2 text-uppercase" data-owl-options="{'loop': false}">
                 <?php foreach ($sliders as $key => $value) { ?>
                     <div class="home-slide home-slide1 banner">
@@ -60,14 +59,12 @@
                                 </h5>
                                 <a href="<?= $value->text_link ?>" class="btn btn-dark btn-lg"><?= $value->text_button ?></a>
                             </div>
-                            <!-- End .banner-layer -->
                         </div>
                     </div>
-                    <!-- End .home-slide -->
                 <?php } ?>
             </div>
-            <!-- End .home-slider -->
 
+            <!-- Guarantee -->
             <div class="container">
                 <div class="info-boxes-slider owl-carousel owl-theme mb-2" data-owl-options="{'dots': false, 'loop': false, 'responsive': { '576': { 'items': 2 }, '992': { 'items': 3 } } }">
                     <?php foreach ($guarantee as $key => $value) { ?>
@@ -78,14 +75,9 @@
                                 <h4><?= $value->name ?></h4>
                                 <p class="text-body"><?= $value->description ?></p>
                             </div>
-                            <!-- End .info-box-content -->
                         </div>
                     <?php } ?>
-                    <!-- End .info-box -->
-
                 </div>
-                <!-- End .info-boxes-slider -->
-
                 <div class="banners-container mb-2">
                     <div class="banners-slider owl-carousel owl-theme" data-owl-options="{'dots': false }">
                         <?php foreach ($promotions as $key => $value) { ?>
@@ -99,18 +91,15 @@
                                     <a href="<?= $value->text_link ?>" class="btn btn-sm btn-dark"><?= $value->text_button ?></a>
                                 </div>
                             </div>
-                            <!-- End .banner -->
                         <?php } ?>
-
                     </div>
                 </div>
             </div>
-            <!-- End .container -->
-
+            
+            <!-- Featured Products -->
             <section class="featured-products-section">
                 <div class="container">
                     <h2 class="section-title heading-border ls-20 border-0">Featured Products</h2>
-
                     <div class="products-slider custom-products owl-carousel owl-theme nav-outer show-nav-hover nav-image-center" data-owl-options="{'dots': false, 'nav': true}">
                         <?php foreach ($featured_products as $key => $value) { ?>
                             <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
@@ -134,35 +123,29 @@
                                     <div class="ratings-container">
                                         <div class="product-ratings">
                                             <span class="ratings" style="width:<?= $value->rating / 5 * 100 ?>%"></span>
-                                            <!-- End .ratings -->
                                             <span class="tooltiptext tooltip-top"></span>
                                         </div>
-                                        <!-- End .product-ratings -->
                                     </div>
-                                    <!-- End .product-container -->
                                     <div class="price-box">
                                         <del class="old-price"><?= $value->price ?></del>
                                         <span class="product-price"><?= $value->price - $value->discount ?></span>
                                     </div>
-                                    <!-- End .price-box -->
                                     <div class="product-action">
                                         <a href="wishlist/store/<?= $value->id ?>" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a>
                                         <a href="cart/store/<?= $value->id ?>" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i><span>SELECT OPTIONS</span></a>
                                         <a href="product/details/<?= $value->id ?>" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a>
                                     </div>
                                 </div>
-                                <!-- End .product-details -->
                             </div>
                         <?php } ?>
                     </div>
-                    <!-- End .featured-proucts -->
                 </div>
             </section>
-
+            
             <section class="new-products-section">
                 <div class="container">
                     <h2 class="section-title heading-border ls-20 border-0">New Arrivals</h2>
-
+                    <!-- New Arrival Products -->
                     <div class="products-slider custom-products owl-carousel owl-theme nav-outer show-nav-hover nav-image-center mb-2" data-owl-options="{ 'dots': false, 'nav': true, 'responsive': { '992': { 'items': 4 }, '1200': { 'items': 5 } } }">
                         <?php foreach ($new_arrival_products as $key => $value) { ?>
                             <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
@@ -183,28 +166,24 @@
                                     <div class="ratings-container">
                                         <div class="product-ratings">
                                             <span class="ratings" style="width:80%"></span>
-                                            <!-- End .ratings -->
                                             <span class="tooltiptext tooltip-top"></span>
                                         </div>
-                                        <!-- End .product-ratings -->
                                     </div>
-                                    <!-- End .product-container -->
                                     <div class="price-box">
                                         <del class="old-price"><?= $value->price ?></del>
                                         <span class="product-price"><?= $value->price - $value->discount ?></span>
                                     </div>
-                                    <!-- End .price-box -->
                                     <div class="product-action">
                                         <a href="wishlist/store/<?= $value->id ?>" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a>
                                         <a href="cart/store/<?= $value->id ?>" class="btn-icon btn-add-cart product-type-simple"><i class="icon-shopping-cart"></i><span>ADD TO CART</span></a>
                                         <a href="product/details/<?= $value->id ?>" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a>
                                     </div>
                                 </div>
-                                <!-- End .product-details -->
                             </div>
                         <?php } ?>
                     </div>
-                    <!-- End .featured-proucts -->
+
+                    <!-- Banner -->
                     <?php if ($banner->status == 1) { ?>
                         <div class="banner banner-big-sale appear-animate" data-animation-delay="200" data-animation-name="fadeInUpShorter" style="background: #2A95CB center/cover url('assets/images/banners/<?= $banner->image ?>');">
                             <div class="banner-content row align-items-center mx-0">
@@ -220,10 +199,10 @@
                             </div>
                         </div>
                     <?php } ?>
-
                     <h2 class="section-title categories-section-title heading-border border-0 ls-0 appear-animate" data-animation-delay="100" data-animation-name="fadeInUpShorter">Browse Our Categories
                     </h2>
 
+                    <!-- Categories -->
                     <div class="categories-slider owl-carousel owl-theme show-nav-hover nav-outer">
                         <?php foreach ($categories as $key => $value) { ?>
                             <div class="product-category appear-animate" data-animation-name="fadeInUpShorter">
@@ -241,7 +220,8 @@
                     </div>
                 </div>
             </section>
-
+            
+            <!-- Support -->
             <section class="feature-boxes-container">
                 <div class="container appear-animate" data-animation-name="fadeInUpShorter">
                     <div class="row">
@@ -251,25 +231,19 @@
                                     <div class="feature-box-icon">
                                         <i class="<?= $value->icon ?>"></i>
                                     </div>
-
                                     <div class="feature-box-content p-0">
                                         <h3><?= $value->text1 ?></h3>
                                         <h5><?= $value->text2 ?></h5>
-
                                         <p><?= $value->text3 ?></p>
                                     </div>
-                                    <!-- End .feature-box-content -->
                                 </div>
-                                <!-- End .feature-box -->
                             </div>
                         <?php } ?>
-                        <!-- End .col-md-4 -->
                     </div>
-                    <!-- End .row -->
                 </div>
-                <!-- End .container-->
             </section>
-            <!-- End .feature-boxes-container -->
+
+            <!-- Exclusive -->
             <?php if ($exclusive->status == 1) { ?>
                 <section class="promo-section bg-dark" data-parallax="{'speed': 2, 'enableOnMobile': true}" data-image-src="assets/images/exclusive/<?= $exclusive->image ?>">
                     <div class="promo-banner banner container text-uppercase">
@@ -290,7 +264,8 @@
                     </div>
                 </section>
             <?php } ?>
-
+            
+            <!-- Blog -->
             <section class="blog-section pb-0">
                 <div class="container">
                     <h2 class="section-title heading-border border-0 appear-animate" data-animation-name="fadeInUp">
@@ -303,436 +278,164 @@
                                         <img src="assets/images/blog/<?= $value->image ?>" alt="Post" width="225" height="280">
                                     </a>
                                     <div class="post-date">
-                                        <span class="day">26</span>
-                                        <span class="month">Feb</span>
+                                        <span class="day"><?= date("d", $value->date) ?></span>
+                                        <span class="month"><?= date("m", $value->date) ?></span>
                                     </div>
                                 </div>
-                                <!-- End .post-media -->
-    
                                 <div class="post-body">
                                     <h2 class="post-title">
-                                        <a href="single.html"><?= $value->title ?></a>
+                                        <a href="blog/show/<?= $value->id ?>"><?= $value->title ?></a>
                                     </h2>
                                     <div class="post-content">
                                         <p><?= $value->short_description ?>...</p>
                                     </div>
-                                    <!-- End .post-content -->
-                                    <a href="single.html" class="post-comment">0 Comments</a>
+                                    <a href="blog/show/<?= $value->id ?>" class="post-comment">0 Comments</a>
                                 </div>
-                                <!-- End .post-body -->
                             </article>
                         <?php } ?>
-                        <!-- End .post -->
                     </div>
-
                     <hr class="mt-0 m-b-5">
 
+                    <!-- Brand -->
                     <div class="brands-slider owl-carousel owl-theme images-center appear-animate" data-animation-name="fadeIn" data-animation-duration="500" data-owl-options="{
 					'margin': 0}">
                         <?php foreach ($brands as $key => $value) { ?>
                             <img src="assets/images/brands/<?= $value->image ?>" width="130" height="56" alt="brand">
                         <?php } ?>
                     </div>
-                    <!-- End .brands-slider -->
-
                     <hr class="mt-4 m-b-5">
-
                     <div class="product-widgets-container row pb-2">
+
+                        <!-- Featured Products -->
                         <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="200">
                             <h4 class="section-sub-title">Featured Products</h4>
-                            <div class="product-default left-details product-widget">
-                                <figure>
-                                    <a href="product.html">
-                                        <img src="assets/images/products/small/product-1.jpg" width="84" height="84" alt="product">
-                                        <img src="assets/images/products/small/product-1-2.jpg" width="84" height="84" alt="product">
-                                    </a>
-                                </figure>
-
-                                <div class="product-details">
-                                    <h3 class="product-title"> <a href="product.html">Ultimate 3D Bluetooth Speaker</a>
-                                    </h3>
-
-                                    <div class="ratings-container">
-                                        <div class="product-ratings">
-                                            <span class="ratings" style="width:100%"></span>
-                                            <!-- End .ratings -->
-                                            <span class="tooltiptext tooltip-top"></span>
+                            <?php foreach ($featured_products as $key => $value) { ?>                                
+                                <div class="product-default left-details product-widget">
+                                    <figure>
+                                        <a href="product/show/<?= $value->id ?>">
+                                            <img src="assets/images/products/small/<?= $value->image1 ?>" width="84" height="84" alt="product">
+                                            <img src="assets/images/products/small/<?= $value->image2 ?>" width="84" height="84" alt="product">
+                                        </a>
+                                    </figure>
+                                    <div class="product-details">
+                                        <h3 class="product-title"> <a href="product.html"><?= $value->name ?></a>
+                                        </h3>
+                                        <div class="ratings-container">
+                                            <div class="product-ratings">
+                                                <span class="ratings" style="width:<?= $value->rating/5 * 100 ?>%"></span>
+                                                <span class="tooltiptext tooltip-top"></span>
+                                            </div>
                                         </div>
-                                        <!-- End .product-ratings -->
-                                    </div>
-                                    <!-- End .product-container -->
-
-                                    <div class="price-box">
-                                        <span class="product-price">$49.00</span>
-                                    </div>
-                                    <!-- End .price-box -->
-                                </div>
-                                <!-- End .product-details -->
-                            </div>
-
-                            <div class="product-default left-details product-widget">
-                                <figure>
-                                    <a href="product.html">
-                                        <img src="assets/images/products/small/product-2.jpg" width="84" height="84" alt="product">
-                                        <img src="assets/images/products/small/product-2-2.jpg" width="84" height="84" alt="product">
-                                    </a>
-                                </figure>
-
-                                <div class="product-details">
-                                    <h3 class="product-title"> <a href="product.html">Brown Women Casual HandBag</a>
-                                    </h3>
-
-                                    <div class="ratings-container">
-                                        <div class="product-ratings">
-                                            <span class="ratings" style="width:100%"></span>
-                                            <!-- End .ratings -->
-                                            <span class="tooltiptext tooltip-top">5.00</span>
+                                        <div class="price-box">
+                                            <span class="product-price"><?= $value->price - $value->discount ?></span>
                                         </div>
-                                        <!-- End .product-ratings -->
                                     </div>
-                                    <!-- End .product-container -->
-
-                                    <div class="price-box">
-                                        <span class="product-price">$49.00</span>
-                                    </div>
-                                    <!-- End .price-box -->
                                 </div>
-                                <!-- End .product-details -->
-                            </div>
-
-                            <div class="product-default left-details product-widget">
-                                <figure>
-                                    <a href="product.html">
-                                        <img src="assets/images/products/small/product-3.jpg" width="84" height="84" alt="product">
-                                        <img src="assets/images/products/small/product-3-2.jpg" width="84" height="84" alt="product">
-                                    </a>
-                                </figure>
-
-                                <div class="product-details">
-                                    <h3 class="product-title"> <a href="product.html">Circled Ultimate 3D Speaker</a>
-                                    </h3>
-
-                                    <div class="ratings-container">
-                                        <div class="product-ratings">
-                                            <span class="ratings" style="width:100%"></span>
-                                            <!-- End .ratings -->
-                                            <span class="tooltiptext tooltip-top"></span>
-                                        </div>
-                                        <!-- End .product-ratings -->
-                                    </div>
-                                    <!-- End .product-container -->
-
-                                    <div class="price-box">
-                                        <span class="product-price">$49.00</span>
-                                    </div>
-                                    <!-- End .price-box -->
-                                </div>
-                                <!-- End .product-details -->
-                            </div>
+                            <?php if ($key == 3) { break; } } ?>
                         </div>
 
+                        <!-- Best Selling Products -->
                         <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="500">
                             <h4 class="section-sub-title">Best Selling Products</h4>
-                            <div class="product-default left-details product-widget">
-                                <figure>
-                                    <a href="product.html">
-                                        <img src="assets/images/products/small/product-4.jpg" width="84" height="84" alt="product">
-                                        <img src="assets/images/products/small/product-4-2.jpg" width="84" height="84" alt="product">
-                                    </a>
-                                </figure>
-
-                                <div class="product-details">
-                                    <h3 class="product-title"> <a href="product.html">Blue Backpack for the Young -
-                                            S</a> </h3>
-
-                                    <div class="ratings-container">
-                                        <div class="product-ratings">
-                                            <span class="ratings" style="width:100%"></span>
-                                            <!-- End .ratings -->
-                                            <span class="tooltiptext tooltip-top">5.00</span>
+                            <?php foreach ($best_selling_products as $key => $value) { ?>                                
+                                <div class="product-default left-details product-widget">
+                                    <figure>
+                                        <a href="product.html">
+                                            <img src="assets/images/products/<?= $value->image1 ?>" width="84" height="84" alt="product">
+                                            <img src="assets/images/products/<?= $value->image2 ?>" width="84" height="84" alt="product">
+                                        </a>
+                                    </figure>
+    
+                                    <div class="product-details">
+                                        <h3 class="product-title"> <a href="product/show/<?= $value->id ?>"><?= $value->name ?></a> </h3>
+                                        <div class="ratings-container">
+                                            <div class="product-ratings">
+                                                <span class="ratings" style="width:<?= $value->rating/5 * 100 ?>%"></span>
+                                                <span class="tooltiptext tooltip-top"><?= $value->rating ?></span>
+                                            </div>
                                         </div>
-                                        <!-- End .product-ratings -->
-                                    </div>
-                                    <!-- End .product-container -->
-
-                                    <div class="price-box">
-                                        <span class="product-price">$49.00</span>
-                                    </div>
-                                    <!-- End .price-box -->
-                                </div>
-                                <!-- End .product-details -->
-                            </div>
-
-                            <div class="product-default left-details product-widget">
-                                <figure>
-                                    <a href="product.html">
-                                        <img src="assets/images/products/small/product-5.jpg" width="84" height="84" alt="product">
-                                        <img src="assets/images/products/small/product-5-2.jpg" width="84" height="84" alt="product">
-                                    </a>
-                                </figure>
-
-                                <div class="product-details">
-                                    <h3 class="product-title"> <a href="product.html">Casual Spring Blue Shoes</a> </h3>
-
-                                    <div class="ratings-container">
-                                        <div class="product-ratings">
-                                            <span class="ratings" style="width:100%"></span>
-                                            <!-- End .ratings -->
-                                            <span class="tooltiptext tooltip-top"></span>
+                                        <div class="price-box">
+                                            <span class="product-price"><?= $value->price - $value->discount ?></span>
                                         </div>
-                                        <!-- End .product-ratings -->
                                     </div>
-                                    <!-- End .product-container -->
-
-                                    <div class="price-box">
-                                        <span class="product-price">$49.00</span>
-                                    </div>
-                                    <!-- End .price-box -->
                                 </div>
-                                <!-- End .product-details -->
-                            </div>
-
-                            <div class="product-default left-details product-widget">
-                                <figure>
-                                    <a href="product.html">
-                                        <img src="assets/images/products/small/product-6.jpg" width="84" height="84" alt="product">
-                                        <img src="assets/images/products/small/product-6-2.jpg" width="84" height="84" alt="product">
-                                    </a>
-                                </figure>
-
-                                <div class="product-details">
-                                    <h3 class="product-title"> <a href="product.html">Men Black Gentle Belt</a> </h3>
-
-                                    <div class="ratings-container">
-                                        <div class="product-ratings">
-                                            <span class="ratings" style="width:100%"></span>
-                                            <!-- End .ratings -->
-                                            <span class="tooltiptext tooltip-top">5.00</span>
-                                        </div>
-                                        <!-- End .product-ratings -->
-                                    </div>
-                                    <!-- End .product-container -->
-
-                                    <div class="price-box">
-                                        <span class="product-price">$49.00</span>
-                                    </div>
-                                    <!-- End .price-box -->
-                                </div>
-                                <!-- End .product-details -->
-                            </div>
+                            <?php if ($key == 3) { break; } } ?>
                         </div>
-
+                        
+                        <!-- Latest Products -->
                         <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="800">
                             <h4 class="section-sub-title">Latest Products</h4>
-                            <div class="product-default left-details product-widget">
-                                <figure>
-                                    <a href="product.html">
-                                        <img src="assets/images/products/small/product-7.jpg" width="84" height="84" alt="product">
-                                        <img src="assets/images/products/small/product-7-2.jpg" width="84" height="84" alt="product">
-                                    </a>
-                                </figure>
-
-                                <div class="product-details">
-                                    <h3 class="product-title"> <a href="product.html">Brown-Black Men Casual Glasses</a>
-                                    </h3>
-
-                                    <div class="ratings-container">
-                                        <div class="product-ratings">
-                                            <span class="ratings" style="width:100%"></span>
-                                            <!-- End .ratings -->
-                                            <span class="tooltiptext tooltip-top"></span>
+                            <?php foreach ($new_arrival_products as $key => $value) { ?>                                
+                                <div class="product-default left-details product-widget">
+                                    <figure>
+                                        <a href="product/show/<?= $value->id ?>">
+                                            <img src="assets/images/products/<?= $value->image1 ?>" width="84" height="84" alt="product">
+                                            <img src="assets/images/products/<?= $value->image2 ?>" width="84" height="84" alt="product">
+                                        </a>
+                                    </figure>
+    
+                                    <div class="product-details">
+                                        <h3 class="product-title"> <a href="product/show/<?= $value->id ?>"><?= $value->name ?></a>
+                                        </h3>
+    
+                                        <div class="ratings-container">
+                                            <div class="product-ratings">
+                                                <span class="ratings" style="width:<?= $value->rating/5 * 100 ?>%"></span>
+                                                <span class="tooltiptext tooltip-top"></span>
+                                            </div>
                                         </div>
-                                        <!-- End .product-ratings -->
-                                    </div>
-                                    <!-- End .product-container -->
-
-                                    <div class="price-box">
-                                        <span class="product-price">$49.00</span>
-                                    </div>
-                                    <!-- End .price-box -->
-                                </div>
-                                <!-- End .product-details -->
-                            </div>
-
-                            <div class="product-default left-details product-widget">
-                                <figure>
-                                    <a href="product.html">
-                                        <img src="assets/images/products/small/product-8.jpg" width="84" height="84" alt="product">
-                                        <img src="assets/images/products/small/product-8-2.jpg" width="84" height="84" alt="product">
-                                    </a>
-                                </figure>
-
-                                <div class="product-details">
-                                    <h3 class="product-title"> <a href="product.html">Brown-Black Men Casual Glasses</a>
-                                    </h3>
-
-                                    <div class="ratings-container">
-                                        <div class="product-ratings">
-                                            <span class="ratings" style="width:100%"></span>
-                                            <!-- End .ratings -->
-                                            <span class="tooltiptext tooltip-top">5.00</span>
+                                        <div class="price-box">
+                                            <span class="product-price"><?= $value->price - $value->discount ?></span>
                                         </div>
-                                        <!-- End .product-ratings -->
                                     </div>
-                                    <!-- End .product-container -->
-
-                                    <div class="price-box">
-                                        <span class="product-price">$49.00</span>
-                                    </div>
-                                    <!-- End .price-box -->
                                 </div>
-                                <!-- End .product-details -->
-                            </div>
-
-                            <div class="product-default left-details product-widget">
-                                <figure>
-                                    <a href="product.html">
-                                        <img src="assets/images/products/small/product-9.jpg" width="84" height="84" alt="product">
-                                        <img src="assets/images/products/small/product-9-2.jpg" width="84" height="84" alt="product">
-                                    </a>
-                                </figure>
-
-                                <div class="product-details">
-                                    <h3 class="product-title"> <a href="product.html">Black Men Casual Glasses</a> </h3>
-
-                                    <div class="ratings-container">
-                                        <div class="product-ratings">
-                                            <span class="ratings" style="width:100%"></span>
-                                            <!-- End .ratings -->
-                                            <span class="tooltiptext tooltip-top"></span>
-                                        </div>
-                                        <!-- End .product-ratings -->
-                                    </div>
-                                    <!-- End .product-container -->
-
-                                    <div class="price-box">
-                                        <span class="product-price">$49.00</span>
-                                    </div>
-                                    <!-- End .price-box -->
-                                </div>
-                                <!-- End .product-details -->
-                            </div>
+                            <?php if ($key == 3) { break; } } ?>
                         </div>
 
+                        <!-- Top Rated Products -->
                         <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="1100">
                             <h4 class="section-sub-title">Top Rated Products</h4>
-                            <div class="product-default left-details product-widget">
-                                <figure>
-                                    <a href="product.html">
-                                        <img src="assets/images/products/small/product-10.jpg" width="84" height="84" alt="product">
-                                        <img src="assets/images/products/small/product-10-2.jpg" width="84" height="84" alt="product">
-                                    </a>
-                                </figure>
-
-                                <div class="product-details">
-                                    <h3 class="product-title"> <a href="product.html">Basketball Sports Blue Shoes</a>
-                                    </h3>
-
-                                    <div class="ratings-container">
-                                        <div class="product-ratings">
-                                            <span class="ratings" style="width:100%"></span>
-                                            <!-- End .ratings -->
-                                            <span class="tooltiptext tooltip-top"></span>
+                            <?php foreach ($top_rated_products as $key => $value) { ?>                                
+                                <div class="product-default left-details product-widget">
+                                    <figure>
+                                        <a href="product/show/<?= $value->id ?>">
+                                            <img src="assets/images/products/<?= $value->image1 ?>" width="84" height="84" alt="product">
+                                            <img src="assets/images/products/<?= $value->image2 ?>" width="84" height="84" alt="product">
+                                        </a>
+                                    </figure>
+                                    <div class="product-details">
+                                        <h3 class="product-title"> <a href="product/show/<?= $value->id ?>"><?= $value->name ?></a>
+                                        </h3>
+                                        <div class="ratings-container">
+                                            <div class="product-ratings">
+                                                <span class="ratings" style="width:100%"></span>
+                                                <span class="tooltiptext tooltip-top"></span>
+                                            </div>
                                         </div>
-                                        <!-- End .product-ratings -->
-                                    </div>
-                                    <!-- End .product-container -->
-
-                                    <div class="price-box">
-                                        <span class="product-price">$49.00</span>
-                                    </div>
-                                    <!-- End .price-box -->
-                                </div>
-                                <!-- End .product-details -->
-                            </div>
-
-                            <div class="product-default left-details product-widget">
-                                <figure>
-                                    <a href="product.html">
-                                        <img src="assets/images/products/small/product-11.jpg" width="84" height="84" alt="product">
-                                        <img src="assets/images/products/small/product-11-2.jpg" width="84" height="84" alt="product">
-                                    </a>
-                                </figure>
-
-                                <div class="product-details">
-                                    <h3 class="product-title"> <a href="product.html">Men Sports Travel Bag</a> </h3>
-
-                                    <div class="ratings-container">
-                                        <div class="product-ratings">
-                                            <span class="ratings" style="width:100%"></span>
-                                            <!-- End .ratings -->
-                                            <span class="tooltiptext tooltip-top">5.00</span>
+                                        <div class="price-box">
+                                            <span class="product-price"><?= $value->price - $value->discount ?></span>
                                         </div>
-                                        <!-- End .product-ratings -->
                                     </div>
-                                    <!-- End .product-container -->
-
-                                    <div class="price-box">
-                                        <span class="product-price">$49.00</span>
-                                    </div>
-                                    <!-- End .price-box -->
                                 </div>
-                                <!-- End .product-details -->
-                            </div>
-
-                            <div class="product-default left-details product-widget">
-                                <figure>
-                                    <a href="product.html">
-                                        <img src="assets/images/products/small/product-12.jpg" width="84" height="84" alt="product">
-                                        <img src="assets/images/products/small/product-12-2.jpg" width="84" height="84" alt="product">
-                                    </a>
-                                </figure>
-
-                                <div class="product-details">
-                                    <h3 class="product-title"> <a href="product.html">Brown HandBag</a> </h3>
-
-                                    <div class="ratings-container">
-                                        <div class="product-ratings">
-                                            <span class="ratings" style="width:100%"></span>
-                                            <!-- End .ratings -->
-                                            <span class="tooltiptext tooltip-top"></span>
-                                        </div>
-                                        <!-- End .product-ratings -->
-                                    </div>
-                                    <!-- End .product-container -->
-
-                                    <div class="price-box">
-                                        <span class="product-price">$49.00</span>
-                                    </div>
-                                    <!-- End .price-box -->
-                                </div>
-                                <!-- End .product-details -->
-                            </div>
+                            <?php if ($key == 3) { break; } } ?>
                         </div>
                     </div>
-                    <!-- End .row -->
                 </div>
             </section>
         </main>
-        <!-- End .main -->
-
         <?= $this->include('frontend/components/footer') ?>
-        <!-- End .footer -->
     </div>
-    <!-- End .page-wrapper -->
-
-
     <?= $this->include('frontend/components/overlay') ?>
-
     <?= $this->include('frontend/components/mobilemenu') ?>
     <?= $this->include('frontend/components/mobilenavbar') ?>
-
     <a id="scroll-top" href="#top" title="Top" role="button"><i class="icon-angle-up"></i></a>
-
     <!-- Plugins JS File -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/optional/isotope.pkgd.min.js"></script>
     <script src="assets/js/plugins.min.js"></script>
     <script src="assets/js/jquery.appear.min.js"></script>
-
     <!-- Main JS File -->
     <script src="assets/js/main.min.js"></script>
 </body>
-
 </html>
