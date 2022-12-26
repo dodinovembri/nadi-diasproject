@@ -47,7 +47,7 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <a href="/" class="logo">
-                    <img src="assets/images/logo.png" width="111" height="44" alt="Porto Logo">
+                    <img src="<?= base_url('') ?>assets/images/logo.png" width="111" height="44" alt="Porto Logo">
                 </a>
             </div>
             <!-- End .header-left -->
@@ -75,7 +75,7 @@
                 <!-- End .header-search -->
 
                 <div class="header-contact d-none d-lg-flex pl-4 pr-4">
-                    <img alt="phone" src="assets/images/phone.png" width="30" height="30" class="pb-1">
+                    <img alt="phone" src="<?= base_url('') ?>assets/images/phone.png" width="30" height="30" class="pb-1">
                     <h6><span>Call us now</span><a href="tel:#" class="text-dark font1"><?= $configuration->phone ?></a></h6>
                 </div>
 
@@ -113,7 +113,7 @@
 
                                     <figure class="product-image-container">
                                         <a href="product.html" class="product-image">
-                                            <img src="assets/images/products/product-1.jpg" alt="product" width="80" height="80">
+                                            <img src="<?= base_url('') ?>assets/images/products/product-1.jpg" alt="product" width="80" height="80">
                                         </a>
 
                                         <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
@@ -135,7 +135,7 @@
 
                                     <figure class="product-image-container">
                                         <a href="product.html" class="product-image">
-                                            <img src="assets/images/products/product-2.jpg" alt="product" width="80" height="80">
+                                            <img src="<?= base_url('') ?>assets/images/products/product-2.jpg" alt="product" width="80" height="80">
                                         </a>
 
                                         <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
@@ -157,7 +157,7 @@
 
                                     <figure class="product-image-container">
                                         <a href="product.html" class="product-image">
-                                            <img src="assets/images/products/product-3.jpg" alt="product" width="80" height="80">
+                                            <img src="<?= base_url('') ?>assets/images/products/product-3.jpg" alt="product" width="80" height="80">
                                         </a>
                                         <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
                                     </figure>

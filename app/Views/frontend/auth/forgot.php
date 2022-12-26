@@ -10,7 +10,7 @@
     <meta name="description" content="<?= $configuration->description ?>">
     <meta name="author" content="<?= $configuration->author ?>">
 	<!-- Favicon -->
-	<link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.png">
+	<link rel="icon" type="image/x-icon" href="<?= base_url('assets/images/icons/favicon.png') ?>">
 	<script>
 		WebFontConfig = {
 			google: {
@@ -20,16 +20,16 @@
 		(function(d) {
 			var wf = d.createElement('script'),
 				s = d.scripts[0];
-			wf.src = 'assets/js/webfont.js';
+			wf.src = '<?= base_url('assets/js/webfont.js') ?>';
 			wf.async = true;
 			s.parentNode.insertBefore(wf, s);
 		})(document);
 	</script>
 	<!-- Plugins CSS File -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>">
 	<!-- Main CSS File -->
-	<link rel="stylesheet" href="assets/css/style.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="<?= base_url('assets/css/style.min.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/vendor/fontawesome-free/css/all.min.css') ?>">
 </head>
 
 <body>
@@ -107,15 +107,11 @@
 
 
 	<!-- Plugins JS File -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/js/plugins.min.js"></script>
+	<script src="<?= base_url('assets/js/jquery.min.js') ?>"></script>
+	<script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
+	<script src="<?= base_url('assets/js/plugins.min.js') ?>"></script>
 
 	<!-- Main JS File -->
-	<script src="assets/js/main.min.js"></script>
+	<script src="<?= base_url('assets/js/main.min.js') ?>"></script>
 </body>
-
-
-<!-- Mirrored from portotheme.com/html/porto_ecommerce/forgot-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Dec 2022 14:19:47 GMT -->
-
 </html>

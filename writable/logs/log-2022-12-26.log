@@ -1,0 +1,227 @@
+CRITICAL - 2022-12-26 00:45:02 --> explode(): Argument #2 ($string) must be of type string, array given
+in SYSTEMPATH\Router\Router.php on line 462.
+ 1 SYSTEMPATH\Router\Router.php(462): explode('::', [...])
+ 2 SYSTEMPATH\Router\Router.php(181): CodeIgniter\Router\Router->checkRoutes('admin')
+ 3 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\Router->handle('admin')
+ 4 SYSTEMPATH\CodeIgniter.php(428): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 00:56:38 --> Undefined property: mysqli::$link
+in APPPATH\Views\frontend\components\header.php on line 32.
+ 1 APPPATH\Views\frontend\components\header.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$link', 'APPPATH\\Views\\frontend\\components\\header.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\components\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/components/header', null, true)
+ 5 APPPATH\Views\frontend\auth\login.php(50): CodeIgniter\View\View->include('frontend/components/header')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\auth\\login.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/auth/login', [], true)
+ 9 APPPATH\Controllers\Frontend\Authcontroller.php(20): view('frontend/auth/login', [...])
+10 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Authcontroller->login()
+11 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Authcontroller))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 00:59:05 --> Undefined property: mysqli::$link
+in APPPATH\Views\frontend\components\header.php on line 32.
+ 1 APPPATH\Views\frontend\components\header.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$link', 'APPPATH\\Views\\frontend\\components\\header.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\components\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/components/header', null, true)
+ 5 APPPATH\Views\frontend\auth\login.php(50): CodeIgniter\View\View->include('frontend/components/header')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\auth\\login.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/auth/login', [], true)
+ 9 APPPATH\Controllers\Frontend\Authcontroller.php(20): view('frontend/auth/login', [...])
+10 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Authcontroller->login()
+11 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Authcontroller))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 01:00:37 --> Undefined property: mysqli::$link
+in APPPATH\Views\frontend\components\header.php on line 32.
+ 1 APPPATH\Views\frontend\components\header.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$link', 'APPPATH\\Views\\frontend\\components\\header.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\components\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/components/header', null, true)
+ 5 APPPATH\Views\frontend\auth\login.php(50): CodeIgniter\View\View->include('frontend/components/header')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\auth\\login.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/auth/login', [], true)
+ 9 APPPATH\Controllers\Frontend\Authcontroller.php(20): view('frontend/auth/login', [...])
+10 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Authcontroller->login()
+11 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Authcontroller))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 01:15:24 --> Undefined property: mysqli::$link
+in APPPATH\Views\frontend\components\header.php on line 32.
+ 1 APPPATH\Views\frontend\components\header.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$link', 'APPPATH\\Views\\frontend\\components\\header.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\components\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/components/header', null, true)
+ 5 APPPATH\Views\frontend\auth\login.php(50): CodeIgniter\View\View->include('frontend/components/header')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\auth\\login.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/auth/login', [], true)
+ 9 APPPATH\Controllers\Frontend\Authcontroller.php(20): view('frontend/auth/login', [...])
+10 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Authcontroller->login()
+11 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Authcontroller))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 01:51:18 --> Undefined property: mysqli::$link
+in APPPATH\Views\frontend\components\header.php on line 32.
+ 1 APPPATH\Views\frontend\components\header.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$link', 'APPPATH\\Views\\frontend\\components\\header.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\components\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/components/header', null, true)
+ 5 APPPATH\Views\frontend\auth\login.php(50): CodeIgniter\View\View->include('frontend/components/header')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\auth\\login.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/auth/login', [], true)
+ 9 APPPATH\Controllers\Frontend\Authcontroller.php(20): view('frontend/auth/login', [...])
+10 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Authcontroller->login()
+11 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Authcontroller))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 02:08:27 --> Undefined property: mysqli::$link
+in APPPATH\Views\frontend\components\header.php on line 32.
+ 1 APPPATH\Views\frontend\components\header.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$link', 'APPPATH\\Views\\frontend\\components\\header.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\components\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/components/header', null, true)
+ 5 APPPATH\Views\frontend\auth\login.php(50): CodeIgniter\View\View->include('frontend/components/header')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\auth\\login.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/auth/login', [], true)
+ 9 APPPATH\Controllers\Frontend\Authcontroller.php(20): view('frontend/auth/login', [...])
+10 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Authcontroller->login()
+11 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Authcontroller))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 03:24:07 --> auth filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 03:24:55 --> auth filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 03:24:56 --> auth filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 03:25:05 --> auth filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 03:25:06 --> auth filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 03:25:35 --> auth filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 03:25:36 --> auth filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 03:25:36 --> auth filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 03:25:37 --> auth filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 03:25:45 --> Declaration of App\Filters\AuthFilter::before(CodeIgniter\HTTP\RequestInterface $request) must be compatible with CodeIgniter\Filters\FilterInterface::before(CodeIgniter\HTTP\RequestInterface $request, $arguments = null)
+in APPPATH\Filters\Auth.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-26 03:26:19 --> Declaration of App\Filters\Auth::before(CodeIgniter\HTTP\RequestInterface $request) must be compatible with CodeIgniter\Filters\FilterInterface::before(CodeIgniter\HTTP\RequestInterface $request, $arguments = null)
+in APPPATH\Filters\Auth.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-26 03:26:20 --> Declaration of App\Filters\Auth::before(CodeIgniter\HTTP\RequestInterface $request) must be compatible with CodeIgniter\Filters\FilterInterface::before(CodeIgniter\HTTP\RequestInterface $request, $arguments = null)
+in APPPATH\Filters\Auth.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-26 03:30:11 --> The route for "http://localhost:8080/ext-login" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('http://localhost:8080/ext-login')
+ 2 SYSTEMPATH\Common.php(861): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Filters\Auth.php(16): redirect('http://localhost:8080/ext-login')
+ 4 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\Filters\Filters->run('extranet', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 03:30:12 --> The route for "http://localhost:8080/ext-login" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('http://localhost:8080/ext-login')
+ 2 SYSTEMPATH\Common.php(861): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Filters\Auth.php(16): redirect('http://localhost:8080/ext-login')
+ 4 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\Filters\Filters->run('extranet', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 03:30:33 --> The route for "http://localhost:8080/ext-login" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('http://localhost:8080/ext-login')
+ 2 SYSTEMPATH\Common.php(861): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Filters\Auth.php(16): redirect('http://localhost:8080/ext-login')
+ 4 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\Filters\Filters->run('extranet', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 03:30:34 --> The route for "http://localhost:8080/ext-login" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('http://localhost:8080/ext-login')
+ 2 SYSTEMPATH\Common.php(861): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Filters\Auth.php(16): redirect('http://localhost:8080/ext-login')
+ 4 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\Filters\Filters->run('extranet', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 03:40:40 --> syntax error, unexpected token "<"
+in APPPATH\Controllers\Extranet\Authcontroller.php on line 52.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Extranet\\Authcontroller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Extranet\\Authcontroller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Extranet\\Authcontroller')
+ 4 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Extranet\\Authcontroller', true)
+ 5 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

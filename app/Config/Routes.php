@@ -16,9 +16,6 @@ if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
  * Router Setup
  * --------------------------------------------------------------------
  */
-$routes->setDefaultNamespace('App\Controllers\Frontend');
-$routes->setDefaultController('Homecontroller');
-$routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
@@ -35,6 +32,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
 // Routes Frontend Website
 $routes->get('/', [\App\Controllers\Frontend\Homecontroller::class, 'index']);
 $routes->get('about', [\App\Controllers\Frontend\Aboutcontroller::class, 'index']);
@@ -50,9 +48,13 @@ $routes->get('product', [\App\Controllers\Frontend\Productcontroller::class, 'in
 $routes->get('wishlist', [\App\Controllers\Frontend\Wishlistcontroller::class, 'index']);
 
 // Routes Backend Website
-$routes->group('admin', static function ($routes) {
-    $routes->get('/', [\App\Controllers\Extranet\HomeController::class, 'index']);
+$routes->get('ext-login', 'App\Controllers\Extranet\Authcontroller::login');
+$routes->post('ext-auth', 'App\Controllers\Extranet\Authcontroller::auth');
+
+$routes->group('extranet', ['filter' => 'auth'], function($routes){
+	$routes->get('/', 'App\Controllers\Extranet\Homecontroller::index');
 });
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
