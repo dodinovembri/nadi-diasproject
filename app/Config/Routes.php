@@ -54,19 +54,121 @@ $routes->get('ext-logout', 'App\Controllers\Extranet\Authcontroller::logout');
 
 $routes->group('extranet', ['filter' => 'auth'], function($routes){
 	$routes->get('/', 'App\Controllers\Extranet\Homecontroller::index');
-	$routes->get('configuration', 'App\Controllers\Extranet\Configurationcontroller::index');
-	$routes->get('social-media', 'App\Controllers\Extranet\Socialmediacontroller::index');
-	$routes->get('category', 'App\Controllers\Extranet\Categorycontroller::index');
-	$routes->get('banner', 'App\Controllers\Extranet\Bannercontroller::index');
-	$routes->get('blog', 'App\Controllers\Extranet\Blogcontroller::index');
-	$routes->get('brand', 'App\Controllers\Extranet\Brandcontroller::index');
-	$routes->get('exclusive', 'App\Controllers\Extranet\Exclusivecontroller::index');
-	$routes->get('guarantee', 'App\Controllers\Extranet\Guaranteecontroller::index');
-	$routes->get('product', 'App\Controllers\Extranet\Productcontroller::index');
-	$routes->get('promotion', 'App\Controllers\Extranet\Promotioncontroller::index');
-	$routes->get('slider', 'App\Controllers\Extranet\Slidercontroller::index');
-	$routes->get('support', 'App\Controllers\Extranet\Supportcontroller::index');
-	$routes->get('user', 'App\Controllers\Extranet\Usercontroller::index');
+
+	$routes->group('configuration', function ($routes) {
+		$routes->get('/', 'App\Controllers\Extranet\Configurationcontroller::index');
+		$routes->get('update', 'App\Controllers\Extranet\Configurationcontroller::index');
+    });
+
+	$routes->group('social-media', function ($routes) {
+		$routes->get('/', 'App\Controllers\Extranet\Socialmediacontroller::index');
+		$routes->get('create', 'App\Controllers\Extranet\Socialmediacontroller::create');
+		$routes->post('store', 'App\Controllers\Extranet\Socialmediacontroller::store');
+		$routes->get('show', 'App\Controllers\Extranet\Socialmediacontroller::show');
+		$routes->get('edit', 'App\Controllers\Extranet\Socialmediacontroller::edit');
+		$routes->post('update', 'App\Controllers\Extranet\Socialmediacontroller::update');
+		$routes->get('destroy', 'App\Controllers\Extranet\Socialmediacontroller::destroy');
+    });
+
+	$routes->group('category', function ($routes) {
+		$routes->get('/', 'App\Controllers\Extranet\Categorycontroller::index');
+		$routes->get('create', 'App\Controllers\Extranet\Categorycontroller::create');
+		$routes->post('store', 'App\Controllers\Extranet\Categorycontroller::store');
+		$routes->get('show', 'App\Controllers\Extranet\Categorycontroller::show');
+		$routes->get('edit', 'App\Controllers\Extranet\Categorycontroller::edit');
+		$routes->post('update', 'App\Controllers\Extranet\Categorycontroller::update');
+		$routes->get('destroy', 'App\Controllers\Extranet\Categorycontroller::destroy');
+    });
+	
+	$routes->group('banner', function ($routes) {
+		$routes->get('/', 'App\Controllers\Extranet\Bannercontroller::index');
+		$routes->post('update', 'App\Controllers\Extranet\Bannercontroller::update');
+    });
+
+	$routes->group('blog', function ($routes) {
+		$routes->get('/', 'App\Controllers\Extranet\Blogcontroller::index');
+		$routes->get('create', 'App\Controllers\Extranet\Blogcontroller::create');
+		$routes->post('store', 'App\Controllers\Extranet\Blogcontroller::store');
+		$routes->get('show', 'App\Controllers\Extranet\Blogcontroller::show');
+		$routes->get('edit', 'App\Controllers\Extranet\Blogcontroller::edit');
+		$routes->post('update', 'App\Controllers\Extranet\Blogcontroller::update');
+		$routes->get('destroy', 'App\Controllers\Extranet\Blogcontroller::destroy');
+    });
+	
+	$routes->group('brand', function ($routes) {
+		$routes->get('/', 'App\Controllers\Extranet\Brandcontroller::index');
+		$routes->get('create', 'App\Controllers\Extranet\Brandcontroller::create');
+		$routes->post('store', 'App\Controllers\Extranet\Brandcontroller::store');
+		$routes->get('show', 'App\Controllers\Extranet\Brandcontroller::show');
+		$routes->get('edit', 'App\Controllers\Extranet\Brandcontroller::edit');
+		$routes->post('update', 'App\Controllers\Extranet\Brandcontroller::update');
+		$routes->get('destroy', 'App\Controllers\Extranet\Brandcontroller::destroy');
+    });		
+
+	$routes->group('exclusive', function ($routes) {
+		$routes->get('/', 'App\Controllers\Extranet\Exclusivecontroller::index');
+		$routes->post('update', 'App\Controllers\Extranet\Exclusivecontroller::update');
+    });	
+
+	$routes->group('guarantee', function ($routes) {
+		$routes->get('/', 'App\Controllers\Extranet\Guaranteecontroller::index');
+		$routes->get('create', 'App\Controllers\Extranet\Guaranteecontroller::create');
+		$routes->post('store', 'App\Controllers\Extranet\Guaranteecontroller::store');
+		$routes->get('show', 'App\Controllers\Extranet\Guaranteecontroller::show');
+		$routes->get('edit', 'App\Controllers\Extranet\Guaranteecontroller::edit');
+		$routes->post('update', 'App\Controllers\Extranet\Guaranteecontroller::update');
+		$routes->get('destroy', 'App\Controllers\Extranet\Guaranteecontroller::destroy');
+    });			
+
+	$routes->group('product', function ($routes) {
+		$routes->get('/', 'App\Controllers\Extranet\Productcontroller::index');
+		$routes->get('create', 'App\Controllers\Extranet\Productcontroller::create');
+		$routes->post('store', 'App\Controllers\Extranet\Productcontroller::store');
+		$routes->get('show', 'App\Controllers\Extranet\Productcontroller::show');
+		$routes->get('edit', 'App\Controllers\Extranet\Productcontroller::edit');
+		$routes->post('update', 'App\Controllers\Extranet\Productcontroller::update');
+		$routes->get('destroy', 'App\Controllers\Extranet\Productcontroller::destroy');
+    });
+
+	$routes->group('promotion', function ($routes) {
+		$routes->get('/', 'App\Controllers\Extranet\Promotioncontroller::index');
+		$routes->get('create', 'App\Controllers\Extranet\Promotioncontroller::create');
+		$routes->post('store', 'App\Controllers\Extranet\Promotioncontroller::store');
+		$routes->get('show', 'App\Controllers\Extranet\Promotioncontroller::show');
+		$routes->get('edit', 'App\Controllers\Extranet\Promotioncontroller::edit');
+		$routes->post('update', 'App\Controllers\Extranet\Promotioncontroller::update');
+		$routes->get('destroy', 'App\Controllers\Extranet\Promotioncontroller::destroy');
+    });
+
+	$routes->group('slider', function ($routes) {
+		$routes->get('/', 'App\Controllers\Extranet\Slidercontroller::index');
+		$routes->get('create', 'App\Controllers\Extranet\Slidercontroller::create');
+		$routes->post('store', 'App\Controllers\Extranet\Slidercontroller::store');
+		$routes->get('show', 'App\Controllers\Extranet\Slidercontroller::show');
+		$routes->get('edit', 'App\Controllers\Extranet\Slidercontroller::edit');
+		$routes->post('update', 'App\Controllers\Extranet\Slidercontroller::update');
+		$routes->get('destroy', 'App\Controllers\Extranet\Slidercontroller::destroy');
+    });
+
+	$routes->group('support', function ($routes) {
+		$routes->get('/', 'App\Controllers\Extranet\Supportcontroller::index');
+		$routes->get('create', 'App\Controllers\Extranet\Supportcontroller::create');
+		$routes->post('store', 'App\Controllers\Extranet\Supportcontroller::store');
+		$routes->get('show', 'App\Controllers\Extranet\Supportcontroller::show');
+		$routes->get('edit', 'App\Controllers\Extranet\Supportcontroller::edit');
+		$routes->post('update', 'App\Controllers\Extranet\Supportcontroller::update');
+		$routes->get('destroy', 'App\Controllers\Extranet\Supportcontroller::destroy');
+    });
+
+	$routes->group('user', function ($routes) {
+		$routes->get('/', 'App\Controllers\Extranet\Usercontroller::index');
+		$routes->get('create', 'App\Controllers\Extranet\Usercontroller::create');
+		$routes->post('store', 'App\Controllers\Extranet\Usercontroller::store');
+		$routes->get('show', 'App\Controllers\Extranet\Usercontroller::show');
+		$routes->get('edit', 'App\Controllers\Extranet\Usercontroller::edit');
+		$routes->post('update', 'App\Controllers\Extranet\Usercontroller::update');
+		$routes->get('destroy', 'App\Controllers\Extranet\Usercontroller::destroy');
+    });
 });
 
 /*

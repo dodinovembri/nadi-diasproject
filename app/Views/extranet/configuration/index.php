@@ -34,11 +34,11 @@
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="firstName1">Title</label>
-                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" />
+                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" value="<?= $configuration->title ?>" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="lastName1">Key Words</label>
-                                            <input class="form-control" id="lastName1" type="text" name="keyword" placeholder="Enter keyword" />
+                                            <label for="lastName1">Key Word</label>
+                                            <input class="form-control" id="lastName1" type="text" name="keyword" placeholder="Enter keyword" value="<?= $configuration->keyword ?>" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker1">Text 1 Status</label>
@@ -49,7 +49,7 @@
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="phone">Text 1 Text</label>
-                                            <input class="form-control" id="phone" name="text1_text" placeholder="Enter text 1 text" />
+                                            <input class="form-control" id="phone" name="text1_text" placeholder="Enter text 1 text" value="<?= $configuration->text1_text ?>" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker1">Text 2 Status</label>
@@ -60,7 +60,7 @@
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="website">Text 2 Text</label>
-                                            <input class="form-control" id="website" name="text2_status" placeholder="Enter text 2 text" />
+                                            <input class="form-control" id="website" name="text2_status" placeholder="Enter text 2 text" value="<?= $configuration->text2_text ?>" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3 ">
                                             <label for="website">Logo</label>
@@ -71,19 +71,19 @@
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Phone</label>
-                                            <input class="form-control" id="picker2" placeholder="Enter phone" name="phone" />
+                                            <input class="form-control" id="picker2" placeholder="Enter phone" name="phone" value="<?= $configuration->phone ?>" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Email</label>
-                                            <input class="form-control" id="picker2" placeholder="Enter email" name="email" />
+                                            <input class="form-control" id="picker2" placeholder="Enter email" name="email" value="<?= $configuration->email ?>" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Working Day</label>
-                                            <input class="form-control" id="picker2" placeholder="Enter working days" name="working_day" />
+                                            <input class="form-control" id="picker2" placeholder="Enter working days" name="working_day" value="<?= $configuration->working_day ?>" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Copy Right</label>
-                                            <input class="form-control" id="picker2" placeholder="Enter copyright" name="copyright" />
+                                            <input class="form-control" id="picker2" placeholder="Enter copyright" name="copyright" value="<?= $configuration->copyright ?>" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker1">Status</label>
@@ -94,11 +94,11 @@
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Address</label>
-                                            <textarea class="form-control" id="picker2" placeholder="Enter address" name="address"></textarea>
+                                            <textarea class="form-control" id="picker2" placeholder="Enter address" name="address"><?= $configuration->address ?></textarea>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Description</label>
-                                            <textarea class="form-control" id="picker2" placeholder="Enter description" name="description"></textarea>
+                                            <textarea class="form-control" id="picker2" placeholder="Enter description" name="description"><?= $configuration->description ?></textarea>
                                         </div>
                                         <div class="col-md-12">
                                             <button class="btn btn-primary">Submit</button>

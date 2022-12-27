@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Blog - <?= $configuration->title ?></title>
-    <meta name="keywords" content="<?= $configuration->keywords ?>" />
+    <meta name="keywords" content="<?= $configuration->keyword ?>" />
     <meta name="description" content="<?= $configuration->description ?>">
     <meta name="author" content="<?= $configuration->author ?>">
 

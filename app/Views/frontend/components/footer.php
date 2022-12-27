@@ -16,7 +16,7 @@
                                 <span class="contact-info-label">Email:</span> <a href="mailto:<?= $configuration->email ?>"><?= $configuration->email ?></a>
                             </li>
                             <li>
-                                <span class="contact-info-label">Working Days/Hours:</span> <?= $configuration->working_days ?>
+                                <span class="contact-info-label">Working Days/Hours:</span> <?= $configuration->working_day ?>
                             </li>
                         </ul>
                         <div class="social-icons">
