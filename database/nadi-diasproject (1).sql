@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2022 at 06:00 PM
+-- Generation Time: Dec 28, 2022 at 12:09 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -155,7 +155,7 @@ CREATE TABLE `configuration` (
   `creator_id` varchar(36) DEFAULT NULL,
   `modifier_id` varchar(36) DEFAULT NULL,
   `title` varchar(100) DEFAULT NULL,
-  `keywords` text DEFAULT NULL,
+  `keyword` text DEFAULT NULL,
   `author` varchar(100) DEFAULT NULL,
   `text1_status` tinyint(4) DEFAULT 1,
   `text1_text` varchar(150) DEFAULT NULL,
@@ -165,7 +165,7 @@ CREATE TABLE `configuration` (
   `phone` varchar(36) DEFAULT NULL,
   `address` text DEFAULT NULL,
   `email` text DEFAULT NULL,
-  `working_days` text DEFAULT NULL,
+  `working_day` text DEFAULT NULL,
   `description` text DEFAULT NULL,
   `copyright` varchar(256) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -174,7 +174,7 @@ CREATE TABLE `configuration` (
 -- Dumping data for table `configuration`
 --
 
-INSERT INTO `configuration` (`id`, `status`, `sort`, `created_at`, `modified_at`, `creator_id`, `modifier_id`, `title`, `keywords`, `author`, `text1_status`, `text1_text`, `text2_status`, `text2_text`, `logo`, `phone`, `address`, `email`, `working_days`, `description`, `copyright`) VALUES
+INSERT INTO `configuration` (`id`, `status`, `sort`, `created_at`, `modified_at`, `creator_id`, `modifier_id`, `title`, `keyword`, `author`, `text1_status`, `text1_text`, `text2_status`, `text2_text`, `logo`, `phone`, `address`, `email`, `working_day`, `description`, `copyright`) VALUES
 ('76c26f41-8397-11ed-8270-b0227a7395f6', 1, 1, '2022-12-24 15:26:24', NULL, NULL, NULL, 'Dias Project', 'Dias Project, Ecommerce Website', 'nadi-app', 1, 'Get Up to 40% OFF New-Season Styles MEN WOMEN * Limited time only.', 1, 'FREE RETURNS. STANDARD SHIPPING ORDERS $99+', 'logo.png', '+123 5678 890', '123 Street Name, City, England', 'mail@example.com', 'Mon - Sun / 9:00 AM - 8:00 PM', 'Dias Project, Ecommerce Website', '© Dias Project. 2022. All Rights Reserved');
 
 -- --------------------------------------------------------
@@ -357,7 +357,7 @@ CREATE TABLE `social_media` (
   `modified_at` datetime DEFAULT NULL,
   `creator_id` varchar(36) DEFAULT NULL,
   `modifier_id` varchar(36) DEFAULT NULL,
-  `social_media_name` varchar(256) DEFAULT NULL,
+  `name` varchar(256) DEFAULT NULL,
   `icon` varchar(256) DEFAULT NULL,
   `link` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -366,7 +366,7 @@ CREATE TABLE `social_media` (
 -- Dumping data for table `social_media`
 --
 
-INSERT INTO `social_media` (`id`, `status`, `sort`, `created_at`, `modified_at`, `creator_id`, `modifier_id`, `social_media_name`, `icon`, `link`) VALUES
+INSERT INTO `social_media` (`id`, `status`, `sort`, `created_at`, `modified_at`, `creator_id`, `modifier_id`, `name`, `icon`, `link`) VALUES
 ('950aab9b-83a8-11ed-8270-b0227a7395f6', 1, 1, '2022-12-24 17:31:58', NULL, NULL, NULL, 'facebook', 'social-facebook icon-facebook', '#'),
 ('a8b0182c-83a8-11ed-8270-b0227a7395f6', 1, 2, '2022-12-24 17:32:41', NULL, NULL, NULL, 'twitter', 'social-twitter icon-twitter', '#'),
 ('be0d24fc-83a8-11ed-8270-b0227a7395f6', 1, 3, '2022-12-24 17:33:13', NULL, NULL, NULL, 'instagram', 'social-instagram icon-instagram', '#');
