@@ -60,7 +60,7 @@ $routes->group('extranet', ['filter' => 'auth'], function($routes){
 	$routes->get('banner', 'App\Controllers\Extranet\Bannercontroller::index');
 	$routes->get('blog', 'App\Controllers\Extranet\Blogcontroller::index');
 	$routes->get('brand', 'App\Controllers\Extranet\Brandcontroller::index');
-	$routes->get('exclusive', 'App\Controllers\Extranet\Exlusivecontroller::index');
+	$routes->get('exclusive', 'App\Controllers\Extranet\Exclusivecontroller::index');
 	$routes->get('guarantee', 'App\Controllers\Extranet\Guaranteecontroller::index');
 	$routes->get('product', 'App\Controllers\Extranet\Productcontroller::index');
 	$routes->get('promotion', 'App\Controllers\Extranet\Promotioncontroller::index');

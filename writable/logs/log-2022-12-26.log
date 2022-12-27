@@ -421,3 +421,13 @@ in APPPATH\Views\frontend\components\header.php on line 4.
 12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 19:43:02 --> Invalid file: extranet/exlusive/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('extranet/exlusive/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/exlusive/index', [], true)
+ 3 APPPATH\Controllers\Extranet\Exlusivecontroller.php(9): view('extranet/exlusive/index')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Exlusivecontroller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Exlusivecontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
