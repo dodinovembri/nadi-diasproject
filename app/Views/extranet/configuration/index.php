@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Configuration | Dias Stuff</title>
+    <title>Configuration | Dias Project</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet" />
     <link href="<?= base_url('assets/extranet/css/themes/lite-purple.min.css') ?>" rel="stylesheet" />
     <link href="<?= base_url('assets/extranet/css/plugins/perfect-scrollbar.min.css') ?>" rel="stylesheet" />
@@ -28,7 +28,7 @@
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <form action="<?= base_url('extranet/configuration/update/'.$configuration->id) ?>" method="post">
+                                <form action="<?= base_url('extranet/configuration/update/'.$configuration->id) ?>" method="post" enctype="multipart/form-data">
                                     
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
@@ -42,8 +42,13 @@
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker1">Text 1 Status</label>
                                             <select class="form-control" name="text1_status">
-                                                <option value="1">Active</option>
-                                                <option value="0">Inactive</option>
+                                                <?php if ($configuration->text1_status == 0) { ?>
+                                                    <option value="0">Inactive</option>
+                                                    <option value="1">Active</option>
+                                                <?php } elseif ($configuration->text1_status == 1) { ?>
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Inactive</option>
+                                                <?php } ?>
                                             </select>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
@@ -53,20 +58,30 @@
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker1">Text 2 Status</label>
                                             <select class="form-control" name="text2_status">
-                                                <option value="1">Active</option>
-                                                <option value="0">Inactive</option>
+                                                <?php if ($configuration->text2_status == 0) { ?>
+                                                    <option value="0">Inactive</option>
+                                                    <option value="1">Active</option>
+                                                <?php } elseif ($configuration->text2_status == 1) { ?>
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Inactive</option>
+                                                <?php } ?>
                                             </select>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="website">Text 2 Text</label>
                                             <input class="form-control" id="website" name="text2_text" placeholder="Enter text 2 text" value="<?= $configuration->text2_text ?>" />
                                         </div>
-                                        <div class="col-md-6 form-group mb-3 ">
-                                            <label for="website">Logo</label>
-                                            <div class="custom-file">
-                                                <input class="custom-file-input" id="inputGroupFile01" type="file" name="logo" aria-describedby="inputGroupFileAddon01" />
-                                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                            </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="frontend_logo">Frontend Logo</label>
+                                            <img src="<?= base_url('assets/images/logo/'.$configuration->frontend_logo_name) ?>" height="120" alt="">
+                                            <input class="form-control" id="frontend_logo" type="file" name="frontend_logo" value="<?= $configuration->frontend_logo_name ?>" />
+                                            <sub>.jpg or .png file, size: 785x318 under 10kb</sub>
+                                        </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="extranet_logo">Extranet Logo</label>
+                                            <img src="<?= base_url('assets/images/logo/'.$configuration->extranet_logo_name) ?>" height="120" alt="">
+                                            <input class="form-control" id="extranet_logo" type="file" name="extranet_logo" value="<?= $configuration->extranet_logo_name ?>" />
+                                            <sub>.jpg or .png file, size: 318x318 under 25kb</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Phone</label>
@@ -83,13 +98,6 @@
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Copy Right</label>
                                             <input class="form-control" id="picker2" placeholder="Enter copyright" name="copyright" value="<?= $configuration->copyright ?>" />
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3">
-                                            <label for="picker1">Status</label>
-                                            <select class="form-control" name="text2_status">
-                                                <option value="1">Active</option>
-                                                <option value="0">Inactive</option>
-                                            </select>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Address</label>

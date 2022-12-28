@@ -1,8 +1,7 @@
 ```sql
 CREATE TABLE `configuration`(
-	`id` varchar(36) NOT NULL,
+	`id` varchar(36) DEFAULT (UUID()) PRIMARY KEY,
 	`status` tinyint NOT NULL,
-	`sort` int NULL,
 	`created_at` datetime NOT NULL,
 	`modified_at` datetime NULL,
 	`creator_id` varchar(36) NULL,
@@ -20,7 +19,6 @@ CREATE TABLE `configuration`(
 	`email` text NULL,
 	`working_day` text NULL,
 	`description` text NULL,
-	`copyright` varchar(256) null,
-	PRIMARY KEY (`id`)
+	`copyright` varchar(256) null
 )
 ```

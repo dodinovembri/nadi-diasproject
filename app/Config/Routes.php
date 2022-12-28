@@ -64,10 +64,10 @@ $routes->group('extranet', ['filter' => 'auth'], function($routes){
 		$routes->get('/', 'App\Controllers\Extranet\Socialmediacontroller::index');
 		$routes->get('create', 'App\Controllers\Extranet\Socialmediacontroller::create');
 		$routes->post('store', 'App\Controllers\Extranet\Socialmediacontroller::store');
-		$routes->get('show', 'App\Controllers\Extranet\Socialmediacontroller::show');
-		$routes->get('edit', 'App\Controllers\Extranet\Socialmediacontroller::edit');
-		$routes->post('update', 'App\Controllers\Extranet\Socialmediacontroller::update');
-		$routes->get('destroy', 'App\Controllers\Extranet\Socialmediacontroller::destroy');
+		$routes->get('show/(:any)', 'App\Controllers\Extranet\Socialmediacontroller::show/$1');
+		$routes->get('edit/(:any)', 'App\Controllers\Extranet\Socialmediacontroller::edit/$1');
+		$routes->post('update/(:any)', 'App\Controllers\Extranet\Socialmediacontroller::update/$1');
+		$routes->get('destroy/(:any)', 'App\Controllers\Extranet\Socialmediacontroller::destroy/$1');
     });
 
 	$routes->group('category', function ($routes) {
@@ -77,7 +77,7 @@ $routes->group('extranet', ['filter' => 'auth'], function($routes){
 		$routes->get('show', 'App\Controllers\Extranet\Categorycontroller::show');
 		$routes->get('edit', 'App\Controllers\Extranet\Categorycontroller::edit');
 		$routes->post('update', 'App\Controllers\Extranet\Categorycontroller::update');
-		$routes->get('destroy', 'App\Controllers\Extranet\Categorycontroller::destroy');
+		$routes->get('destroy/(:any)', 'App\Controllers\Extranet\Categorycontroller::destroy/$1');
     });
 	
 	$routes->group('banner', function ($routes) {

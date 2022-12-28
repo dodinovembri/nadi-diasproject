@@ -1,8 +1,7 @@
 ```sql
 CREATE TABLE `exclusive`(
-	`id` varchar(36) NOT NULL,
+	`id` varchar(36) DEFAULT (UUID()) PRIMARY KEY,
 	`status` tinyint NOT NULL,
-	`sort` int NULL,
 	`created_at` datetime NOT NULL,
 	`modified_at` datetime NULL,
 	`creator_id` varchar(36) NULL,
@@ -16,7 +15,6 @@ CREATE TABLE `exclusive`(
 	`text3` varchar(256) null,
 	`text4` varchar(256) null,
 	`text5` varchar(256) null,
-	`text6` varchar(256) null,
-	PRIMARY KEY (`id`)
+	`text6` varchar(256) null
 )
 ```

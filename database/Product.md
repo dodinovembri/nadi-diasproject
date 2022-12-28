@@ -1,8 +1,7 @@
 ```sql
 CREATE TABLE `product`(
-	`id` varchar(36) NOT NULL,
+	`id` varchar(36) DEFAULT (UUID()) PRIMARY KEY,
 	`status` tinyint NOT NULL,
-	`sort` int NULL,
 	`created_at` datetime NOT NULL,
 	`modified_at` datetime NULL,
 	`creator_id` varchar(36) NULL,
@@ -21,7 +20,6 @@ CREATE TABLE `product`(
 	`image2` varchar(256) null,
 	`image3` varchar(256) null,
 	`is_featured` boolean default 0,
-	`is_new_arrival` boolean default 0,
-	PRIMARY KEY (`id`)
+	`is_new_arrival` boolean default 0
 )
 ```

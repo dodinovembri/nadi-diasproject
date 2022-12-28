@@ -21,8 +21,7 @@
                 <div class="breadcrumb">
                     <h1>Social Media</h1>
                     <ul>
-                        <li><a href="#">UI Kits</a></li>
-                        <li>Datatables</li>
+                        <li><a href="#">Social Media</a></li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
@@ -60,10 +59,10 @@
                                                         } ?>
                                                     </td>
                                                     <td>
-                                                        <a class="text-success mr-2" href="<?= base_url('extranet/social-media/show') ?>">
+                                                        <a class="text-success mr-2" href="<?= base_url('extranet/social-media/show/'.$value->id) ?>">
                                                             <i class="nav-icon i-Eye font-weight-bold"></i>
                                                         </a>
-                                                        <a class="text-success mr-2" href="<?= base_url('extranet/social-media/edit') ?>">
+                                                        <a class="text-success mr-2" href="<?= base_url('extranet/social-media/edit/'.$value->id) ?>">
                                                             <i class="nav-icon i-Pen-2 font-weight-bold"></i>
                                                         </a>
                                                         <a class="text-danger mr-2" href="#">
@@ -75,15 +74,15 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Delete Data</h5>
                                                                 <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere autem consequuntur unde? Dolore, dolor iusto.</p>
+                                                                <p>Are you sure want to delete this data?</p>
                                                             </div>
                                                             <div class="modal-footer">
-                                                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
-                                                                <button class="btn btn-primary ml-2" type="button">Save changes</button>
+                                                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                                                <a href="<?= base_url('extranet/social-media/destroy/'.$value->id) ?>"><button class="btn btn-primary ml-2" type="button">Delete</button></a>
                                                             </div>
                                                         </div>
                                                     </div>

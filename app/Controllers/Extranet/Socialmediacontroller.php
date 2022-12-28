@@ -20,26 +20,51 @@ class Socialmediacontroller extends BaseController
 
     public function store()
     {
-        // 
+        $social_media = new SocialMediaModel();
+        $social_media->insert([
+            'created_at' => date('Y-m-d H:i:s'),
+            'name' => $this->request->getPost('name'),
+            'icon' => $this->request->getPost('icon'),
+            'link' => $this->request->getPost('link'),
+            'status' => $this->request->getPost('status')
+        ]);
+        return redirect()->to(base_url('extranet/social-media'));
     }    
 
-    public function show()
+    public function show($id)
     {
-        return view('extranet/social-media/create');
+        $social_media = new SocialMediaModel();
+        $data['social_media'] = $social_media->where('id', $id)->get()->getFirstRow();
+
+        return view('extranet/social-media/show', $data);
     }    
 
-    public function edit()
+    public function edit($id)
     {
-        return view('extranet/social-media/create');
+        $social_media = new SocialMediaModel();
+        $data['social_media'] = $social_media->where('id', $id)->get()->getFirstRow();
+
+        return view('extranet/social-media/edit', $data);
     }   
     
-    public function update()
+    public function update($id)
     {
-        // 
+        $social_media = new SocialMediaModel();
+        $social_media->update($id, [
+            'modified_at' => date('Y-m-d H:i:s'),
+            'name' => $this->request->getPost('name'),
+            'icon' => $this->request->getPost('icon'),
+            'link' => $this->request->getPost('link'),
+            'status' => $this->request->getPost('status')
+        ]);
+        return redirect()->to(base_url('extranet/social-media'));
     }
 
-    public function destroy()
+    public function destroy($id)
     {
-        // 
+        $social_media = new SocialMediaModel();
+        $social_media->delete($id);
+        return redirect()->to(base_url('extranet/social-media'));
+
     }
 }

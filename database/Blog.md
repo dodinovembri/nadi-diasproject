@@ -1,8 +1,7 @@
 ```sql
 CREATE TABLE `blog`(
-	`id` varchar(36) NOT NULL,
+	`id` varchar(36) DEFAULT (UUID()) PRIMARY KEY,
 	`status` tinyint NOT NULL,
-	`sort` int NULL,
 	`created_at` datetime NOT NULL,
 	`modified_at` datetime NULL,
 	`creator_id` varchar(36) NULL,
@@ -14,7 +13,6 @@ CREATE TABLE `blog`(
 	`author` varchar(256) null,
 	`short_description` text NULL,
 	`description` text null,
-	`tag` text null,
-	PRIMARY KEY (`id`)
+	`tag` text null
 )
 ```
