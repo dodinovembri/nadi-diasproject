@@ -16,7 +16,7 @@ CREATE TABLE `product`(
 	`price` real null,
 	`qty` int(11) null,
 	`discount` real null,
-	`tags` text null,
+	`tag` text null,
 	`image1` varchar(256) null,
 	`image2` varchar(256) null,
 	`image3` varchar(256) null,

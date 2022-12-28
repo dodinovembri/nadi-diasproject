@@ -18,10 +18,9 @@
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Basic</h1>
+                    <h1>Configuration</h1>
                     <ul>
-                        <li><a href="href.html">Form</a></li>
-                        <li>Basic</li>
+                        <li>Configuration</li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
@@ -29,8 +28,8 @@
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <div class="card-title mb-3">Form Inputs</div>
-                                <form>
+                                <form action="<?= base_url('extranet/configuration/update/'.$configuration->id) ?>" method="post">
+                                    
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="firstName1">Title</label>
@@ -60,7 +59,7 @@
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="website">Text 2 Text</label>
-                                            <input class="form-control" id="website" name="text2_status" placeholder="Enter text 2 text" value="<?= $configuration->text2_text ?>" />
+                                            <input class="form-control" id="website" name="text2_text" placeholder="Enter text 2 text" value="<?= $configuration->text2_text ?>" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3 ">
                                             <label for="website">Logo</label>
@@ -100,8 +99,8 @@
                                             <label for="picker2">Description</label>
                                             <textarea class="form-control" id="picker2" placeholder="Enter description" name="description"><?= $configuration->description ?></textarea>
                                         </div>
-                                        <div class="col-md-12">
-                                            <button class="btn btn-primary">Submit</button>
+                                        <div class="col-md-12" style="margin-top: 20px;">
+                                            <button class="btn btn-primary" type="submit">Submit</button>
                                         </div>
                                     </div>
                                 </form>

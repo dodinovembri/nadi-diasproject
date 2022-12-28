@@ -12,7 +12,7 @@ CREATE TABLE `promotion`(
 	`text1` varchar(256) null,
 	`text2` varchar(256) null,
 	`text_button` varchar(256) null,
-	`text_link` varchar(256) null,
+	`button_link` varchar(256) null,
 	PRIMARY KEY (`id`)
 )
 ```

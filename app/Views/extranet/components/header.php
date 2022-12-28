@@ -1,6 +1,6 @@
 <div class="main-header">
     <div class="logo">
-        <img src="<?= base_url('assets/images/logo.png') ?>" alt="">
+        <a href="<?= base_url('extranet') ?>"><img src="<?= base_url('assets/images/ext-logo.png') ?>" alt=""></a>
     </div>
     <div class="menu-toggle">
         <div></div>

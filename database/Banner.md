@@ -11,7 +11,7 @@ CREATE TABLE `banner`(
 	`text1` varchar(400) null,
 	`text2` varchar(400) null,
 	`text_button` varchar(256) null,
-	`link` varchar(400) null,
+	`button_link` varchar(400) null,
 	PRIMARY KEY (`id`)
 )
 ```

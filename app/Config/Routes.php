@@ -57,7 +57,7 @@ $routes->group('extranet', ['filter' => 'auth'], function($routes){
 
 	$routes->group('configuration', function ($routes) {
 		$routes->get('/', 'App\Controllers\Extranet\Configurationcontroller::index');
-		$routes->get('update', 'App\Controllers\Extranet\Configurationcontroller::index');
+		$routes->post('update/(:any)', 'App\Controllers\Extranet\Configurationcontroller::update/$1');
     });
 
 	$routes->group('social-media', function ($routes) {

@@ -23934,7 +23934,7 @@ div.tab-border {
   min-height: 100vh;
   background-size: cover; }
   .auth-layout-wrap .auth-content {
-    max-width: 660px;
+    max-width: 330px;
     margin: auto; }
 
 .auth-right {
@@ -23950,7 +23950,7 @@ div.tab-border {
 
 @media (min-width: 1024px) {
   .auth-layout-wrap .auth-content {
-    min-width: 660px; } }
+    min-width: 330px; } }
 
 @media (max-width: 767px) {
   .auth-layout-wrap .auth-content {

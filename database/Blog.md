@@ -14,7 +14,7 @@ CREATE TABLE `blog`(
 	`author` varchar(256) null,
 	`short_description` text NULL,
 	`description` text null,
-	`tags` text null,
+	`tag` text null,
 	PRIMARY KEY (`id`)
 )
 ```

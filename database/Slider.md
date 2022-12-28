@@ -14,7 +14,7 @@ CREATE TABLE `slider`(
 	`text4` varchar(256) null,
 	`text5` varchar(256) null,
 	`text_button` varchar(256) null,
-	`text_link` varchar(256) null,
+	`button_link` varchar(256) null,
 	PRIMARY KEY (`id`)
 )
 ```

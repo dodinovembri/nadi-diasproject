@@ -57,7 +57,7 @@
                                     <span><?= $value->text4 ?></span>
                                     <b class="coupon-sale-text text-white bg-secondary align-middle"><?= $value->text5 ?></b>
                                 </h5>
-                                <a href="<?= $value->text_link ?>" class="btn btn-dark btn-lg"><?= $value->text_button ?></a>
+                                <a href="<?= $value->button_link ?>" class="btn btn-dark btn-lg"><?= $value->text_button ?></a>
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                                 <div class="banner-layer">
                                     <h3 class="m-b-2"><?= $value->text1 ?></h3>
                                     <h4 class="m-b-3 text-primary"><sup class="text-dark"><?= $value->text2 ?></h4>
-                                    <a href="<?= $value->text_link ?>" class="btn btn-sm btn-dark"><?= $value->text_button ?></a>
+                                    <a href="<?= $value->button_link ?>" class="btn btn-sm btn-dark"><?= $value->text_button ?></a>
                                 </div>
                             </div>
                         <?php } ?>
@@ -116,7 +116,7 @@
                                     <?php } ?>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-list"><?= $value->category_name ?></div>
+                                    <div class="category-list"><?= $value->name ?></div>
                                     <h3 class="product-title">
                                         <a href="product"><?= $value->name ?></a>
                                     </h3>
@@ -159,7 +159,7 @@
                                     </div>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-list"><?= $value->category_name ?></div>
+                                    <div class="category-list"><?= $value->name ?></div>
                                     <h3 class="product-title">
                                         <a href="product"><?= $value->name ?></a>
                                     </h3>
@@ -194,7 +194,7 @@
                                     </h2>
                                 </div>
                                 <div class="col-md-3 col-sm-4 text-center text-sm-right">
-                                    <a class="btn btn-light btn-white btn-lg" href="<?= $banner->link ?>"><?= $banner->text_button ?></a>
+                                    <a class="btn btn-light btn-white btn-lg" href="<?= $banner->button_link ?>"><?= $banner->text_button ?></a>
                                 </div>
                             </div>
                         </div>
@@ -204,14 +204,14 @@
 
                     <!-- Categories -->
                     <div class="categories-slider owl-carousel owl-theme show-nav-hover nav-outer">
-                        <?php foreach ($categories as $key => $value) { ?>
+                        <?php foreach ($product_categories as $key => $value) { ?>
                             <div class="product-category appear-animate" data-animation-name="fadeInUpShorter">
                                 <a href="category">
                                     <figure>
                                         <img src="assets/images/categories/<?= $value->image ?>" alt="category" width="280" height="240" />
                                     </figure>
                                     <div class="category-content">
-                                        <h3><?= $value->category_name ?></h3>
+                                        <h3><?= $value->name ?></h3>
                                         <!-- <span><mark class="count">3</mark> products</span> -->
                                     </div>
                                 </a>
@@ -252,7 +252,7 @@
                                 <h2 class="mb-md-0 text-white"><?= $exclusive->text1 ?><br><?= $exclusive->text2 ?></h2>
                             </div>
                             <div class="col-md-4 col-xl-3 pb-4 pb-md-0 appear-animate" data-animation-name="fadeIn" data-animation-delay="300">
-                                <a href="<?= $exclusive->text_link ?>" class="btn btn-dark btn-black ls-10"><?= $exclusive->text_button ?></a>
+                                <a href="<?= $exclusive->button_link ?>" class="btn btn-dark btn-black ls-10"><?= $exclusive->text_button ?></a>
                             </div>
                             <div class="col-md-4 mr-xl-auto text-md-left appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="600">
                                 <h4 class="mb-1 mt-1 font1 coupon-sale-text p-0 d-block ls-n-10 text-transform-none">

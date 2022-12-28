@@ -28,7 +28,7 @@
                 <span class="separator"></span>
 
                 <div class="social-icons">
-                    <?php foreach ($social_media as $key => $value) { ?>
+                    <?php foreach ($social_medias as $key => $value) { ?>
                         <a href="<?= $value->link ?>" class="social-icon <?= $value->icon ?>" target="_blank"></a>
                     <?php } ?>
                 </div>
@@ -61,8 +61,8 @@
                             <div class="select-custom">
                                 <select id="cat" name="cat">
                                     <option value="">All Categories</option>
-                                    <?php foreach ($categories as $key => $value) { ?>
-                                        <option value="<?= $value->id ?>"><?= $value->category_name ?></option>
+                                    <?php foreach ($product_categories as $key => $value) { ?>
+                                        <option value="<?= $value->id ?>"><?= $value->name ?></option>
                                     <?php } ?>
                                 </select>
                             </div>
@@ -205,8 +205,8 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <ul class="submenu">
-                                        <?php foreach ($categories as $key => $value) { ?>
-                                            <li><a href="category/<?= $value->id ?>"><?= $value->category_name ?></a></li>
+                                        <?php foreach ($product_categories as $key => $value) { ?>
+                                            <li><a href="category/<?= $value->id ?>"><?= $value->name ?></a></li>
                                         <?php } ?>
                                     </ul>
                                 </div>
