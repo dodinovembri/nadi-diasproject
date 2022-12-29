@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 28, 2022 at 05:43 PM
+-- Generation Time: Dec 29, 2022 at 02:59 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `banner` (
-  `id` varchar(36) NOT NULL,
+  `id` varchar(36) NOT NULL DEFAULT uuid(),
   `status` tinyint(4) NOT NULL,
   `created_at` datetime NOT NULL,
   `modified_at` datetime DEFAULT NULL,
@@ -55,7 +55,7 @@ INSERT INTO `banner` (`id`, `status`, `created_at`, `modified_at`, `creator_id`,
 --
 
 CREATE TABLE `blog` (
-  `id` varchar(36) NOT NULL,
+  `id` varchar(36) NOT NULL DEFAULT uuid(),
   `status` tinyint(4) NOT NULL,
   `created_at` datetime NOT NULL,
   `modified_at` datetime DEFAULT NULL,
@@ -85,7 +85,7 @@ INSERT INTO `blog` (`id`, `status`, `created_at`, `modified_at`, `creator_id`, `
 --
 
 CREATE TABLE `brand` (
-  `id` varchar(36) NOT NULL,
+  `id` varchar(36) NOT NULL DEFAULT uuid(),
   `status` tinyint(4) NOT NULL,
   `created_at` datetime NOT NULL,
   `modified_at` datetime DEFAULT NULL,
@@ -114,7 +114,7 @@ INSERT INTO `brand` (`id`, `status`, `created_at`, `modified_at`, `creator_id`, 
 --
 
 CREATE TABLE `configuration` (
-  `id` varchar(36) NOT NULL,
+  `id` varchar(36) NOT NULL DEFAULT uuid(),
   `status` tinyint(4) NOT NULL,
   `created_at` datetime NOT NULL,
   `modified_at` datetime DEFAULT NULL,
@@ -151,7 +151,7 @@ INSERT INTO `configuration` (`id`, `status`, `created_at`, `modified_at`, `creat
 --
 
 CREATE TABLE `exclusive` (
-  `id` varchar(36) NOT NULL,
+  `id` varchar(36) NOT NULL DEFAULT uuid(),
   `status` tinyint(4) NOT NULL,
   `created_at` datetime NOT NULL,
   `modified_at` datetime DEFAULT NULL,
@@ -183,7 +183,7 @@ INSERT INTO `exclusive` (`id`, `status`, `created_at`, `modified_at`, `creator_i
 --
 
 CREATE TABLE `guarantee` (
-  `id` varchar(36) NOT NULL,
+  `id` varchar(36) NOT NULL DEFAULT uuid(),
   `status` tinyint(4) NOT NULL,
   `created_at` datetime NOT NULL,
   `modified_at` datetime DEFAULT NULL,
@@ -210,7 +210,7 @@ INSERT INTO `guarantee` (`id`, `status`, `created_at`, `modified_at`, `creator_i
 --
 
 CREATE TABLE `product` (
-  `id` varchar(36) NOT NULL,
+  `id` varchar(36) NOT NULL DEFAULT uuid(),
   `status` tinyint(4) NOT NULL,
   `created_at` datetime NOT NULL,
   `modified_at` datetime DEFAULT NULL,
@@ -229,8 +229,8 @@ CREATE TABLE `product` (
   `image1` varchar(256) DEFAULT NULL,
   `image2` varchar(256) DEFAULT NULL,
   `image3` varchar(256) DEFAULT NULL,
-  `is_featured` tinyint(1) NOT NULL DEFAULT 0,
-  `is_new_arrival` tinyint(1) NOT NULL DEFAULT 0
+  `is_featured` tinyint(1) DEFAULT 0,
+  `is_new_arrival` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -251,7 +251,7 @@ INSERT INTO `product` (`id`, `status`, `created_at`, `modified_at`, `creator_id`
 --
 
 CREATE TABLE `product_category` (
-  `id` varchar(36) NOT NULL,
+  `id` varchar(36) NOT NULL DEFAULT uuid(),
   `status` tinyint(4) NOT NULL,
   `created_at` datetime NOT NULL,
   `modified_at` datetime DEFAULT NULL,
@@ -280,7 +280,7 @@ INSERT INTO `product_category` (`id`, `status`, `created_at`, `modified_at`, `cr
 --
 
 CREATE TABLE `promotion` (
-  `id` varchar(36) NOT NULL,
+  `id` varchar(36) NOT NULL DEFAULT uuid(),
   `status` tinyint(4) NOT NULL,
   `created_at` datetime NOT NULL,
   `modified_at` datetime DEFAULT NULL,
@@ -310,7 +310,7 @@ INSERT INTO `promotion` (`id`, `status`, `created_at`, `modified_at`, `creator_i
 --
 
 CREATE TABLE `slider` (
-  `id` varchar(36) NOT NULL,
+  `id` varchar(36) NOT NULL DEFAULT uuid(),
   `status` tinyint(4) NOT NULL,
   `created_at` datetime NOT NULL,
   `modified_at` datetime DEFAULT NULL,
@@ -368,7 +368,7 @@ INSERT INTO `social_media` (`id`, `status`, `created_at`, `modified_at`, `creato
 --
 
 CREATE TABLE `support` (
-  `id` varchar(36) NOT NULL,
+  `id` varchar(36) NOT NULL DEFAULT uuid(),
   `status` tinyint(4) NOT NULL,
   `created_at` datetime NOT NULL,
   `modified_at` datetime DEFAULT NULL,
@@ -397,7 +397,7 @@ INSERT INTO `support` (`id`, `status`, `created_at`, `modified_at`, `creator_id`
 --
 
 CREATE TABLE `user` (
-  `id` varchar(36) NOT NULL,
+  `id` varchar(36) NOT NULL DEFAULT uuid(),
   `status` tinyint(4) NOT NULL,
   `created_at` datetime NOT NULL,
   `modified_at` datetime DEFAULT NULL,

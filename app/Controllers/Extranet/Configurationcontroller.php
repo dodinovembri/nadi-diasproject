@@ -1,8 +1,6 @@
 <?php
 
 namespace App\Controllers\Extranet;
-use CodeIgniter\Files\File;
-
 use App\Models\ConfigurationModel;
 
 class Configurationcontroller extends BaseController
