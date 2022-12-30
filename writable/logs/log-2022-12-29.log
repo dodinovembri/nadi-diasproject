@@ -1,0 +1,31 @@
+ERROR - 2022-12-29 08:43:53 --> mysqli_sql_exception: Column 'status' cannot be null in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `so...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `so...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `so...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `so...', Array, false)
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\BaseModel.php(750): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Model.php(695): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Cartcontroller.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Cartcontroller->store('7936525b-83ab-1...')
+#9 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Cartcontroller))
+#10 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#13 {main}
+CRITICAL - 2022-12-29 08:43:53 --> Column 'status' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `social_media` (`created_at`, `name`, `icon`, `link`, `status`) VALUES (\'2022-12-29 08:43:53\', NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `social_media` (`created_at`, `name`, `icon`, `link`, `status`) VALUES (\'2022-12-29 08:43:53\', NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `social_media` (`created_at`, `name`, `icon`, `link`, `status`) VALUES (\'2022-12-29 08:43:53\', NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `social_media` (`created_at`, `name`, `icon`, `link`, `status`) VALUES (:created_at:, :name:, :icon:, :link:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(303): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(695): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Frontend\Cartcontroller.php(31): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Cartcontroller->store('7936525b-83ab-11ed-8270-b0227a7395f6')
+10 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Cartcontroller))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

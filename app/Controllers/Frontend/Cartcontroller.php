@@ -4,6 +4,7 @@ namespace App\Controllers\Frontend;
 use App\Models\ConfigurationModel;
 use App\Models\SocialMediaModel;
 use App\Models\ProductCategoryModel;
+use App\Models\CartModel;
 
 class Cartcontroller extends BaseController
 {
@@ -18,5 +19,17 @@ class Cartcontroller extends BaseController
         $data['product_categories'] = $product_category->get()->getResult();
         
         return view('frontend/cart/index', $data);
+    }
+
+    public function store($id)
+    {
+        $cart = new CartModel();
+        $cart->insert([
+            'created_at' => date('Y-m-d H:i:s'),
+            'user_id' => $this->request->getPost('name'),
+            'product_id' => $id,
+            'qty' => 1
+        ]);
+        return redirect()->to(base_url('extranet/social-media'));        
     }
 }

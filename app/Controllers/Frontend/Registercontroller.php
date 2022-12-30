@@ -17,7 +17,7 @@ class Authcontroller extends BaseController
         $data['social_medias'] = $social_media->get()->getResult();
         $data['product_categories'] = $product_category->get()->getResult();
         
-        return view('frontend/auth/login', $data);
+        return view('frontend/auth/register', $data);
     }
 
     public function forgot()

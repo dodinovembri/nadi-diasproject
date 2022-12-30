@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Login - <?= $configuration->title ?></title>
+	<title>Register - <?= $configuration->title ?></title>
 	<meta name="keywords" content="<?= $configuration->keyword ?>" />
 	<meta name="description" content="<?= $configuration->description ?>">
 	<meta name="author" content="<?= $configuration->author ?>">
@@ -46,12 +46,13 @@
 				</div>
 			</div>
 		<?php } ?>
+
 		<?= $this->include('frontend/components/header') ?>
 
 		<main class="main">
 			<div class="page-header">
 				<div class="container d-flex flex-column align-items-center">
-					<h1>Login</h1>
+					<h1>Register</h1>
 				</div>
 			</div>
 
@@ -60,31 +61,24 @@
 					<div class="col-lg-10 mx-auto">
 						<div class="row">
 							<div class="col-md-12">
-								<form action="#">
-									<label for="login-email">
-										Username or email address
+								<form action="<?= base_url('register/store') ?>" method="post">
+									<label for="register-email">
+										Email Address
 										<span class="required">*</span>
 									</label>
-									<input type="email" class="form-input form-wide" id="login-email" required />
+									<input type="email" name="email" class="form-input form-wide" id="register-email" required />
 
-									<label for="login-password">
+									<label for="register-password">
 										Password
 										<span class="required">*</span>
 									</label>
-									<input type="password" class="form-input form-wide" id="login-password" required />
+									<input type="password" name="password" class="form-input form-wide" id="register-password" required />
 
-									<div class="form-footer">
-										<div class="custom-control custom-checkbox mb-0">
-											<input type="checkbox" class="custom-control-input" id="lost-password" />
-											<label class="custom-control-label mb-0" for="lost-password">Remember
-												me</label>
-										</div>
-
-										<a href="<?= base_url('register') ?>" class="forget-password text-dark form-footer-right">Register</a>
+									<div class="form-footer mb-2">
+										<button type="submit" class="btn btn-dark btn-md w-100 mr-0">
+											Register
+										</button>
 									</div>
-									<button type="submit" class="btn btn-dark btn-md w-100">
-										LOGIN
-									</button>
 								</form>
 							</div>
 						</div>

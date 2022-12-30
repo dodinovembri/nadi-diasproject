@@ -131,9 +131,9 @@
                                         <span class="product-price"><?= $value->price - $value->discount ?></span>
                                     </div>
                                     <div class="product-action">
-                                        <a href="wishlist/store/<?= $value->id ?>" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a>
-                                        <a href="cart/store/<?= $value->id ?>" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i><span>SELECT OPTIONS</span></a>
-                                        <a href="product/details/<?= $value->id ?>" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a>
+                                        <!-- <a href="" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a> -->
+                                        <a href="<?= base_url('cart/store/'.$value->id) ?>" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i><span>ADD TO CART</span></a>
+                                        <!-- <a href="" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a> -->
                                     </div>
                                 </div>
                             </div>
@@ -174,9 +174,9 @@
                                         <span class="product-price"><?= $value->price - $value->discount ?></span>
                                     </div>
                                     <div class="product-action">
-                                        <a href="wishlist/store/<?= $value->id ?>" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a>
+                                        <!-- <a href="" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a> -->
                                         <a href="cart/store/<?= $value->id ?>" class="btn-icon btn-add-cart product-type-simple"><i class="icon-shopping-cart"></i><span>ADD TO CART</span></a>
-                                        <a href="product/details/<?= $value->id ?>" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a>
+                                        <!-- <a href="" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a> -->
                                     </div>
                                 </div>
                             </div>

@@ -37,10 +37,16 @@ $routes->set404Override();
 $routes->get('/', [\App\Controllers\Frontend\Homecontroller::class, 'index']);
 $routes->get('about', [\App\Controllers\Frontend\Aboutcontroller::class, 'index']);
 $routes->get('account', [\App\Controllers\Frontend\Accountcontroller::class, 'index']);
+$routes->get('register', [\App\Controllers\Frontend\Registercontroller::class, 'register']);
+$routes->post('register/store', [\App\Controllers\Frontend\Registercontroller::class, 'store']);
+
 $routes->get('login', [\App\Controllers\Frontend\Authcontroller::class, 'login']);
 $routes->get('forgot', [\App\Controllers\Frontend\Authcontroller::class, 'forgot']);
 $routes->get('blog', [\App\Controllers\Frontend\Blogcontroller::class, 'index']);
+
 $routes->get('cart', [\App\Controllers\Frontend\Cartcontroller::class, 'index']);
+$routes->get('cart/store/(:any)', [\App\Controllers\Frontend\Cartcontroller::class, 'store']);
+
 $routes->get('checkout', [\App\Controllers\Frontend\Checkoutcontroller::class, 'index']);
 $routes->get('contact', [\App\Controllers\Frontend\Contactcontroller::class, 'index']);
 $routes->get('category', [\App\Controllers\Frontend\Categorycontroller::class, 'index']);
