@@ -4,10 +4,11 @@ namespace App\Controllers\Frontend;
 use App\Models\ConfigurationModel;
 use App\Models\SocialMediaModel;
 use App\Models\ProductCategoryModel;
+use App\Models\UserModel;
 
-class Authcontroller extends BaseController
+class Registercontroller extends BaseController
 {
-    public function login()
+    public function index()
     {
         $configuration = new ConfigurationModel();
         $social_media = new SocialMediaModel();
@@ -20,29 +21,16 @@ class Authcontroller extends BaseController
         return view('frontend/auth/register', $data);
     }
 
-    public function forgot()
+    public function store()
     {
-        $configuration = new ConfigurationModel();
-        $social_media = new SocialMediaModel();
-        $product_category = new ProductCategoryModel();
-        
-        $data['configuration'] = $configuration->get()->getFirstRow();
-        $data['social_medias'] = $social_media->get()->getResult();
-        $data['product_categories'] = $product_category->get()->getResult();
-        
-        return view('frontend/auth/forgot', $data);
-    }
-
-    public function register()
-    {
-        $configuration = new ConfigurationModel();
-        $social_media = new SocialMediaModel();
-        $product_category = new ProductCategoryModel();
-        
-        $data['configuration'] = $configuration->get()->getFirstRow();
-        $data['social_medias'] = $social_media->get()->getResult();
-        $data['product_categories'] = $product_category->get()->getResult();
-        
-        return view('frontend/auth/register', $data);
+        $user = new UserModel();
+        $user->insert([
+            'created_at' => date('Y-m-d H:i:s'),
+            'name' => $this->request->getPost('name'),
+            'email' => $this->request->getPost('email'),
+            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+            'role_code' => 1
+        ]);
+        return redirect()->to(base_url('/'));  
     }
 }

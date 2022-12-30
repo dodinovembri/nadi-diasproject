@@ -37,10 +37,15 @@ $routes->set404Override();
 $routes->get('/', [\App\Controllers\Frontend\Homecontroller::class, 'index']);
 $routes->get('about', [\App\Controllers\Frontend\Aboutcontroller::class, 'index']);
 $routes->get('account', [\App\Controllers\Frontend\Accountcontroller::class, 'index']);
-$routes->get('register', [\App\Controllers\Frontend\Registercontroller::class, 'register']);
+
+// register
+$routes->get('register', [\App\Controllers\Frontend\Registercontroller::class, 'index']);
 $routes->post('register/store', [\App\Controllers\Frontend\Registercontroller::class, 'store']);
 
-$routes->get('login', [\App\Controllers\Frontend\Authcontroller::class, 'login']);
+// login
+$routes->get('login', [\App\Controllers\Frontend\Authcontroller::class, 'index']);
+$routes->post('login/auth', [\App\Controllers\Frontend\Authcontroller::class, 'auth']);
+
 $routes->get('forgot', [\App\Controllers\Frontend\Authcontroller::class, 'forgot']);
 $routes->get('blog', [\App\Controllers\Frontend\Blogcontroller::class, 'index']);
 

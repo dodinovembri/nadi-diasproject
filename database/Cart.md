@@ -1,7 +1,7 @@
 ```sql
 CREATE TABLE `cart`(
 	`id` varchar(36) DEFAULT (UUID()) PRIMARY KEY,
-	`status` tinyint NOT NULL,
+	`status` tinyint default 1,
 	`created_at` datetime NOT NULL,
 	`modified_at` datetime NULL,
 	`creator_id` varchar(36) NULL,

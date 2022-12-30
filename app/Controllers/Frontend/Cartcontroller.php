@@ -26,10 +26,10 @@ class Cartcontroller extends BaseController
         $cart = new CartModel();
         $cart->insert([
             'created_at' => date('Y-m-d H:i:s'),
-            'user_id' => $this->request->getPost('name'),
+            'user_id' => session()->get('id'),
             'product_id' => $id,
             'qty' => 1
         ]);
-        return redirect()->to(base_url('extranet/social-media'));        
+        return redirect()->to(base_url('/'));        
     }
 }

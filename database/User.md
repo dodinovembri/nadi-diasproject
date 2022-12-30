@@ -9,6 +9,6 @@ CREATE TABLE `user`(
 	`name` varchar(256) null,
 	`email` varchar(256) null,
 	`password` varchar(256) null,
-	`role_code` tinyint NOT NULL
+	`role_code` tinyint NULL
 )
 ```

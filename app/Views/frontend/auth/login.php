@@ -60,18 +60,18 @@
 					<div class="col-lg-10 mx-auto">
 						<div class="row">
 							<div class="col-md-12">
-								<form action="#">
+								<form action="<?= base_url('login/auth') ?>" method="post">
 									<label for="login-email">
 										Username or email address
 										<span class="required">*</span>
 									</label>
-									<input type="email" class="form-input form-wide" id="login-email" required />
+									<input type="email" name="email" class="form-input form-wide" id="login-email" required />
 
 									<label for="login-password">
 										Password
 										<span class="required">*</span>
 									</label>
-									<input type="password" class="form-input form-wide" id="login-password" required />
+									<input type="password" name="password" class="form-input form-wide" id="login-password" required />
 
 									<div class="form-footer">
 										<div class="custom-control custom-checkbox mb-0">
