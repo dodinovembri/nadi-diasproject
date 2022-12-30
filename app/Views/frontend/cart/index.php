@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Cart - <?= $configuration->title ?></title>
-    <meta name="keywords" content="<?= $configuration->keyword ?>" />
-    <meta name="description" content="<?= $configuration->description ?>">
-    <meta name="author" content="<?= $configuration->author ?>">
+	<title>Cart - <?= $configuration->title ?></title>
+	<meta name="keywords" content="<?= $configuration->keyword ?>" />
+	<meta name="description" content="<?= $configuration->description ?>">
+	<meta name="author" content="<?= $configuration->author ?>">
 	<!-- Favicon -->
 	<link rel="icon" type="image/x-icon" href="<?= base_url('assets/images/icons/favicon.png') ?>">
 	<script>
@@ -35,16 +36,14 @@
 
 <body>
 	<div class="page-wrapper">
-		<div class="top-notice bg-primary text-white">
-			<div class="container text-center">
-				<h5 class="d-inline-block">Get Up to <b>40% OFF</b> New-Season Styles</h5>
-				<a href="category.html" class="category">MEN</a>
-				<a href="category.html" class="category ml-2 mr-3">WOMEN</a>
-				<small>* Limited time only.</small>
-				<button title="Close (Esc)" type="button" class="mfp-close">×</button>
-			</div><!-- End .container -->
-		</div><!-- End .top-notice -->
-
+		<?php if ($configuration->text1_status == 1) { ?>
+			<div class="top-notice bg-primary text-white">
+				<div class="container text-center">
+					<h5 class="d-inline-block"><?= $configuration->text1_text ?></h5>
+					<button title="Close (Esc)" type="button" class="mfp-close">×</button>
+				</div>
+			</div>
+		<?php } ?>
 		<?= $this->include('frontend/components/header') ?>
 
 		<main class="main">
@@ -75,77 +74,31 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr class="product-row">
-										<td>
-											<figure class="product-image-container">
-												<a href="product.html" class="product-image">
-													<img src="assets/images/products/product-4.jpg" alt="product">
-												</a>
-
-												<a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
-											</figure>
-										</td>
-										<td class="product-col">
-											<h5 class="product-title">
-												<a href="product.html">Men Watch</a>
-											</h5>
-										</td>
-										<td>$17.90</td>
-										<td>
-											<div class="product-single-qty">
-												<input class="horizontal-quantity form-control" type="text">
-											</div><!-- End .product-single-qty -->
-										</td>
-										<td class="text-right"><span class="subtotal-price">$17.90</span></td>
-									</tr>
-
-									<tr class="product-row">
-										<td>
-											<figure class="product-image-container">
-												<a href="product.html" class="product-image">
-													<img src="assets/images/products/product-3.jpg" alt="product">
-												</a>
-
-												<a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
-											</figure>
-										</td>
-										<td class="product-col">
-											<h5 class="product-title">
-												<a href="product.html">Men Watch</a>
-											</h5>
-										</td>
-										<td>$17.90</td>
-										<td>
-											<div class="product-single-qty">
-												<input class="horizontal-quantity form-control" type="text">
-											</div><!-- End .product-single-qty -->
-										</td>
-										<td class="text-right"><span class="subtotal-price">$17.90</span></td>
-									</tr>
-
-									<tr class="product-row">
-										<td>
-											<figure class="product-image-container">
-												<a href="product.html" class="product-image">
-													<img src="assets/images/products/product-6.jpg" alt="product">
-												</a>
-
-												<a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
-											</figure>
-										</td>
-										<td class="product-col">
-											<h5 class="product-title">
-												<a href="product.html">Men Black Gentle Belt</a>
-											</h5>
-										</td>
-										<td>$17.90</td>
-										<td>
-											<div class="product-single-qty">
-												<input class="horizontal-quantity form-control" type="text">
-											</div><!-- End .product-single-qty -->
-										</td>
-										<td class="text-right"><span class="subtotal-price">$17.90</span></td>
-									</tr>
+									<?php foreach ($cart_products as $key => $value) { ?>
+										<tr class="product-row">
+											<td>
+												<figure class="product-image-container">
+													<a href="product.html" class="product-image">
+														<img src="assets/images/products/product-4.jpg" alt="product">
+													</a>
+	
+													<a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+												</figure>
+											</td>
+											<td class="product-col">
+												<h5 class="product-title">
+													<a href="product.html">Men Watch</a>
+												</h5>
+											</td>
+											<td>$17.90</td>
+											<td>
+												<div class="product-single-qty">
+													<input class="horizontal-quantity form-control" type="text">
+												</div><!-- End .product-single-qty -->
+											</td>
+											<td class="text-right"><span class="subtotal-price">$17.90</span></td>
+										</tr>
+									<?php } ?>
 								</tbody>
 
 
@@ -158,8 +111,7 @@
 														<div class="input-group">
 															<input type="text" class="form-control form-control-sm" placeholder="Coupon Code" required>
 															<div class="input-group-append">
-																<button class="btn btn-sm" type="submit">Apply
-																	Coupon</button>
+																<button class="btn btn-sm" type="submit">Apply Coupon</button>
 															</div>
 														</div><!-- End .input-group -->
 													</form>
@@ -282,4 +234,5 @@
 	<!-- Main JS File -->
 	<script src="<?= base_url('assets/js/main.min.js') ?>"></script>
 </body>
+
 </html>
