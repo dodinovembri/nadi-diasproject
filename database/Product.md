@@ -6,7 +6,7 @@ CREATE TABLE `product`(
 	`modified_at` datetime NULL,
 	`creator_id` varchar(36) NULL,
 	`modifier_id` varchar(36) NULL,
-	`category_id` varchar(36) NULL,
+	`product_category_id` varchar(36) NULL,
 	`sku` varchar(256) null,
 	`name` varchar(400) null,
 	`rating` real null,

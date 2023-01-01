@@ -42,6 +42,7 @@ class Bannercontroller extends BaseController
             ]);
         }
 
-        return redirect()->to(base_url('extranet/banner/index'));
+        session()->setFlashdata('success', 'Success update data');
+        return redirect()->to(base_url('extranet/banner'));
     }
 }

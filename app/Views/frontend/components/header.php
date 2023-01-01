@@ -11,14 +11,14 @@
                     <div class="header-dropdown dropdown-expanded d-none d-lg-block">
                         <div class="header-menu">
                             <ul>
-                                <li><a href="about">About Us</a></li>
-                                <li><a href="blog">Blog</a></li>
+                                <li><a href="<?= base_url('about') ?>">About Us</a></li>
+                                <!-- <li><a href="">Blog</a></li> -->
                                 <?php if (session()->get('logged_in') == TRUE) { ?>
                                     <!-- <li><a href="wishlist">My Wishlist</a></li> -->
-                                    <li><a href="cart">Cart</a></li>
-                                    <li><a href="account">My Account</a></li>
+                                    <li><a href="<?= base_url('cart') ?>">Cart</a></li>
+                                    <li><a href="<?= base_url('account') ?>">My Account</a></li>
                                 <?php } else { ?>
-                                    <li><a href="login">Log In</a></li>
+                                    <li><a href="<?= base_url('login') ?>">Log In</a></li>
                                 <?php } ?>
                             </ul>
                         </div>
@@ -35,7 +35,7 @@
             </div>
         </div>
     <?php } ?>
-    <?php if ($configuration->header_top_status == 1) { ?>
+    <?php if ($configuration->header_middle_status == 1) { ?>
         <div class="header-middle sticky-header" data-sticky-options="{'mobile': true}">
             <div class="container">
                 <div class="header-left col-lg-2 w-auto pl-0">
@@ -78,7 +78,9 @@
                     <div class="dropdown cart-dropdown">
                         <a href="<?= base_url('cart') ?>" title="Cart" class="dropdown-toggle cart-toggle" role="button">
                             <i class="minicart-icon"></i>
-                            <span class="cart-count badge-circle">3</span>
+                            <?php if (session()->get('logged_in') == TRUE) { ?>
+                                <span class="cart-count badge-circle"><?= $count_cart ?></span>
+                            <?php } ?>
                         </a>
                     </div>
                 </div>
@@ -90,35 +92,16 @@
         <div class="container">
             <nav class="main-nav w-100">
                 <ul class="menu">
-                    <li class="active">
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="category">Categories</a>
-                        <div class="megamenu megamenu-1cols">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <ul class="submenu">
-                                        <?php foreach ($product_categories as $key => $value) { ?>
-                                            <li><a href="category/<?= $value->id ?>"><?= $value->name ?></a></li>
-                                        <?php } ?>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="product">Products</a>
-                    </li>
-                    <li><a href="<?= base_url('blog') ?>">Blog</a></li>
-                    <li class="float-right"><a href="<?= base_url('about') ?>" rel="noopener" class="pl-5">About Us</a></li>
-                    <li class="float-right"><a href="<?= base_url('contact') ?>" class="pl-5">Contact Us</a></li>
+                    <li><a href="<?= base_url('/') ?>">Home</a></li>
+                    <li><a href="<?= base_url('category') ?>">Categories</a></li>
+                    <li><a href="<?= base_url('product') ?>">Products</a></li>                    
+                    <li class="float-right"><a href="#" rel="noopener" class="pl-5">About Us</a></li>
+                    <li class="float-right"><a href="#" class="pl-5">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
         <!-- End .container -->
     </div>
-    <!-- End .header-bottom -->
     <div class="header-bottom sticky-header d-none d-lg-block" data-sticky-options="{'mobile': false}">
         <div class="container">
             <nav class="main-nav w-100">
@@ -127,6 +110,5 @@
                 } ?>
             </nav>
         </div>
-        <!-- End .container -->
     </div>
 </header>

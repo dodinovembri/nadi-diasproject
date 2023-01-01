@@ -24,6 +24,7 @@
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
+                <?= $this->include('extranet/components/flashmessage') ?>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card mb-4">
@@ -82,6 +83,102 @@
                                             <img src="<?= base_url('assets/images/logo/'.$configuration->extranet_logo_name) ?>" height="120" alt="">
                                             <input class="form-control" id="extranet_logo" type="file" name="extranet_logo" value="<?= $configuration->extranet_logo_name ?>" />
                                             <sub>.jpg or .png file, size: 318x318 under 25kb</sub>
+                                        </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="picker1">Header Top Status</label>
+                                            <select class="form-control" name="header_top_status">
+                                                <?php if ($configuration->header_top_status == 0) { ?>
+                                                    <option value="0">Inactive</option>
+                                                    <option value="1">Active</option>
+                                                <?php } elseif ($configuration->header_top_status == 1) { ?>
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Inactive</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="picker1">Header Middle Status</label>
+                                            <select class="form-control" name="header_middle_status">
+                                                <?php if ($configuration->header_middle_status == 0) { ?>
+                                                    <option value="0">Inactive</option>
+                                                    <option value="1">Active</option>
+                                                <?php } elseif ($configuration->header_middle_status == 1) { ?>
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Inactive</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="picker1">Guarantee Status</label>
+                                            <select class="form-control" name="guarantee_status">
+                                                <?php if ($configuration->guarantee_status == 0) { ?>
+                                                    <option value="0">Inactive</option>
+                                                    <option value="1">Active</option>
+                                                <?php } elseif ($configuration->guarantee_status == 1) { ?>
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Inactive</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="picker1">Promotion Status</label>
+                                            <select class="form-control" name="promotion_status">
+                                                <?php if ($configuration->promotion_status == 0) { ?>
+                                                    <option value="0">Inactive</option>
+                                                    <option value="1">Active</option>
+                                                <?php } elseif ($configuration->promotion_status == 1) { ?>
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Inactive</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="picker1">Product New Arrival Status</label>
+                                            <select class="form-control" name="product_new_arrival_status">
+                                                <?php if ($configuration->product_new_arrival_status == 0) { ?>
+                                                    <option value="0">Inactive</option>
+                                                    <option value="1">Active</option>
+                                                <?php } elseif ($configuration->product_new_arrival_status == 1) { ?>
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Inactive</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="picker1">Support Status</label>
+                                            <select class="form-control" name="support_status">
+                                                <?php if ($configuration->support_status == 0) { ?>
+                                                    <option value="0">Inactive</option>
+                                                    <option value="1">Active</option>
+                                                <?php } elseif ($configuration->support_status == 1) { ?>
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Inactive</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="picker1">Blog Status</label>
+                                            <select class="form-control" name="blog_status">
+                                                <?php if ($configuration->blog_status == 0) { ?>
+                                                    <option value="0">Inactive</option>
+                                                    <option value="1">Active</option>
+                                                <?php } elseif ($configuration->blog_status == 1) { ?>
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Inactive</option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="picker1">Brand Status</label>
+                                            <select class="form-control" name="brand_status">
+                                                <?php if ($configuration->brand_status == 0) { ?>
+                                                    <option value="0">Inactive</option>
+                                                    <option value="1">Active</option>
+                                                <?php } elseif ($configuration->brand_status == 1) { ?>
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Inactive</option>
+                                                <?php } ?>
+                                            </select>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Phone</label>

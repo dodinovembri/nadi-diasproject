@@ -50,18 +50,20 @@
 		<?= $this->include('frontend/components/header') ?>
 
 		<main class="main">
-			<div class="page-header">
-				<div class="container d-flex flex-column align-items-center">
-					<h1>Register</h1>
-				</div>
-			</div>
+			<h5 class="heading-bottom text-uppercase" style="text-align: center; margin-top: 50px">Register</h5>
 
 			<div class="container login-container">
 				<div class="row">
-					<div class="col-lg-10 mx-auto">
+					<div class="col-lg-4 mx-auto">
 						<div class="row">
 							<div class="col-md-12">
 								<form action="<?= base_url('register/store') ?>" method="post">
+									<label for="register-email">
+										Name
+										<span class="required">*</span>
+									</label>
+									<input type="text" name="name" class="form-input form-wide" required />
+									
 									<label for="register-email">
 										Email Address
 										<span class="required">*</span>
@@ -73,7 +75,9 @@
 										<span class="required">*</span>
 									</label>
 									<input type="password" name="password" class="form-input form-wide" id="register-password" required />
-
+									<div class="form-footer">
+										Already have account? <a href="<?= base_url('login') ?>" class="forget-password text-dark form-footer-right">Login</a>
+									</div>
 									<div class="form-footer mb-2">
 										<button type="submit" class="btn btn-dark btn-md w-100 mr-0">
 											Register

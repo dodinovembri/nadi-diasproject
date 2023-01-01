@@ -28,6 +28,7 @@
                 <a href="<?= base_url('extranet/social-media/create') ?>"><button class="btn btn-primary ripple" type="button">Create New</button><br><br></a>
                 <div class="row mb-4">
                     <div class="col-md-12 mb-4">
+                        <?= $this->include('extranet/components/flashmessage') ?>
                         <div class="card text-left">
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -59,10 +60,10 @@
                                                         } ?>
                                                     </td>
                                                     <td>
-                                                        <a class="text-success mr-2" href="<?= base_url('extranet/social-media/show/'.$value->id) ?>">
+                                                        <a class="text-success mr-2" href="<?= base_url('extranet/social-media/show/' . $value->id) ?>">
                                                             <i class="nav-icon i-Eye font-weight-bold"></i>
                                                         </a>
-                                                        <a class="text-success mr-2" href="<?= base_url('extranet/social-media/edit/'.$value->id) ?>">
+                                                        <a class="text-success mr-2" href="<?= base_url('extranet/social-media/edit/' . $value->id) ?>">
                                                             <i class="nav-icon i-Pen-2 font-weight-bold"></i>
                                                         </a>
                                                         <a class="text-danger mr-2" href="#">
@@ -82,7 +83,7 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                                                <a href="<?= base_url('extranet/social-media/destroy/'.$value->id) ?>"><button class="btn btn-primary ml-2" type="button">Delete</button></a>
+                                                                <a href="<?= base_url('extranet/social-media/destroy/' . $value->id) ?>"><button class="btn btn-primary ml-2" type="button">Delete</button></a>
                                                             </div>
                                                         </div>
                                                     </div>

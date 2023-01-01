@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Configuration | Dias Stuff</title>
+    <title>Exclusive | Dias Stuff</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet" />
     <link href="<?= base_url('assets/extranet/css/themes/lite-purple.min.css') ?>" rel="stylesheet" />
     <link href="<?= base_url('assets/extranet/css/plugins/perfect-scrollbar.min.css') ?>" rel="stylesheet" />
@@ -18,72 +18,75 @@
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Basic</h1>
+                    <h1>Exclusive</h1>
                     <ul>
-                        <li><a href="href.html">Form</a></li>
-                        <li>Basic</li>
+                        <li>Exclusive</li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
+                <?= $this->include('extranet/components/flashmessage') ?>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <div class="card-title mb-3">Form Inputs</div>
-                                <form>
+                                <form action="<?= base_url('extranet/exclusive/update/' . $exclusive->id) ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="firstName1">Name</label>
-                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" />
-                                        </div>
-                                        <div class="col-md-6 form-group mb-3 ">
-                                            <label for="website">Image</label>
-                                            <div class="custom-file">
-                                                <input class="custom-file-input" id="inputGroupFile01" type="file" name="logo" aria-describedby="inputGroupFileAddon01" />
-                                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                            </div>
+                                            <label>Name</label>
+                                            <input class="form-control" type="text" name="name" value="<?= $exclusive->name ?>" placeholder="Enter name" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="firstName1">Text 1</label>
-                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" />
+                                            <label>Image</label>
+                                            <img src="<?= base_url('assets/images/exclusives/' . $exclusive->image) ?>" height="120" alt="">
+                                            <input class="form-control" type="file" name="image" />
+                                            <sub>.jpg or .png file, size: 785x318 under 10kb</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="firstName1">Text 2</label>
-                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" />
+                                            <label>Text 1</label>
+                                            <input class="form-control" type="text" name="text1" value="<?= $exclusive->text1 ?>" placeholder="Enter text 1" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="firstName1">Text Button</label>
-                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" />
+                                            <label>Text 2</label>
+                                            <input class="form-control" type="text" name="text2" value="<?= $exclusive->text2 ?>" placeholder="Enter text 2" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="firstName1">Button Link</label>
-                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" />
+                                            <label>Text 3</label>
+                                            <input class="form-control" type="text" name="text3" value="<?= $exclusive->text3 ?>" placeholder="Enter text 3" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="firstName1">Text 3</label>
-                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" />
+                                            <label>Text 4</label>
+                                            <input class="form-control" type="text" name="text4" value="<?= $exclusive->text4 ?>" placeholder="Enter text 4" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="firstName1">Text 4</label>
-                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" />
+                                            <label>Text 5</label>
+                                            <input class="form-control" type="text" name="text5" value="<?= $exclusive->text5 ?>" placeholder="Enter text 5" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="firstName1">Text 5</label>
-                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" />
+                                            <label>Text 6</label>
+                                            <input class="form-control" type="text" name="text6" value="<?= $exclusive->text6 ?>" placeholder="Enter text 6" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="firstName1">Text 6</label>
-                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" />
+                                            <label>Text Button</label>
+                                            <input class="form-control" type="text" name="text_button" value="<?= $exclusive->text_button ?>" placeholder="Enter text button" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="picker1">Status</label>
-                                            <select class="form-control" name="text2_status">
-                                                <option value="1">Active</option>
-                                                <option value="0">Inactive</option>
+                                            <label>Button Link</label>
+                                            <input class="form-control" type="text" name="button_link" value="<?= $exclusive->button_link ?>" placeholder="Enter button link" />
+                                        </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label>Status</label>
+                                            <select class="form-control" name="status">
+                                                <?php if ($exclusive->status == 0) { ?>
+                                                    <option value="0">Inactive</option>
+                                                    <option value="1">Active</option>
+                                                <?php } elseif ($exclusive->status == 1) { ?>
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Inactive</option>
+                                                <?php } ?>
                                             </select>
                                         </div>
                                         <div class="col-md-12">
-                                            <button class="btn btn-primary">Submit</button>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
                                     </div>
                                 </form>

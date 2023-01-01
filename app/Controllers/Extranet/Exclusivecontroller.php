@@ -15,33 +15,46 @@ class Exclusivecontroller extends BaseController
 
     public function update($id)
     {
-        $exclusive_image = $this->request->getFile('exclusive_image');
+        $image = $this->request->getFile('image');
 
         $exclusive = new ExclusiveModel();
-        if ($exclusive_image != '') {
-            $exclusive_image_name = $exclusive_image->getRandomName();
-            $exclusive_image->move('assets/images/exclusives/', $exclusive_image_name);
+        if ($image != '') {
+            $image_name = $image->getRandomName();
+            $image->move('assets/images/exclusives/', $image_name);
 
             $exclusive->update($id, [
-                'status' => $this->request->getPost('status'),
                 'modified_at' => date('Y-m-d H:i:s'),
-                'image' => $exclusive_image_name,
-                // 'text1' => $this->request->getPost('text1'),
-                // 'text2' => $this->request->getPost('text2'),
-                // 'text_button' => $this->request->getPost('text_button'),
-                // 'button_link' => $this->request->getPost('button_link')
+                'modifier_id' => session()->get('id'),
+                'name' => $this->request->getPost('name'),
+                'image' => $image_name,
+                'text1' => $this->request->getPost('text1'),
+                'text2' => $this->request->getPost('text2'),
+                'text_button' => $this->request->getPost('text_button'),
+                'button_link' => $this->request->getPost('button_link'),
+                'text3' => $this->request->getPost('text3'),
+                'text4' => $this->request->getPost('text4'),
+                'text5' => $this->request->getPost('text5'),
+                'text6' => $this->request->getPost('text6'),
+                'status' => $this->request->getPost('status')
             ]);
         } else {
             $exclusive->update($id, [
-                'status' => $this->request->getPost('status'),
                 'modified_at' => date('Y-m-d H:i:s'),
-                // 'text1' => $this->request->getPost('text1'),
-                // 'text2' => $this->request->getPost('text2'),
-                // 'text_button' => $this->request->getPost('text_button'),
-                // 'button_link' => $this->request->getPost('button_link')
+                'modifier_id' => session()->get('id'),
+                'name' => $this->request->getPost('name'),
+                'text1' => $this->request->getPost('text1'),
+                'text2' => $this->request->getPost('text2'),
+                'text_button' => $this->request->getPost('text_button'),
+                'button_link' => $this->request->getPost('button_link'),
+                'text3' => $this->request->getPost('text3'),
+                'text4' => $this->request->getPost('text4'),
+                'text5' => $this->request->getPost('text5'),
+                'text6' => $this->request->getPost('text6'),
+                'status' => $this->request->getPost('status')
             ]);
         }
 
-        return redirect()->to(base_url('extranet/exclusive/index'));
+        session()->setFlashdata('success', 'Success update data');
+        return redirect()->to(base_url('extranet/exclusive'));
     }
 }

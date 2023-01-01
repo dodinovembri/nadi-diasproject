@@ -5,6 +5,7 @@ use App\Models\ConfigurationModel;
 use App\Models\SocialMediaModel;
 use App\Models\ProductCategoryModel;
 use App\Models\UserModel;
+use App\Models\CartModel;
 
 class Registercontroller extends BaseController
 {
@@ -13,10 +14,12 @@ class Registercontroller extends BaseController
         $configuration = new ConfigurationModel();
         $social_media = new SocialMediaModel();
         $product_category = new ProductCategoryModel();
-        
+        $cart = new CartModel();
+
         $data['configuration'] = $configuration->get()->getFirstRow();
         $data['social_medias'] = $social_media->get()->getResult();
         $data['product_categories'] = $product_category->get()->getResult();
+        $data['count_cart'] = $cart->where('user_id', session()->get('id'))->countAll();
         
         return view('frontend/auth/register', $data);
     }

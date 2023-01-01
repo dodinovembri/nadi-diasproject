@@ -18,52 +18,55 @@
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <div class="main-content">
                 <div class="breadcrumb">
-                    <h1>Basic</h1>
+                    <h1>Banner</h1>
                     <ul>
-                        <li><a href="href.html">Form</a></li>
-                        <li>Basic</li>
+                        <li>Banner</li>
                     </ul>
                 </div>
                 <div class="separator-breadcrumb border-top"></div>
+                <?= $this->include('extranet/components/flashmessage') ?>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <div class="card-title mb-3">Form Inputs</div>
-                                <form>
+                                <form action="<?= base_url('extranet/banner/update/' . $banner->id) ?>" method="post" enctype="multipart/form-data">
                                     <div class="row">
-                                        <div class="col-md-6 form-group mb-3 ">
-                                            <label for="website">Image</label>
-                                            <div class="custom-file">
-                                                <input class="custom-file-input" id="inputGroupFile01" type="file" name="logo" aria-describedby="inputGroupFileAddon01" />
-                                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                            </div>
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label>Image</label>
+                                            <img src="<?= base_url('assets/images/banners/' . $banner->image) ?>" height="120" alt="">
+                                            <input class="form-control" type="file" name="image" />
+                                            <sub>.jpg or .png file</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="firstName1">Text 1</label>
-                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" />
+                                            <label>Text 1</label>
+                                            <input class="form-control" type="text" name="text1" value="<?= $banner->text1 ?>" placeholder="Enter text 1" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="firstName1">Text 2</label>
-                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" />
+                                            <label>Text 2</label>
+                                            <input class="form-control" type="text" name="text2" value="<?= $banner->text2 ?>" placeholder="Enter text 2" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="firstName1">Text Button</label>
-                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" />
+                                            <label>Text Button</label>
+                                            <input class="form-control" type="text" name="text_button" value="<?= $banner->text_button ?>" placeholder="Enter text button" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="firstName1">Button Link</label>
-                                            <input class="form-control" id="firstName1" type="text" name="title" placeholder="Enter title" />
+                                            <label>Button Link</label>
+                                            <input class="form-control" type="text" name="button_link" value="<?= $banner->button_link ?>" placeholder="Enter button link" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="picker1">Status</label>
-                                            <select class="form-control" name="text2_status">
-                                                <option value="1">Active</option>
-                                                <option value="0">Inactive</option>
+                                            <label>Status</label>
+                                            <select class="form-control" name="status">
+                                                <?php if ($banner->status == 0) { ?>
+                                                    <option value="0">Inactive</option>
+                                                    <option value="1">Active</option>
+                                                <?php } elseif ($banner->status == 1) { ?>
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Inactive</option>
+                                                <?php } ?>
                                             </select>
                                         </div>
                                         <div class="col-md-12">
-                                            <button class="btn btn-primary">Submit</button>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
                                     </div>
                                 </form>

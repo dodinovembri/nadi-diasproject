@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/demo4.min.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/vendor/fontawesome-free/css/all.min.css') ?>">
 </head>
+
 <body>
     <div class="page-wrapper">
         <?php if ($configuration->text1_status == 1) { ?>
@@ -66,36 +67,42 @@
 
             <!-- Guarantee -->
             <div class="container">
-                <div class="info-boxes-slider owl-carousel owl-theme mb-2" data-owl-options="{'dots': false, 'loop': false, 'responsive': { '576': { 'items': 2 }, '992': { 'items': 3 } } }">
-                    <?php foreach ($guarantee as $key => $value) { ?>
-                        <div class="info-box info-box-icon-left">
-                            <i class="<?= $value->icon ?>"></i>
+                <?php if ($configuration->guarantee_status == 1) { ?>
+                    <div class="info-boxes-slider owl-carousel owl-theme mb-2" data-owl-options="{'dots': false, 'loop': false, 'responsive': { '576': { 'items': 2 }, '992': { 'items': 3 } } }">
+                        <?php foreach ($guarantee as $key => $value) { ?>
+                            <div class="info-box info-box-icon-left">
+                                <i class="<?= $value->icon ?>"></i>
 
-                            <div class="info-box-content">
-                                <h4><?= $value->name ?></h4>
-                                <p class="text-body"><?= $value->description ?></p>
-                            </div>
-                        </div>
-                    <?php } ?>
-                </div>
-                <div class="banners-container mb-2">
-                    <div class="banners-slider owl-carousel owl-theme" data-owl-options="{'dots': false }">
-                        <?php foreach ($promotions as $key => $value) { ?>
-                            <div class="banner banner1 banner-sm-vw d-flex align-items-center appear-animate" style="background-color: #ccc;" data-animation-name="fadeInLeftShorter" data-animation-delay="500">
-                                <figure class="w-100">
-                                    <img src="assets/images/promotions/<?= $value->image ?>" alt="banner" width="380" height="175" />
-                                </figure>
-                                <div class="banner-layer">
-                                    <h3 class="m-b-2"><?= $value->text1 ?></h3>
-                                    <h4 class="m-b-3 text-primary"><sup class="text-dark"><?= $value->text2 ?></h4>
-                                    <a href="<?= $value->button_link ?>" class="btn btn-sm btn-dark"><?= $value->text_button ?></a>
+                                <div class="info-box-content">
+                                    <h4><?= $value->name ?></h4>
+                                    <p class="text-body"><?= $value->description ?></p>
                                 </div>
                             </div>
                         <?php } ?>
                     </div>
-                </div>
+                <?php } ?>
+
+                <!-- Promotions -->
+                <?php if ($configuration->guarantee_status == 1) { ?>
+                    <div class="banners-container mb-2">
+                        <div class="banners-slider owl-carousel owl-theme" data-owl-options="{'dots': false }">
+                            <?php foreach ($promotions as $key => $value) { ?>
+                                <div class="banner banner1 banner-sm-vw d-flex align-items-center appear-animate" style="background-color: #ccc;" data-animation-name="fadeInLeftShorter" data-animation-delay="500">
+                                    <figure class="w-100">
+                                        <img src="assets/images/promotions/<?= $value->image ?>" alt="banner" width="380" height="175" />
+                                    </figure>
+                                    <div class="banner-layer">
+                                        <h3 class="m-b-2"><?= $value->text1 ?></h3>
+                                        <h4 class="m-b-3 text-primary"><sup class="text-dark"><?= $value->text2 ?></h4>
+                                        <a href="<?= $value->button_link ?>" class="btn btn-sm btn-dark"><?= $value->text_button ?></a>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
-            
+
             <!-- Featured Products -->
             <section class="featured-products-section">
                 <div class="container">
@@ -104,21 +111,21 @@
                         <?php foreach ($featured_products as $key => $value) { ?>
                             <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
                                 <figure>
-                                    <a href="product">
+                                    <a href="<?= base_url('product/'.$value->id) ?>">
                                         <img src="assets/images/products/<?= $value->image1 ?>" width="280" height="280" alt="product">
                                         <img src="assets/images/products/<?= $value->image2 ?>" width="280" height="280" alt="product">
                                     </a>
                                     <?php if ($value->discount > 0) { ?>
                                         <div class="label-group">
                                             <div class="product-label label-hot">HOT</div>
-                                            <div class="product-label label-sale">-<?= $value->discount ?></div>
+                                            <div class="product-label label-sale">-<?= $value->discount ?>%</div>
                                         </div>
                                     <?php } ?>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-list"><?= $value->name ?></div>
+                                    <div class="category-list"><?= $value->category_name ?></div>
                                     <h3 class="product-title">
-                                        <a href="product"><?= $value->name ?></a>
+                                        <a href="<?= base_url('product/'.$value->id) ?>"><?= $value->product_name ?></a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -127,12 +134,12 @@
                                         </div>
                                     </div>
                                     <div class="price-box">
-                                        <del class="old-price"><?= $value->price ?></del>
-                                        <span class="product-price"><?= $value->price - $value->discount ?></span>
+                                        <del class="old-price"><?= "Rp. " . number_format($value->price, 0, ",", "."); ?></del>
+                                        <span class="product-price"><?= "Rp. " . number_format($value->price -  $value->discount / 100 * $value->price, 0, ",", "."); ?></span>
                                     </div>
                                     <div class="product-action">
                                         <!-- <a href="" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a> -->
-                                        <a href="<?= base_url('cart/store/'.$value->id) ?>" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i><span>ADD TO CART</span></a>
+                                        <a href="<?= base_url('cart/store/' . $value->id. '/0/0/0') ?>" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i><span>ADD TO CART</span></a>
                                         <!-- <a href="" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a> -->
                                     </div>
                                 </div>
@@ -141,47 +148,49 @@
                     </div>
                 </div>
             </section>
-            
+
             <section class="new-products-section">
                 <div class="container">
-                    <h2 class="section-title heading-border ls-20 border-0">New Arrivals</h2>
-                    <!-- New Arrival Products -->
-                    <div class="products-slider custom-products owl-carousel owl-theme nav-outer show-nav-hover nav-image-center mb-2" data-owl-options="{ 'dots': false, 'nav': true, 'responsive': { '992': { 'items': 4 }, '1200': { 'items': 5 } } }">
-                        <?php foreach ($new_arrival_products as $key => $value) { ?>
-                            <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
-                                <figure>
-                                    <a href="product.html">
-                                        <img src="assets/images/products/<?= $value->image1 ?>" width="220" height="220" alt="product">
-                                        <img src="assets/images/products/<?= $value->image2 ?>" width="220" height="220" alt="product">
-                                    </a>
-                                    <div class="label-group">
-                                        <div class="product-label label-hot">HOT</div>
-                                    </div>
-                                </figure>
-                                <div class="product-details">
-                                    <div class="category-list"><?= $value->name ?></div>
-                                    <h3 class="product-title">
-                                        <a href="product"><?= $value->name ?></a>
-                                    </h3>
-                                    <div class="ratings-container">
-                                        <div class="product-ratings">
-                                            <span class="ratings" style="width:80%"></span>
-                                            <span class="tooltiptext tooltip-top"></span>
+                    <?php if ($configuration->product_new_arrival_status == 1) { ?>
+                        <h2 class="section-title heading-border ls-20 border-0">New Arrivals</h2>
+                        <!-- New Arrival Products -->
+                        <div class="products-slider custom-products owl-carousel owl-theme nav-outer show-nav-hover nav-image-center mb-2" data-owl-options="{ 'dots': false, 'nav': true, 'responsive': { '992': { 'items': 4 }, '1200': { 'items': 5 } } }">
+                            <?php foreach ($new_arrival_products as $key => $value) { ?>
+                                <div class="product-default appear-animate" data-animation-name="fadeInRightShorter">
+                                    <figure>
+                                        <a href="product.html">
+                                            <img src="assets/images/products/<?= $value->image1 ?>" width="220" height="220" alt="product">
+                                            <img src="assets/images/products/<?= $value->image2 ?>" width="220" height="220" alt="product">
+                                        </a>
+                                        <div class="label-group">
+                                            <div class="product-label label-hot">HOT</div>
+                                        </div>
+                                    </figure>
+                                    <div class="product-details">
+                                        <div class="category-list"><?= $value->category_name ?></div>
+                                        <h3 class="product-title">
+                                            <a href="product"><?= $value->product_name ?></a>
+                                        </h3>
+                                        <div class="ratings-container">
+                                            <div class="product-ratings">
+                                                <span class="ratings" style="width:80%"></span>
+                                                <span class="tooltiptext tooltip-top"></span>
+                                            </div>
+                                        </div>
+                                        <div class="price-box">
+                                            <del class="old-price"><?= $value->price ?></del>
+                                            <span class="product-price"><?= $value->price - $value->discount ?></span>
+                                        </div>
+                                        <div class="product-action">
+                                            <!-- <a href="" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a> -->
+                                            <a href="cart/store/<?= $value->id ?>" class="btn-icon btn-add-cart product-type-simple"><i class="icon-shopping-cart"></i><span>ADD TO CART</span></a>
+                                            <!-- <a href="" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a> -->
                                         </div>
                                     </div>
-                                    <div class="price-box">
-                                        <del class="old-price"><?= $value->price ?></del>
-                                        <span class="product-price"><?= $value->price - $value->discount ?></span>
-                                    </div>
-                                    <div class="product-action">
-                                        <!-- <a href="" class="btn-icon-wish" title="wishlist"><i class="icon-heart"></i></a> -->
-                                        <a href="cart/store/<?= $value->id ?>" class="btn-icon btn-add-cart product-type-simple"><i class="icon-shopping-cart"></i><span>ADD TO CART</span></a>
-                                        <!-- <a href="" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a> -->
-                                    </div>
                                 </div>
-                            </div>
-                        <?php } ?>
-                    </div>
+                            <?php } ?>
+                        </div>
+                    <?php } ?>
 
                     <!-- Banner -->
                     <?php if ($banner->status == 1) { ?>
@@ -199,49 +208,32 @@
                             </div>
                         </div>
                     <?php } ?>
-                    <h2 class="section-title categories-section-title heading-border border-0 ls-0 appear-animate" data-animation-delay="100" data-animation-name="fadeInUpShorter">Browse Our Categories
-                    </h2>
-
-                    <!-- Categories -->
-                    <div class="categories-slider owl-carousel owl-theme show-nav-hover nav-outer">
-                        <?php foreach ($product_categories as $key => $value) { ?>
-                            <div class="product-category appear-animate" data-animation-name="fadeInUpShorter">
-                                <a href="category">
-                                    <figure>
-                                        <img src="assets/images/categories/<?= $value->image ?>" alt="category" width="280" height="240" />
-                                    </figure>
-                                    <div class="category-content">
-                                        <h3><?= $value->name ?></h3>
-                                        <!-- <span><mark class="count">3</mark> products</span> -->
-                                    </div>
-                                </a>
-                            </div>
-                        <?php } ?>
-                    </div>
                 </div>
             </section>
-            
+
             <!-- Support -->
-            <section class="feature-boxes-container">
-                <div class="container appear-animate" data-animation-name="fadeInUpShorter">
-                    <div class="row">
-                        <?php foreach ($supports as $key => $value) { ?>
-                            <div class="col-md-4">
-                                <div class="feature-box px-sm-5 feature-box-simple text-center">
-                                    <div class="feature-box-icon">
-                                        <i class="<?= $value->icon ?>"></i>
-                                    </div>
-                                    <div class="feature-box-content p-0">
-                                        <h3><?= $value->text1 ?></h3>
-                                        <h5><?= $value->text2 ?></h5>
-                                        <p><?= $value->text3 ?></p>
+            <?php if ($configuration->support_status == 1) { ?>
+                <section class="feature-boxes-container">
+                    <div class="container appear-animate" data-animation-name="fadeInUpShorter">
+                        <div class="row">
+                            <?php foreach ($supports as $key => $value) { ?>
+                                <div class="col-md-4">
+                                    <div class="feature-box px-sm-5 feature-box-simple text-center">
+                                        <div class="feature-box-icon">
+                                            <i class="<?= $value->icon ?>"></i>
+                                        </div>
+                                        <div class="feature-box-content p-0">
+                                            <h3><?= $value->text1 ?></h3>
+                                            <h5><?= $value->text2 ?></h5>
+                                            <p><?= $value->text3 ?></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        <?php } ?>
+                            <?php } ?>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            <?php } ?>
 
             <!-- Exclusive -->
             <?php if ($exclusive->status == 1) { ?>
@@ -264,162 +256,49 @@
                     </div>
                 </section>
             <?php } ?>
-            
+
             <!-- Blog -->
             <section class="blog-section pb-0">
                 <div class="container">
-                    <h2 class="section-title heading-border border-0 appear-animate" data-animation-name="fadeInUp">
-                        Latest News</h2>
-                    <div class="owl-carousel owl-theme appear-animate" data-animation-name="fadeIn" data-owl-options="{'loop': false, 'margin': 20, 'autoHeight': true, 'autoplay': false, 'dots': false, 'items': 2, 'responsive': { '0': { 'items': 1 }, '480': { 'items': 2 }, '576': { 'items': 3 }, '768': { 'items': 4 } } }">
-                        <?php foreach ($blogs as $key => $value) { ?>                            
-                            <article class="post">
-                                <div class="post-media">
-                                    <a href="blog/show/<?= $value->id ?>">
-                                        <img src="assets/images/blog/<?= $value->image ?>" alt="Post" width="225" height="280">
-                                    </a>
-                                    <div class="post-date">
-                                        <span class="day"><?= date('d', strtotime($value->date)) ?></span>
-                                        <span class="month"><?= date('m', strtotime($value->date)) ?></span>
+                    <?php if ($configuration->blog_status == 1) { ?>
+                        <h2 class="section-title heading-border border-0 appear-animate" data-animation-name="fadeInUp">
+                            Latest News</h2>
+                        <div class="owl-carousel owl-theme appear-animate" data-animation-name="fadeIn" data-owl-options="{'loop': false, 'margin': 20, 'autoHeight': true, 'autoplay': false, 'dots': false, 'items': 2, 'responsive': { '0': { 'items': 1 }, '480': { 'items': 2 }, '576': { 'items': 3 }, '768': { 'items': 4 } } }">
+                            <?php foreach ($blogs as $key => $value) { ?>
+                                <article class="post">
+                                    <div class="post-media">
+                                        <a href="blog/show/<?= $value->id ?>">
+                                            <img src="assets/images/blog/<?= $value->image ?>" alt="Post" width="225" height="280">
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="day"><?= date('d', strtotime($value->date)) ?></span>
+                                            <span class="month"><?= date('m', strtotime($value->date)) ?></span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="post-body">
-                                    <h2 class="post-title">
-                                        <a href="blog/show/<?= $value->id ?>"><?= $value->title ?></a>
-                                    </h2>
-                                    <div class="post-content">
-                                        <p><?= $value->short_description ?>...</p>
+                                    <div class="post-body">
+                                        <h2 class="post-title">
+                                            <a href="blog/show/<?= $value->id ?>"><?= $value->title ?></a>
+                                        </h2>
+                                        <div class="post-content">
+                                            <p><?= $value->short_description ?>...</p>
+                                        </div>
+                                        <a href="blog/show/<?= $value->id ?>" class="post-comment">0 Comments</a>
                                     </div>
-                                    <a href="blog/show/<?= $value->id ?>" class="post-comment">0 Comments</a>
-                                </div>
-                            </article>
-                        <?php } ?>
-                    </div>
-                    <hr class="mt-0 m-b-5">
-
+                                </article>
+                            <?php } ?>
+                        </div>
+                        <hr class="mt-0 m-b-5">
+                    <?php } ?>
                     <!-- Brand -->
-                    <div class="brands-slider owl-carousel owl-theme images-center appear-animate" data-animation-name="fadeIn" data-animation-duration="500" data-owl-options="{
+                    <?php if ($configuration->brand_status == 1) { ?>
+                        <div class="brands-slider owl-carousel owl-theme images-center appear-animate" data-animation-name="fadeIn" data-animation-duration="500" data-owl-options="{
 					'margin': 0}">
-                        <?php foreach ($brands as $key => $value) { ?>
-                            <img src="assets/images/brands/<?= $value->image ?>" width="130" height="56" alt="brand">
-                        <?php } ?>
-                    </div>
-                    <hr class="mt-4 m-b-5">
-                    <div class="product-widgets-container row pb-2">
-
-                        <!-- Featured Products -->
-                        <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="200">
-                            <h4 class="section-sub-title">Featured Products</h4>
-                            <?php foreach ($featured_products as $key => $value) { ?>                                
-                                <div class="product-default left-details product-widget">
-                                    <figure>
-                                        <a href="product/show/<?= $value->id ?>">
-                                            <img src="assets/images/products/small/<?= $value->image1 ?>" width="84" height="84" alt="product">
-                                            <img src="assets/images/products/small/<?= $value->image2 ?>" width="84" height="84" alt="product">
-                                        </a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h3 class="product-title"> <a href="product.html"><?= $value->name ?></a>
-                                        </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:<?= $value->rating/5 * 100 ?>%"></span>
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="product-price"><?= $value->price - $value->discount ?></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php if ($key == 3) { break; } } ?>
+                            <?php foreach ($brands as $key => $value) { ?>
+                                <img src="assets/images/brands/<?= $value->image ?>" width="130" height="56" alt="brand">
+                            <?php } ?>
                         </div>
-
-                        <!-- Best Selling Products -->
-                        <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="500">
-                            <h4 class="section-sub-title">Best Selling Products</h4>
-                            <?php foreach ($best_selling_products as $key => $value) { ?>                                
-                                <div class="product-default left-details product-widget">
-                                    <figure>
-                                        <a href="product.html">
-                                            <img src="assets/images/products/<?= $value->image1 ?>" width="84" height="84" alt="product">
-                                            <img src="assets/images/products/<?= $value->image2 ?>" width="84" height="84" alt="product">
-                                        </a>
-                                    </figure>
-    
-                                    <div class="product-details">
-                                        <h3 class="product-title"> <a href="product/show/<?= $value->id ?>"><?= $value->name ?></a> </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:<?= $value->rating/5 * 100 ?>%"></span>
-                                                <span class="tooltiptext tooltip-top"><?= $value->rating ?></span>
-                                            </div>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="product-price"><?= $value->price - $value->discount ?></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php if ($key == 3) { break; } } ?>
-                        </div>
-                        
-                        <!-- Latest Products -->
-                        <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="800">
-                            <h4 class="section-sub-title">Latest Products</h4>
-                            <?php foreach ($new_arrival_products as $key => $value) { ?>                                
-                                <div class="product-default left-details product-widget">
-                                    <figure>
-                                        <a href="product/show/<?= $value->id ?>">
-                                            <img src="assets/images/products/<?= $value->image1 ?>" width="84" height="84" alt="product">
-                                            <img src="assets/images/products/<?= $value->image2 ?>" width="84" height="84" alt="product">
-                                        </a>
-                                    </figure>
-    
-                                    <div class="product-details">
-                                        <h3 class="product-title"> <a href="product/show/<?= $value->id ?>"><?= $value->name ?></a>
-                                        </h3>
-    
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:<?= $value->rating/5 * 100 ?>%"></span>
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="product-price"><?= $value->price - $value->discount ?></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php if ($key == 3) { break; } } ?>
-                        </div>
-
-                        <!-- Top Rated Products -->
-                        <div class="col-lg-3 col-sm-6 pb-5 pb-md-0 appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="1100">
-                            <h4 class="section-sub-title">Top Rated Products</h4>
-                            <?php foreach ($top_rated_products as $key => $value) { ?>                                
-                                <div class="product-default left-details product-widget">
-                                    <figure>
-                                        <a href="product/show/<?= $value->id ?>">
-                                            <img src="assets/images/products/<?= $value->image1 ?>" width="84" height="84" alt="product">
-                                            <img src="assets/images/products/<?= $value->image2 ?>" width="84" height="84" alt="product">
-                                        </a>
-                                    </figure>
-                                    <div class="product-details">
-                                        <h3 class="product-title"> <a href="product/show/<?= $value->id ?>"><?= $value->name ?></a>
-                                        </h3>
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:100%"></span>
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="product-price"><?= $value->price - $value->discount ?></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php if ($key == 3) { break; } } ?>
-                        </div>
-                    </div>
+                        <hr class="mt-4 m-b-5">
+                    <?php } ?>
                 </div>
             </section>
         </main>
@@ -438,4 +317,5 @@
     <!-- Main JS File -->
     <script src="<?= base_url('assets/js/main.min.js') ?>"></script>
 </body>
+
 </html>

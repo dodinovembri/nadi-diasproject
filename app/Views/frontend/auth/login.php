@@ -49,15 +49,11 @@
 		<?= $this->include('frontend/components/header') ?>
 
 		<main class="main">
-			<div class="page-header">
-				<div class="container d-flex flex-column align-items-center">
-					<h1>Login</h1>
-				</div>
-			</div>
+			<h5 class="heading-bottom text-uppercase" style="text-align: center; margin-top: 50px">Login to Your Account</h5>
 
 			<div class="container login-container">
 				<div class="row">
-					<div class="col-lg-10 mx-auto">
+					<div class="col-lg-4 mx-auto">
 						<div class="row">
 							<div class="col-md-12">
 								<form action="<?= base_url('login/auth') ?>" method="post">

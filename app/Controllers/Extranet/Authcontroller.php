@@ -47,7 +47,7 @@ class Authcontroller extends BaseController
         $model = new UserModel();
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
-        $data = $model->where('email', $email)->first();
+        $data = $model->where('email', $email)->where('role_code', 0)->first();
         if($data){
             $pass = $data['password'];
             $verify_pass = password_verify($password, $pass);
@@ -56,6 +56,7 @@ class Authcontroller extends BaseController
                     'id'       => $data['id'],
                     'name'     => $data['name'],
                     'email'    => $data['email'],
+                    'role_code' => $data['role_code'],
                     'logged_in'     => TRUE
                 ];
                 $session->set($ses_data);
@@ -72,8 +73,7 @@ class Authcontroller extends BaseController
 
     public function logout()
     {
-        $session = session();
-        $session->destroy();
-        return redirect()->to('ext-login');
+        session()->destroy();
+        return redirect()->to(base_url('ext-login'));
     }
 }

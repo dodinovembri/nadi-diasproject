@@ -33,3 +33,2425 @@ WHERE `email` IS NULL', [], false)
  9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 08:04:47 --> Undefined property: stdClass::$header_top_status
+in APPPATH\Views\frontend\components\header.php on line 2.
+ 1 APPPATH\Views\frontend\components\header.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$header_top_status', 'APPPATH\\Views\\frontend\\components\\header.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\components\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('frontend/components/header', null, true)
+ 5 APPPATH\Views\frontend\home\index.php(44): CodeIgniter\View\View->include('frontend/components/header')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 9 APPPATH\Controllers\Frontend\Homecontroller.php(34): view('frontend/home/index', [...])
+10 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+11 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 09:17:03 --> Undefined property: stdClass::$guarantee
+in APPPATH\Views\frontend\home\index.php on line 69.
+ 1 APPPATH\Views\frontend\home\index.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$guarantee', 'APPPATH\\Views\\frontend\\home\\index.php', 69)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\Homecontroller.php(34): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 13:28:31 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.name as category_name
+            FROM product JOIN category
+            O...' at line 10 in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Homecontroller.php(27): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 13:28:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.name as category_name
+            FROM product JOIN category
+            O...' at line 10
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+            SELECT 
+                product.id,
+                product.name as product_name,
+                product.rating,
+                product.price,
+                product.discount,
+                product.image1,
+                product.image2,
+                product.image3
+                product_category.name as category_name
+            FROM product JOIN category
+            ON product.product_category_id = product_category.id
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                product.id,
+                product.name as product_name,
+                product.rating,
+                product.price,
+                product.discount,
+                product.image1,
+                product.image2,
+                product.image3
+                product_category.name as category_name
+            FROM product JOIN category
+            ON product.product_category_id = product_category.id
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                product.id,
+                product.name as product_name,
+                product.rating,
+                product.price,
+                product.discount,
+                product.image1,
+                product.image2,
+                product.image3
+                product_category.name as category_name
+            FROM product JOIN category
+            ON product.product_category_id = product_category.id
+        ')
+ 4 APPPATH\Controllers\Frontend\Homecontroller.php(27): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                product.id,
+                product.name as product_name,
+                product.rating,
+                product.price,
+                product.discount,
+                product.image1,
+                product.image2,
+                product.image3
+                product_category.name as category_name
+            FROM product JOIN category
+            ON product.product_category_id = product_category.id
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 13:29:09 --> mysqli_sql_exception: Table 'nadi-diasproject.category' doesn't exist in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Homecontroller.php(27): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 13:29:09 --> Table 'nadi-diasproject.category' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+            SELECT 
+                product.id,
+                product.name as product_name,
+                product.rating,
+                product.price,
+                product.discount,
+                product.image1,
+                product.image2,
+                product.image3,
+                product_category.name as category_name
+            FROM product JOIN category
+            ON product.product_category_id = product_category.id
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                product.id,
+                product.name as product_name,
+                product.rating,
+                product.price,
+                product.discount,
+                product.image1,
+                product.image2,
+                product.image3,
+                product_category.name as category_name
+            FROM product JOIN category
+            ON product.product_category_id = product_category.id
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                product.id,
+                product.name as product_name,
+                product.rating,
+                product.price,
+                product.discount,
+                product.image1,
+                product.image2,
+                product.image3,
+                product_category.name as category_name
+            FROM product JOIN category
+            ON product.product_category_id = product_category.id
+        ')
+ 4 APPPATH\Controllers\Frontend\Homecontroller.php(27): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                product.id,
+                product.name as product_name,
+                product.rating,
+                product.price,
+                product.discount,
+                product.image1,
+                product.image2,
+                product.image3,
+                product_category.name as category_name
+            FROM product JOIN category
+            ON product.product_category_id = product_category.id
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 13:29:54 --> mysqli_sql_exception: Unknown column 'product.category_id' in 'on clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Homecontroller.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#10 {main}
+CRITICAL - 2022-12-30 13:29:54 --> Unknown column 'product.category_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `product`
+JOIN `product_category` ON `product_category`.`id` = `product`.`category_id`
+WHERE `product`.`is_new_arrival` = 1
+AND `product`.`status` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `product`
+JOIN `product_category` ON `product_category`.`id` = `product`.`category_id`
+WHERE `product`.`is_new_arrival` = 1
+AND `product`.`status` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `product`
+JOIN `product_category` ON `product_category`.`id` = `product`.`category_id`
+WHERE `product`.`is_new_arrival` = 1
+AND `product`.`status` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`
+JOIN `product_category` ON `product_category`.`id` = `product`.`category_id`
+WHERE `product`.`is_new_arrival` = :product.is_new_arrival:
+AND `product`.`status` = :product.status:', [...], false)
+ 5 APPPATH\Controllers\Frontend\Homecontroller.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 13:30:26 --> Undefined property: stdClass::$name
+in APPPATH\Views\frontend\home\index.php on line 126.
+ 1 APPPATH\Views\frontend\home\index.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$name', 'APPPATH\\Views\\frontend\\home\\index.php', 126)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\Homecontroller.php(50): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 13:31:18 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`category_id`
+WHERE `product`.`is_new_arrival` = 1
+AND `product`.`status` = 1' at line 3 in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Homecontroller.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#10 {main}
+CRITICAL - 2022-12-30 13:31:18 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`category_id`
+WHERE `product`.`is_new_arrival` = 1
+AND `product`.`status` = 1' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `product`
+JOIN `product_category` ON `product_category`.`id` = `product`.`product_` `category_id`
+WHERE `product`.`is_new_arrival` = 1
+AND `product`.`status` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `product`
+JOIN `product_category` ON `product_category`.`id` = `product`.`product_` `category_id`
+WHERE `product`.`is_new_arrival` = 1
+AND `product`.`status` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `product`
+JOIN `product_category` ON `product_category`.`id` = `product`.`product_` `category_id`
+WHERE `product`.`is_new_arrival` = 1
+AND `product`.`status` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`
+JOIN `product_category` ON `product_category`.`id` = `product`.`product_` `category_id`
+WHERE `product`.`is_new_arrival` = :product.is_new_arrival:
+AND `product`.`status` = :product.status:', [...], false)
+ 5 APPPATH\Controllers\Frontend\Homecontroller.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 13:31:44 --> Undefined property: stdClass::$name
+in APPPATH\Views\frontend\home\index.php on line 126.
+ 1 APPPATH\Views\frontend\home\index.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$name', 'APPPATH\\Views\\frontend\\home\\index.php', 126)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 5 APPPATH\Controllers\Frontend\Homecontroller.php(50): view('frontend/home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 14:09:54 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\Frontend\Productcategorycontroller.php on line 35.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\Productcategorycontroller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\Productcategorycontroller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\Productcategorycontroller')
+ 4 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Frontend\\Productcategorycontroller', true)
+ 5 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 14:09:55 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\Frontend\Productcategorycontroller.php on line 35.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\Productcategorycontroller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\Productcategorycontroller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\Productcategorycontroller')
+ 4 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Frontend\\Productcategorycontroller', true)
+ 5 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 14:10:18 --> mysqli_sql_exception: Unknown column 'product_cateory_id' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Model.php(805): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(32): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#11 {main}
+CRITICAL - 2022-12-30 14:10:18 --> Unknown column 'product_cateory_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `product`
+WHERE `status` = 1
+AND `product_cateory_id` = \'7936525b-83ab-11ed-8270-b0227a7395f6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `product`
+WHERE `status` = 1
+AND `product_cateory_id` = \'7936525b-83ab-11ed-8270-b0227a7395f6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `product`
+WHERE `status` = 1
+AND `product_cateory_id` = \'7936525b-83ab-11ed-8270-b0227a7395f6\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`
+WHERE `status` = :status:
+AND `product_cateory_id` = :product_cateory_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(805): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Frontend\Productcategorycontroller.php(32): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 8 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 14:10:31 --> Invalid file: frontend/category/show.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('frontend/category/show.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/category/show', [], true)
+ 3 APPPATH\Controllers\Frontend\Productcategorycontroller.php(34): view('frontend/category/show', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 20:11:56 --> Undefined variable $product_categories
+in APPPATH\Views\frontend\category\show.php on line 232.
+ 1 APPPATH\Views\frontend\category\show.php(232): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product_categories', 'APPPATH\\Views\\frontend\\category\\show.php', 232)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\category\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/category/show', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcategorycontroller.php(34): view('frontend/category/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('FCPATH\\assets', 'images', 'products', 'small', 'product-1.jpg')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 20:12:44 --> Undefined variable $product_categories
+in APPPATH\Views\frontend\category\show.php on line 232.
+ 1 APPPATH\Views\frontend\category\show.php(232): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product_categories', 'APPPATH\\Views\\frontend\\category\\show.php', 232)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\category\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/category/show', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcategorycontroller.php(34): view('frontend/category/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 20:13:09 --> Undefined variable $product_categories
+in APPPATH\Views\frontend\category\show.php on line 232.
+ 1 APPPATH\Views\frontend\category\show.php(232): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product_categories', 'APPPATH\\Views\\frontend\\category\\show.php', 232)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\category\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/category/show', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcategorycontroller.php(34): view('frontend/category/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 20:18:31 --> Undefined variable $variable
+in APPPATH\Views\frontend\category\show.php on line 134.
+ 1 APPPATH\Views\frontend\category\show.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $variable', 'APPPATH\\Views\\frontend\\category\\show.php', 134)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\category\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/category/show', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcategorycontroller.php(36): view('frontend/category/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 20:23:26 --> Undefined property: stdClass::$category_name
+in APPPATH\Views\frontend\category\show.php on line 153.
+ 1 APPPATH\Views\frontend\category\show.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$category_name', 'APPPATH\\Views\\frontend\\category\\show.php', 153)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\category\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/category/show', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcategorycontroller.php(36): view('frontend/category/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 20:30:13 --> CodeIgniter\HTTP\RedirectResponse::back(): Argument #1 ($code) must be of type ?int, string given, called in C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Cartcontroller.php on line 39
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 74.
+ 1 APPPATH\Controllers\Frontend\Cartcontroller.php(39): CodeIgniter\HTTP\RedirectResponse->back('C:\\')
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Cartcontroller->store('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Cartcontroller))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 20:34:38 --> mysqli_sql_exception: Unknown column '$id' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(37): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('b1d37591-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 20:34:38 --> Unknown column '$id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = $id
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = $id
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = $id
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(37): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = $id
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('b1d37591-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 20:35:06 --> mysqli_sql_exception: Unknown column 'b1d37591' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('b1d37591-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 20:35:06 --> Unknown column 'b1d37591' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = b1d37591-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = b1d37591-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = b1d37591-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = b1d37591-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('b1d37591-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 20:35:11 --> mysqli_sql_exception: Unknown column '92fb57f1' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('92fb57f1-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 20:35:11 --> Unknown column '92fb57f1' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 92fb57f1-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 92fb57f1-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 92fb57f1-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 92fb57f1-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('92fb57f1-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 20:35:13 --> mysqli_sql_exception: Unknown column '7936525b' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 20:35:13 --> Unknown column '7936525b' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 20:35:30 --> syntax error, unexpected single-quoted string "", expecting ")"
+in APPPATH\Controllers\Frontend\Productcategorycontroller.php on line 54.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\Productcategorycontroller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\Productcategorycontroller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\Productcategorycontroller')
+ 4 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Frontend\\Productcategorycontroller', true)
+ 5 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 20:35:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 13 in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...', '7936525b-83ab-1...', true)
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 20:35:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 13
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ', '7936525b-83ab-11ed-8270-b0227a7395f6', true)
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 20:35:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 13 in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...', '7936525b-83ab-1...', true)
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 20:35:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 13
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ', '7936525b-83ab-11ed-8270-b0227a7395f6', true)
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:06:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 13 in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...', '7936525b-83ab-1...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:06:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 13
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ', '7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:06:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 13 in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...', '7936525b-83ab-1...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:06:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 13
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ', '7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:06:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 13 in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...', '7936525b-83ab-1...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:06:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 13
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ', '7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:06:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 13 in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...', '7936525b-83ab-1...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:06:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 13
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = ', '7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:06:10 --> mysqli_sql_exception: Unknown column '7936525b' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:06:10 --> Unknown column '7936525b' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:06:11 --> mysqli_sql_exception: Unknown column '7936525b' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:06:11 --> Unknown column '7936525b' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:06:12 --> mysqli_sql_exception: Unknown column '7936525b' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:06:12 --> Unknown column '7936525b' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:06:12 --> mysqli_sql_exception: Unknown column '7936525b' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:06:12 --> Unknown column '7936525b' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:06:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+...' at line 13 in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:06:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+...' at line 13
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id == 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id == 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id == 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id == 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 21:07:57 --> syntax error, unexpected double-quote mark, expecting ")"
+in APPPATH\Controllers\Frontend\Productcategorycontroller.php on line 50.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\Productcategorycontroller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\Productcategorycontroller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\Productcategorycontroller')
+ 4 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Frontend\\Productcategorycontroller', true)
+ 5 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:08:43 --> mysqli_sql_exception: Unknown column '7936525b' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:08:43 --> Unknown column '7936525b' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:08:58 --> mysqli_sql_exception: Unknown column '7936525b' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:08:58 --> Unknown column '7936525b' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:08:59 --> mysqli_sql_exception: Unknown column '7936525b' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:08:59 --> Unknown column '7936525b' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:08:59 --> mysqli_sql_exception: Unknown column '7936525b' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:08:59 --> Unknown column '7936525b' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:08:59 --> mysqli_sql_exception: Unknown column '7936525b' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:08:59 --> Unknown column '7936525b' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 21:08:59 --> mysqli_sql_exception: Unknown column '7936525b' in 'where clause' in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-1...')
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-30 21:08:59 --> Unknown column '7936525b' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 4 APPPATH\Controllers\Frontend\Productcategorycontroller.php(50): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            product.id,
+            product.name as product_name,
+            product.rating,
+            product.price,
+            product.discount,
+            product.image1,
+            product.image2,
+            product.image3,
+            product_category.name as category_name
+        FROM product JOIN product_category
+        ON product.product_category_id = product_category.id
+        WHERE product.product_category_id = 7936525b-83ab-11ed-8270-b0227a7395f6
+            AND product.status != 0
+            AND product_category.status != 0
+    ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 21:22:45 --> Undefined property: stdClass::$category_id
+in APPPATH\Views\frontend\category\show.php on line 168.
+ 1 APPPATH\Views\frontend\category\show.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$category_id', 'APPPATH\\Views\\frontend\\category\\show.php', 168)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\category\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/category/show', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcategorycontroller.php(56): view('frontend/category/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcategorycontroller->show('7936525b-83ab-11ed-8270-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcategorycontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 21:29:19 --> Too few arguments to function App\Controllers\Frontend\Cartcontroller::store(), 1 passed in C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php on line 925 and exactly 2 expected
+in APPPATH\Controllers\Frontend\Cartcontroller.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Cartcontroller->store('9a349426-842b-11ed-bfb0-b0227a7395f6')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Cartcontroller))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 21:29:42 --> Optional parameter $category_id declared before required parameter $id is implicitly treated as a required parameter
+in APPPATH\Controllers\Frontend\Cartcontroller.php on line 29.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(283): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Optional parameter $category_id declared before required parameter $id is implicitly treated as a required parameter', 'APPPATH\\Controllers\\Frontend\\Cartcontroller.php', 29)
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(283): include_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\Cartcontroller.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\Cartcontroller')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\Cartcontroller')
+ 6 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Frontend\\Cartcontroller', true)
+ 7 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 21:54:43 --> Undefined variable $products
+in APPPATH\Views\frontend\product\index.php on line 66.
+ 1 APPPATH\Views\frontend\product\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'APPPATH\\Views\\frontend\\product\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\product\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/product/index', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcontroller.php(20): view('frontend/product/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 22:03:25 --> Undefined variable $products
+in APPPATH\Views\frontend\product\index.php on line 66.
+ 1 APPPATH\Views\frontend\product\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'APPPATH\\Views\\frontend\\product\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\product\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/product/index', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcontroller.php(20): view('frontend/product/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 22:05:59 --> Undefined variable $db
+in APPPATH\Controllers\Frontend\Productcontroller.php on line 20.
+ 1 APPPATH\Controllers\Frontend\Productcontroller.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'APPPATH\\Controllers\\Frontend\\Productcontroller.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcontroller->index()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcontroller))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 22:06:01 --> Undefined variable $db
+in APPPATH\Controllers\Frontend\Productcontroller.php on line 20.
+ 1 APPPATH\Controllers\Frontend\Productcontroller.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'APPPATH\\Controllers\\Frontend\\Productcontroller.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcontroller->index()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcontroller))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 22:06:29 --> Undefined variable $id
+in APPPATH\Controllers\Frontend\Productcontroller.php on line 35.
+ 1 APPPATH\Controllers\Frontend\Productcontroller.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Controllers\\Frontend\\Productcontroller.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcontroller->index()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcontroller))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 22:15:14 --> Optional parameter $category_id declared before required parameter $product_list is implicitly treated as a required parameter
+in APPPATH\Controllers\Frontend\Cartcontroller.php on line 29.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(283): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Optional parameter $category_id declared before required parameter $product_list is implicitly treated as a required parameter', 'APPPATH\\Controllers\\Frontend\\Cartcontroller.php', 29)
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(283): include_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(260): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\Cartcontroller.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(238): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\Cartcontroller')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\Cartcontroller')
+ 6 SYSTEMPATH\CodeIgniter.php(875): class_exists('\\App\\Controllers\\Frontend\\Cartcontroller', true)
+ 7 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 23:15:04 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\frontend\home\index.php on line 128.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/home/index', [], true)
+ 4 APPPATH\Controllers\Frontend\Homecontroller.php(68): view('frontend/home/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Homecontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homecontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 23:20:41 --> Undefined variable $data
+in APPPATH\Controllers\Frontend\Productcontroller.php on line 44.
+ 1 APPPATH\Controllers\Frontend\Productcontroller.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Frontend\\Productcontroller.php', 44)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcontroller))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 23:21:16 --> Undefined variable $configuration
+in APPPATH\Views\frontend\product\show.php on line 7.
+ 1 APPPATH\Views\frontend\product\show.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $configuration', 'APPPATH\\Views\\frontend\\product\\show.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/product/show', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcontroller.php(63): view('frontend/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 23:28:34 --> Undefined variable $related_products
+in APPPATH\Views\frontend\product\show.php on line 375.
+ 1 APPPATH\Views\frontend\product\show.php(375): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $related_products', 'APPPATH\\Views\\frontend\\product\\show.php', 375)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/product/show', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcontroller.php(71): view('frontend/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 23:42:23 --> Undefined variable $value
+in APPPATH\Views\frontend\product\show.php on line 67.
+ 1 APPPATH\Views\frontend\product\show.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'APPPATH\\Views\\frontend\\product\\show.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/product/show', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcontroller.php(89): view('frontend/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 23:42:31 --> Undefined variable $value
+in APPPATH\Views\frontend\product\show.php on line 70.
+ 1 APPPATH\Views\frontend\product\show.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'APPPATH\\Views\\frontend\\product\\show.php', 70)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/product/show', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcontroller.php(89): view('frontend/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

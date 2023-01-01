@@ -28,6 +28,8 @@ class Socialmediacontroller extends BaseController
             'link' => $this->request->getPost('link'),
             'status' => $this->request->getPost('status')
         ]);
+
+        session()->setFlashdata('success', 'Success create new data');
         return redirect()->to(base_url('extranet/social-media'));
     }    
 
@@ -57,6 +59,8 @@ class Socialmediacontroller extends BaseController
             'link' => $this->request->getPost('link'),
             'status' => $this->request->getPost('status')
         ]);
+
+        session()->setFlashdata('success', 'Success update data');
         return redirect()->to(base_url('extranet/social-media'));
     }
 
@@ -64,7 +68,8 @@ class Socialmediacontroller extends BaseController
     {
         $social_media = new SocialMediaModel();
         $social_media->delete($id);
-        return redirect()->to(base_url('extranet/social-media'));
 
+        session()->setFlashdata('success', 'Success delete data');
+        return redirect()->to(base_url('extranet/social-media'));
     }
 }

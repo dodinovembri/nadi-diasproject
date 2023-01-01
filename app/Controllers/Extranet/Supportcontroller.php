@@ -21,15 +21,21 @@ class Supportcontroller extends BaseController
     public function store()
     {
         $support = new SupportModel();
+
         $support->insert([
             'created_at' => date('Y-m-d H:i:s'),
-            // 'name' => $this->request->getPost('name'),
-            // 'icon' => $this->request->getPost('icon'),
-            // 'link' => $this->request->getPost('link'),
-            // 'status' => $this->request->getPost('status')
+            'creator_id' => session()->get('id'),
+            'icon' => $this->request->getPost('icon'),
+            'name' => $this->request->getPost('name'),
+            'text1' => $this->request->getPost('text1'),
+            'text2' => $this->request->getPost('text2'),           
+            'text3' => $this->request->getPost('text3'),           
+            'status' => $this->request->getPost('status')
         ]);
-        return redirect()->to(base_url('extranet/support/index'));
-    }    
+
+        session()->setFlashdata('success', 'Success create new data');
+        return redirect()->to(base_url('extranet/support'));
+    }
 
     public function show($id)
     {
@@ -37,7 +43,7 @@ class Supportcontroller extends BaseController
         $data['support'] = $support->where('id', $id)->get()->getFirstRow();
 
         return view('extranet/support/show', $data);
-    }    
+    }
 
     public function edit($id)
     {
@@ -45,25 +51,32 @@ class Supportcontroller extends BaseController
         $data['support'] = $support->where('id', $id)->get()->getFirstRow();
 
         return view('extranet/support/edit', $data);
-    }   
-    
+    }
+
     public function update($id)
     {
         $support = new SupportModel();
         $support->update($id, [
             'modified_at' => date('Y-m-d H:i:s'),
-            // 'name' => $this->request->getPost('name'),
-            // 'icon' => $this->request->getPost('icon'),
-            // 'link' => $this->request->getPost('link'),
-            // 'status' => $this->request->getPost('status')
+            'modifier_id' => session()->get('id'),
+            'icon' => $this->request->getPost('icon'),
+            'name' => $this->request->getPost('name'),
+            'text1' => $this->request->getPost('text1'),
+            'text2' => $this->request->getPost('text2'),
+            'text3' => $this->request->getPost('text3'),
+            'status' => $this->request->getPost('status')
         ]);
-        return redirect()->to(base_url('extranet/support/index'));
+
+        session()->setFlashdata('success', 'Success update data');
+        return redirect()->to(base_url('extranet/support'));
     }
 
     public function destroy($id)
     {
         $support = new SupportModel();
         $support->delete($id);
-        return redirect()->to(base_url('extranet/support/index'));
+
+        session()->setFlashdata('success', 'Success delete data');
+        return redirect()->to(base_url('extranet/support'));
     }
 }

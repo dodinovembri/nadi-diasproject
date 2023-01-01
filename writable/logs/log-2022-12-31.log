@@ -1,0 +1,682 @@
+CRITICAL - 2022-12-31 00:05:53 --> Undefined variable $value
+in APPPATH\Views\frontend\product\show.php on line 149.
+ 1 APPPATH\Views\frontend\product\show.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'APPPATH\\Views\\frontend\\product\\show.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/product/show', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcontroller.php(89): view('frontend/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 00:09:03 --> Undefined property: stdClass::$description
+in APPPATH\Views\frontend\product\show.php on line 124.
+ 1 APPPATH\Views\frontend\product\show.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$description', 'APPPATH\\Views\\frontend\\product\\show.php', 124)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/product/show', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcontroller.php(89): view('frontend/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 00:11:45 --> Undefined property: stdClass::$tags
+in APPPATH\Views\frontend\product\show.php on line 139.
+ 1 APPPATH\Views\frontend\product\show.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tags', 'APPPATH\\Views\\frontend\\product\\show.php', 139)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/product/show', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcontroller.php(91): view('frontend/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 00:11:54 --> Undefined property: stdClass::$tag
+in APPPATH\Views\frontend\product\show.php on line 139.
+ 1 APPPATH\Views\frontend\product\show.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tag', 'APPPATH\\Views\\frontend\\product\\show.php', 139)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/product/show', [], true)
+ 5 APPPATH\Controllers\Frontend\Productcontroller.php(91): view('frontend/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 01:15:21 --> Invalid file: extranet/product_category/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('extranet/product_category/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product_category/index', [], true)
+ 3 APPPATH\Controllers\Extranet\Productcategorycontroller.php(13): view('extranet/product_category/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcategorycontroller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcategorycontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 01:19:39 --> Undefined property: stdClass::$icon
+in APPPATH\Views\extranet\product_category\index.php on line 52.
+ 1 APPPATH\Views\extranet\product_category\index.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$icon', 'APPPATH\\Views\\extranet\\product_category\\index.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\product_category\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product_category/index', [], true)
+ 5 APPPATH\Controllers\Extranet\Productcategorycontroller.php(13): view('extranet/product_category/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcategorycontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcategorycontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 01:20:36 --> Invalid file: extranet/product_category/create.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('extranet/product_category/create.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product_category/create', [], true)
+ 3 APPPATH\Controllers\Extranet\Productcategorycontroller.php(18): view('extranet/product_category/create')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcategorycontroller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcategorycontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 01:31:50 --> Invalid file: extranet/product_category/create.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('extranet/product_category/create.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product_category/create', [], true)
+ 3 APPPATH\Controllers\Extranet\Productcategorycontroller.php(18): view('extranet/product_category/create')
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcategorycontroller->create()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcategorycontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 02:39:59 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Extranet\Productcategorycontroller.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcategorycontroller->store()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcategorycontroller))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 02:52:34 --> Undefined variable $product_categories
+in APPPATH\Views\extranet\product\index.php on line 49.
+ 1 APPPATH\Views\extranet\product\index.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product_categories', 'APPPATH\\Views\\extranet\\product\\index.php', 49)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\product\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product/index', [], true)
+ 5 APPPATH\Controllers\Extranet\Productcontroller.php(14): view('extranet/product/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 02:52:45 --> Undefined property: stdClass::$code
+in APPPATH\Views\extranet\product\index.php on line 53.
+ 1 APPPATH\Views\extranet\product\index.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$code', 'APPPATH\\Views\\extranet\\product\\index.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\product\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product/index', [], true)
+ 5 APPPATH\Controllers\Extranet\Productcontroller.php(14): view('extranet/product/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 04:20:42 --> Undefined variable $product
+in APPPATH\Views\extranet\product\show.php on line 37.
+ 1 APPPATH\Views\extranet\product\show.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'APPPATH\\Views\\extranet\\product\\show.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product/show', [], true)
+ 5 APPPATH\Controllers\Extranet\Productcontroller.php(105): view('extranet/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 04:20:55 --> Attempt to read property "category_name" on array
+in APPPATH\Views\extranet\product\show.php on line 37.
+ 1 APPPATH\Views\extranet\product\show.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "category_name" on array', 'APPPATH\\Views\\extranet\\product\\show.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product/show', [], true)
+ 5 APPPATH\Controllers\Extranet\Productcontroller.php(105): view('extranet/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 04:22:08 --> Attempt to read property "category_name" on array
+in APPPATH\Views\extranet\product\show.php on line 37.
+ 1 APPPATH\Views\extranet\product\show.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "category_name" on array', 'APPPATH\\Views\\extranet\\product\\show.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product/show', [], true)
+ 5 APPPATH\Controllers\Extranet\Productcontroller.php(105): view('extranet/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 04:23:06 --> Attempt to read property "category_name" on array
+in APPPATH\Views\extranet\product\show.php on line 37.
+ 1 APPPATH\Views\extranet\product\show.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "category_name" on array', 'APPPATH\\Views\\extranet\\product\\show.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product/show', [], true)
+ 5 APPPATH\Controllers\Extranet\Productcontroller.php(105): view('extranet/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 04:26:10 --> Attempt to read property "category_name" on array
+in APPPATH\Views\extranet\product\show.php on line 37.
+ 1 APPPATH\Views\extranet\product\show.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "category_name" on array', 'APPPATH\\Views\\extranet\\product\\show.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product/show', [], true)
+ 5 APPPATH\Controllers\Extranet\Productcontroller.php(105): view('extranet/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 04:26:49 --> Undefined property: stdClass::$name
+in APPPATH\Views\extranet\product\show.php on line 45.
+ 1 APPPATH\Views\extranet\product\show.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$name', 'APPPATH\\Views\\extranet\\product\\show.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product/show', [], true)
+ 5 APPPATH\Controllers\Extranet\Productcontroller.php(105): view('extranet/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcontroller->show('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 04:31:59 --> Undefined property: stdClass::$product_category_id
+in APPPATH\Views\extranet\product\edit.php on line 39.
+ 1 APPPATH\Views\extranet\product\edit.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$product_category_id', 'APPPATH\\Views\\extranet\\product\\edit.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\product\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product/edit', [], true)
+ 5 APPPATH\Controllers\Extranet\Productcontroller.php(141): view('extranet/product/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcontroller->edit('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 04:32:25 --> Undefined property: stdClass::$name
+in APPPATH\Views\extranet\product\edit.php on line 51.
+ 1 APPPATH\Views\extranet\product\edit.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$name', 'APPPATH\\Views\\extranet\\product\\edit.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\product\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product/edit', [], true)
+ 5 APPPATH\Controllers\Extranet\Productcontroller.php(141): view('extranet/product/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcontroller->edit('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 04:32:36 --> Undefined variable $is_featured
+in APPPATH\Views\extranet\product\edit.php on line 102.
+ 1 APPPATH\Views\extranet\product\edit.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $is_featured', 'APPPATH\\Views\\extranet\\product\\edit.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\product\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product/edit', [], true)
+ 5 APPPATH\Controllers\Extranet\Productcontroller.php(141): view('extranet/product/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcontroller->edit('16f00fcb-83f9-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 04:51:25 --> Attempt to read property "category_name" on null
+in APPPATH\Views\extranet\product\show.php on line 37.
+ 1 APPPATH\Views\extranet\product\show.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "category_name" on null', 'APPPATH\\Views\\extranet\\product\\show.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\product\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product/show', [], true)
+ 5 APPPATH\Controllers\Extranet\Productcontroller.php(105): view('extranet/product/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcontroller->show('d33a0e50-88f8-11ed-9756-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 04:52:07 --> Attempt to read property "id" on null
+in APPPATH\Views\extranet\product\edit.php on line 34.
+ 1 APPPATH\Views\extranet\product\edit.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'APPPATH\\Views\\extranet\\product\\edit.php', 34)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\product\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/product/edit', [], true)
+ 5 APPPATH\Controllers\Extranet\Productcontroller.php(141): view('extranet/product/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Productcontroller->edit('d33a0e50-88f8-11ed-9756-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Productcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 06:19:48 --> Undefined variable $product_category
+in APPPATH\Views\extranet\slider\show.php on line 37.
+ 1 APPPATH\Views\extranet\slider\show.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product_category', 'APPPATH\\Views\\extranet\\slider\\show.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\slider\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/slider/show', [], true)
+ 5 APPPATH\Controllers\Extranet\Slidercontroller.php(53): view('extranet/slider/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Slidercontroller->show('6894bdc0-8407-11ed-bfb0-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Slidercontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 10:03:03 --> Undefined variable $product_category
+in APPPATH\Views\extranet\user\show.php on line 37.
+ 1 APPPATH\Views\extranet\user\show.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product_category', 'APPPATH\\Views\\extranet\\user\\show.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\user\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/user/show', [], true)
+ 5 APPPATH\Controllers\Extranet\Usercontroller.php(49): view('extranet/user/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Usercontroller->show('93bebfaa-8924-11ed-9756-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Usercontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 10:07:25 --> Undefined variable $product_category
+in APPPATH\Views\extranet\user\show.php on line 37.
+ 1 APPPATH\Views\extranet\user\show.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product_category', 'APPPATH\\Views\\extranet\\user\\show.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\user\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/user/show', [], true)
+ 5 APPPATH\Controllers\Extranet\Usercontroller.php(49): view('extranet/user/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Usercontroller->show('93bebfaa-8924-11ed-9756-b0227a7395f6')
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Usercontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 10:23:39 --> Undefined variable $products
+in APPPATH\Views\extranet\brand\index.php on line 53.
+ 1 APPPATH\Views\extranet\brand\index.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'APPPATH\\Views\\extranet\\brand\\index.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\brand\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/brand/index', [], true)
+ 5 APPPATH\Controllers\Extranet\Brandcontroller.php(13): view('extranet/brand/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Brandcontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Brandcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 10:27:15 --> Undefined variable $products
+in APPPATH\Views\extranet\brand\index.php on line 53.
+ 1 APPPATH\Views\extranet\brand\index.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $products', 'APPPATH\\Views\\extranet\\brand\\index.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\brand\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/brand/index', [], true)
+ 5 APPPATH\Controllers\Extranet\Brandcontroller.php(13): view('extranet/brand/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Brandcontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Brandcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 10:31:29 --> Undefined variable $social_medias
+in APPPATH\Views\extranet\guarantee\index.php on line 48.
+ 1 APPPATH\Views\extranet\guarantee\index.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $social_medias', 'APPPATH\\Views\\extranet\\guarantee\\index.php', 48)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\guarantee\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/guarantee/index', [], true)
+ 5 APPPATH\Controllers\Extranet\Guaranteecontroller.php(13): view('extranet/guarantee/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Guaranteecontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Guaranteecontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 11:26:30 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\Extranet\Supportcontroller.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Supportcontroller->store()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Supportcontroller))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 19:57:28 --> Attempt to read property "qty" on array
+in APPPATH\Controllers\Frontend\Cartcontroller.php on line 34.
+ 1 APPPATH\Controllers\Frontend\Cartcontroller.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "qty" on array', 'APPPATH\\Controllers\\Frontend\\Cartcontroller.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Cartcontroller->store('16f00fcb-83f9-11ed-bfb0-b0227a7395f6', '0', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Cartcontroller))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 20:19:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.qty as cart_qty
+            product.id as product_id,
+            product....' at line 3 in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Cartcontroller.php(25): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Cartcontroller->index()
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Cartcontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-31 20:19:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.qty as cart_qty
+            product.id as product_id,
+            product....' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1,
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1,
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1,
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ')
+ 4 APPPATH\Controllers\Frontend\Cartcontroller.php(25): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1,
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Cartcontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Cartcontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 20:19:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.qty as cart_qty
+            product.id as product_id,
+            product....' at line 3 in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Cartcontroller.php(25): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Cartcontroller->index()
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Cartcontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-31 20:19:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.qty as cart_qty
+            product.id as product_id,
+            product....' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1,
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1,
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1,
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ')
+ 4 APPPATH\Controllers\Frontend\Cartcontroller.php(25): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1,
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Cartcontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Cartcontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 20:20:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.qty as cart_qty
+            product.id as product_id,
+            product....' at line 3 in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Cartcontroller.php(25): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Cartcontroller->index()
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Cartcontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-31 20:20:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.qty as cart_qty
+            product.id as product_id,
+            product....' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ')
+ 4 APPPATH\Controllers\Frontend\Cartcontroller.php(25): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Cartcontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Cartcontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 20:20:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.qty as cart_qty,
+            product.id as product_id,
+            product...' at line 3 in C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\MySQLi\Connection.php(292): mysqli->query('\r\n        SELEC...', 0)
+#1 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('\r\n        SELEC...')
+#2 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n        SELEC...')
+#3 C:\xampp8-1-12\htdocs\nadi-diasproject\app\Controllers\Frontend\Cartcontroller.php(25): CodeIgniter\Database\BaseConnection->query('\r\n        SELEC...')
+#4 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(925): App\Controllers\Frontend\Cartcontroller->index()
+#5 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Cartcontroller))
+#6 C:\xampp8-1-12\htdocs\nadi-diasproject\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1-12\htdocs\nadi-diasproject\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1-12\htdocs\nadi-diasproject\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1-12\\...')
+#9 {main}
+CRITICAL - 2022-12-31 20:20:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.qty as cart_qty,
+            product.id as product_id,
+            product...' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty,
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty,
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty,
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ')
+ 4 APPPATH\Controllers\Frontend\Cartcontroller.php(25): CodeIgniter\Database\BaseConnection->query('
+        SELECT 
+            cart.id
+            cart.qty as cart_qty,
+            product.id as product_id,
+            product.name as product_name,
+            product.price,
+            product.image1
+        FROM cart JOIN product
+        ON cart.product_id = product.id
+        WHERE cart.status != 0
+            AND product.status != 0
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Cartcontroller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Cartcontroller))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 20:25:48 --> Undefined property: stdClass::$discount
+in APPPATH\Views\frontend\cart\index.php on line 93.
+ 1 APPPATH\Views\frontend\cart\index.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$discount', 'APPPATH\\Views\\frontend\\cart\\index.php', 93)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\cart\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('frontend/cart/index', [], true)
+ 5 APPPATH\Controllers\Frontend\Cartcontroller.php(39): view('frontend/cart/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Cartcontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Cartcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 23:17:22 --> Unsupported operand types: string + int
+in APPPATH\Controllers\Frontend\Checkoutcontroller.php on line 68.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Checkoutcontroller->store()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Checkoutcontroller))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 23:20:01 --> Unsupported operand types: string + string
+in APPPATH\Controllers\Frontend\Checkoutcontroller.php on line 66.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Checkoutcontroller->store()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Checkoutcontroller))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 23:20:17 --> Call to undefined method App\Models\OrderModel::insert_id
+in SYSTEMPATH\Model.php on line 807.
+ 1 APPPATH\Controllers\Frontend\Checkoutcontroller.php(73): CodeIgniter\Model->__call('insert_id', [])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Checkoutcontroller->store()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Checkoutcontroller))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 23:44:53 --> Call to undefined method App\Models\OrderModel::getFirstRow
+in SYSTEMPATH\Model.php on line 807.
+ 1 APPPATH\Controllers\Frontend\Checkoutcontroller.php(75): CodeIgniter\Model->__call('getFirstRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Frontend\Checkoutcontroller->store()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Checkoutcontroller))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

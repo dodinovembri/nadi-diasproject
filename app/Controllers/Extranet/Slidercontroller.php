@@ -21,15 +21,29 @@ class Slidercontroller extends BaseController
     public function store()
     {
         $slider = new SliderModel();
+
+        $image = $this->request->getFile('image');
+        $image_name = $image->getRandomName();
+        $image->move('assets/images/sliders/', $image_name);
+
         $slider->insert([
             'created_at' => date('Y-m-d H:i:s'),
-            // 'name' => $this->request->getPost('name'),
-            // 'icon' => $this->request->getPost('icon'),
-            // 'link' => $this->request->getPost('link'),
-            // 'status' => $this->request->getPost('status')
+            'creator_id' => session()->get('id'),
+            'name' => $this->request->getPost('name'),
+            'image' => $image_name,
+            'text1' => $this->request->getPost('text1'),
+            'text2' => $this->request->getPost('text2'),
+            'text3' => $this->request->getPost('text3'),
+            'text4' => $this->request->getPost('text4'),
+            'text5' => $this->request->getPost('text5'),
+            'text_button' => $this->request->getPost('text_button'),
+            'button_link' => $this->request->getPost('button_link'),
+            'status' => $this->request->getPost('status')
         ]);
-        return redirect()->to(base_url('extranet/slider/index'));
-    }    
+
+        session()->setFlashdata('success', 'Success create new data');
+        return redirect()->to(base_url('extranet/slider'));
+    }
 
     public function show($id)
     {
@@ -37,7 +51,7 @@ class Slidercontroller extends BaseController
         $data['slider'] = $slider->where('id', $id)->get()->getFirstRow();
 
         return view('extranet/slider/show', $data);
-    }    
+    }
 
     public function edit($id)
     {
@@ -45,25 +59,57 @@ class Slidercontroller extends BaseController
         $data['slider'] = $slider->where('id', $id)->get()->getFirstRow();
 
         return view('extranet/slider/edit', $data);
-    }   
-    
+    }
+
     public function update($id)
     {
         $slider = new SliderModel();
-        $slider->update($id, [
-            'modified_at' => date('Y-m-d H:i:s'),
-            // 'name' => $this->request->getPost('name'),
-            // 'icon' => $this->request->getPost('icon'),
-            // 'link' => $this->request->getPost('link'),
-            // 'status' => $this->request->getPost('status')
-        ]);
-        return redirect()->to(base_url('extranet/slider/index'));
+        $image = $this->request->getFile('image');
+        if ($image != '') {
+            // image
+            $image_name = $image->getRandomName();
+            $image->move('assets/images/sliders/', $image_name);
+
+            $slider->update($id, [
+                'modified_at' => date('Y-m-d H:i:s'),
+                'modifier_id' => session()->get('id'),
+                'name' => $this->request->getPost('name'),
+                'image' => $image_name,
+                'text1' => $this->request->getPost('text1'),
+                'text2' => $this->request->getPost('text2'),
+                'text3' => $this->request->getPost('text3'),
+                'text4' => $this->request->getPost('text4'),
+                'text5' => $this->request->getPost('text5'),
+                'text_button' => $this->request->getPost('text_button'),
+                'button_link' => $this->request->getPost('button_link'),
+                'status' => $this->request->getPost('status')
+            ]);
+        } else {
+            $slider->update($id, [
+                'modified_at' => date('Y-m-d H:i:s'),
+                'modifier_id' => session()->get('id'),
+                'name' => $this->request->getPost('name'),
+                'text1' => $this->request->getPost('text1'),
+                'text2' => $this->request->getPost('text2'),
+                'text3' => $this->request->getPost('text3'),
+                'text4' => $this->request->getPost('text4'),
+                'text5' => $this->request->getPost('text5'),
+                'text_button' => $this->request->getPost('text_button'),
+                'button_link' => $this->request->getPost('button_link'),
+                'status' => $this->request->getPost('status')
+            ]);
+        }
+
+        session()->setFlashdata('success', 'Success update data');
+        return redirect()->to(base_url('extranet/slider'));
     }
 
     public function destroy($id)
     {
         $slider = new SliderModel();
         $slider->delete($id);
-        return redirect()->to(base_url('extranet/slider/index'));
+
+        session()->setFlashdata('success', 'Success delete data');
+        return redirect()->to(base_url('extranet/slider'));
     }
 }

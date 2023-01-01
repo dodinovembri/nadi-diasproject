@@ -23,12 +23,14 @@ class Guaranteecontroller extends BaseController
         $guarantee = new GuaranteeModel();
         $guarantee->insert([
             'created_at' => date('Y-m-d H:i:s'),
-            // 'name' => $this->request->getPost('name'),
-            // 'icon' => $this->request->getPost('icon'),
-            // 'link' => $this->request->getPost('link'),
-            // 'status' => $this->request->getPost('status')
+            'icon' => $this->request->getPost('icon'),
+            'name' => $this->request->getPost('name'),
+            'description' => $this->request->getPost('description'),
+            'status' => $this->request->getPost('status')
         ]);
-        return redirect()->to(base_url('extranet/guarantee/index'));
+
+        session()->setFlashdata('success', 'Success create new data');
+        return redirect()->to(base_url('extranet/guarantee'));
     }    
 
     public function show($id)
@@ -52,19 +54,22 @@ class Guaranteecontroller extends BaseController
         $guarantee = new GuaranteeModel();
         $guarantee->update($id, [
             'modified_at' => date('Y-m-d H:i:s'),
-            // 'name' => $this->request->getPost('name'),
-            // 'icon' => $this->request->getPost('icon'),
-            // 'link' => $this->request->getPost('link'),
-            // 'status' => $this->request->getPost('status')
+            'icon' => $this->request->getPost('icon'),
+            'name' => $this->request->getPost('name'),
+            'description' => $this->request->getPost('description'),
+            'status' => $this->request->getPost('status')
         ]);
-        return redirect()->to(base_url('extranet/guarantee/index'));
+
+        session()->setFlashdata('success', 'Success update data');
+        return redirect()->to(base_url('extranet/guarantee'));
     }
 
     public function destroy($id)
     {
         $guarantee = new GuaranteeModel();
         $guarantee->delete($id);
-        return redirect()->to(base_url('extranet/guarantee/index'));
+
+        session()->setFlashdata('success', 'Success delete data');
+        return redirect()->to(base_url('extranet/guarantee'));
     }
 }
-
