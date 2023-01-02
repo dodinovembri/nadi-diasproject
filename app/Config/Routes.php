@@ -80,9 +80,8 @@ $routes->get('ext-login', [\App\Controllers\Extranet\Authcontroller::class, 'log
 $routes->post('ext-auth', [\App\Controllers\Extranet\Authcontroller::class, 'auth']);
 $routes->get('ext-logout', [\App\Controllers\Extranet\Authcontroller::class, 'logout']);
 
-$routes->get('extranet', [\App\Controllers\Extranet\Homecontroller::class, 'index'], ['filter' => 'auth']);
-
 $routes->group('extranet', ['filter' => 'auth'], function($routes){
+	$routes->get('/', [\App\Controllers\Extranet\Extranethomecontroller::class, 'index']);
 
 	$routes->group('configuration', function ($routes) {
 		$routes->get('/', [\App\Controllers\Extranet\Configurationcontroller::class, 'index']);

@@ -2,7 +2,7 @@
 
 namespace App\Controllers\Extranet;
 
-class HomeController extends BaseController
+class Extranethomecontroller extends BaseController
 {
     public function index()
     {
