@@ -6,22 +6,8 @@
                 <li><a href="<?= base_url('/') ?>">Home</a></li>
                 <li><a href="<?= base_url('category') ?>">Categories</a></li>
                 <li><a href="<?= base_url('product') ?>">Products</a></li>
-                <li class="float-right"><a href="#" rel="noopener" class="pl-5">About Us</a></li>
-                <li class="float-right"><a href="#" class="pl-5">Contact Us</a></li>
-            </ul>
-
-            <ul class="mobile-menu mt-2 mb-2">
-                <li class="border-0">
-                    <a href="#">
-                        Special Offer!
-                    </a>
-                </li>
-                <li class="border-0">
-                    <a href="#" target="_blank">
-                        Buy Porto!
-                        <span class="tip tip-hot">Hot</span>
-                    </a>
-                </li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
 
             <ul class="mobile-menu">
@@ -43,12 +29,9 @@
         </form>
 
         <div class="social-icons">
-            <a href="#" class="social-icon social-facebook icon-facebook" target="_blank">
-            </a>
-            <a href="#" class="social-icon social-twitter icon-twitter" target="_blank">
-            </a>
-            <a href="#" class="social-icon social-instagram icon-instagram" target="_blank">
-            </a>
+            <?php foreach ($social_medias as $key => $value) { ?>
+                <a href="<?= $value->link ?>" class="social-icon <?= $value->icon ?>" target="_blank"></a>
+            <?php } ?>
         </div>
     </div>
     <!-- End .mobile-menu-wrapper -->
