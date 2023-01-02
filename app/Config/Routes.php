@@ -76,133 +76,133 @@ $routes->get('product/(:any)', [\App\Controllers\Frontend\Productcontroller::cla
 $routes->get('wishlist', [\App\Controllers\Frontend\Wishlistcontroller::class, 'index']);
 
 // Routes Backend Website
-$routes->get('ext-login', 'App\Controllers\Extranet\Authcontroller::login');
-$routes->post('ext-auth', 'App\Controllers\Extranet\Authcontroller::auth');
-$routes->get('ext-logout', 'App\Controllers\Extranet\Authcontroller::logout');
+$routes->get('ext-login', [\App\Controllers\Extranet\Authcontroller::class, 'login']);
+$routes->post('ext-auth', [\App\Controllers\Extranet\Authcontroller::class, 'auth']);
+$routes->get('ext-logout', [\App\Controllers\Extranet\Authcontroller::class, 'logout']);
 
 $routes->group('extranet', ['filter' => 'auth'], function($routes){
-	$routes->get('/', 'App\Controllers\Extranet\Homecontroller::index');
+	$routes->get('/', [\App\Controllers\Extranet\Homecontroller::class, 'index']);
 
 	$routes->group('configuration', function ($routes) {
-		$routes->get('/', 'App\Controllers\Extranet\Configurationcontroller::index');
-		$routes->post('update/(:any)', 'App\Controllers\Extranet\Configurationcontroller::update/$1');
+		$routes->get('/', [\App\Controllers\Extranet\Configurationcontroller::class, 'index']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Configurationcontroller::class, 'update']);
     });
 
 	$routes->group('social-media', function ($routes) {
 		$routes->get('/', [\App\Controllers\Extranet\Socialmediacontroller::class, 'index']);
-		$routes->get('create', 'App\Controllers\Extranet\Socialmediacontroller::create');
-		$routes->post('store', 'App\Controllers\Extranet\Socialmediacontroller::store');
-		$routes->get('show/(:any)', 'App\Controllers\Extranet\Socialmediacontroller::show/$1');
-		$routes->get('edit/(:any)', 'App\Controllers\Extranet\Socialmediacontroller::edit/$1');
-		$routes->post('update/(:any)', 'App\Controllers\Extranet\Socialmediacontroller::update/$1');
-		$routes->get('destroy/(:any)', 'App\Controllers\Extranet\Socialmediacontroller::destroy/$1');
+		$routes->get('create', [\App\Controllers\Extranet\Socialmediacontroller::class, 'create']);
+		$routes->post('store', [App\Controllers\Extranet\Socialmediacontroller::class, 'store']);
+		$routes->get('show/(:any)', [\App\Controllers\Extranet\Socialmediacontroller::class, 'show']);
+		$routes->get('edit/(:any)', [\App\Controllers\Extranet\Socialmediacontroller::class, 'edit']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Socialmediacontroller::class, 'update']);
+		$routes->get('destroy/(:any)', [\App\Controllers\Extranet\Socialmediacontroller::class, 'destroy']);
     });
 
 	$routes->group('product-category', function ($routes) {
-		$routes->get('/', 'App\Controllers\Extranet\Productcategorycontroller::index');
-		$routes->get('create', 'App\Controllers\Extranet\Productcategorycontroller::create');
-		$routes->post('store', 'App\Controllers\Extranet\Productcategorycontroller::store');
-		$routes->get('show/(:any)', 'App\Controllers\Extranet\Productcategorycontroller::show/$1');
-		$routes->get('edit/(:any)', 'App\Controllers\Extranet\Productcategorycontroller::edit/$1');
-		$routes->post('update/(:any)', 'App\Controllers\Extranet\Productcategorycontroller::update/$1');
-		$routes->get('destroy/(:any)', 'App\Controllers\Extranet\Productcategorycontroller::destroy/$1');
+		$routes->get('/', [\App\Controllers\Extranet\Productcategorycontroller::class, 'index']);
+		$routes->get('create', [\App\Controllers\Extranet\Productcategorycontroller::class, 'create']);
+		$routes->post('store', [\App\Controllers\Extranet\Productcategorycontroller::class, 'store']);
+		$routes->get('show/(:any)', [\App\Controllers\Extranet\Productcategorycontroller::class, 'show']);
+		$routes->get('edit/(:any)', [\App\Controllers\Extranet\Productcategorycontroller::class, 'edit']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Productcategorycontroller::class, 'update']);
+		$routes->get('destroy/(:any)', [\App\Controllers\Extranet\Productcategorycontroller::class, 'destroy']);
     });
 	
 	$routes->group('banner', function ($routes) {
-		$routes->get('/', 'App\Controllers\Extranet\Bannercontroller::index');
-		$routes->post('update/(:any)', 'App\Controllers\Extranet\Bannercontroller::update/$1');
+		$routes->get('/', [\App\Controllers\Extranet\Bannercontroller::class, 'index']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Bannercontroller::class, 'update']);
     });
 
 	$routes->group('blog', function ($routes) {
-		$routes->get('/', 'App\Controllers\Extranet\Blogcontroller::index');
-		$routes->get('create', 'App\Controllers\Extranet\Blogcontroller::create');
-		$routes->post('store', 'App\Controllers\Extranet\Blogcontroller::store');
-		$routes->get('show', 'App\Controllers\Extranet\Blogcontroller::show');
-		$routes->get('edit', 'App\Controllers\Extranet\Blogcontroller::edit');
-		$routes->post('update', 'App\Controllers\Extranet\Blogcontroller::update');
-		$routes->get('destroy', 'App\Controllers\Extranet\Blogcontroller::destroy');
+		$routes->get('/', [\App\Controllers\Extranet\Blogcontroller::class, 'index']);
+		$routes->get('create', [\App\Controllers\Extranet\Blogcontroller::class, 'create']);
+		$routes->post('store', [\App\Controllers\Extranet\Blogcontroller::class, 'store']);
+		$routes->get('show', [\App\Controllers\Extranet\Blogcontroller::class, 'show']);
+		$routes->get('edit', [\App\Controllers\Extranet\Blogcontroller::class, 'edit']);
+		$routes->post('update', [\App\Controllers\Extranet\Blogcontroller::class, 'update']);
+		$routes->get('destroy', [\App\Controllers\Extranet\Blogcontroller::class, 'destroy']);
     });
 	
 	$routes->group('brand', function ($routes) {
-		$routes->get('/', 'App\Controllers\Extranet\Brandcontroller::index');
-		$routes->get('create', 'App\Controllers\Extranet\Brandcontroller::create');
-		$routes->post('store', 'App\Controllers\Extranet\Brandcontroller::store');
-		$routes->get('show/(:any)', 'App\Controllers\Extranet\Brandcontroller::show/$1');
-		$routes->get('edit/(:any)', 'App\Controllers\Extranet\Brandcontroller::edit/$1');
-		$routes->post('update/(:any)', 'App\Controllers\Extranet\Brandcontroller::update/$1');
-		$routes->get('destroy/(:any)', 'App\Controllers\Extranet\Brandcontroller::destroy/$1');
+		$routes->get('/', [\App\Controllers\Extranet\Brandcontroller::class, 'index']);
+		$routes->get('create', [\App\Controllers\Extranet\Brandcontroller::class, 'create']);
+		$routes->post('store', [\App\Controllers\Extranet\Brandcontroller::class, 'store']);
+		$routes->get('show/(:any)', [\App\Controllers\Extranet\Brandcontroller::class, 'show']);
+		$routes->get('edit/(:any)', [\App\Controllers\Extranet\Brandcontroller::class, 'edit']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Brandcontroller::class, 'update']);
+		$routes->get('destroy/(:any)', [\App\Controllers\Extranet\Brandcontroller::class, 'destroy']);
     });		
 
 	$routes->group('exclusive', function ($routes) {
-		$routes->get('/', 'App\Controllers\Extranet\Exclusivecontroller::index');
-		$routes->post('update/(:any)', 'App\Controllers\Extranet\Exclusivecontroller::update/$1');
+		$routes->get('/', [\App\Controllers\Extranet\Exclusivecontroller::class, 'index']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Exclusivecontroller::class, 'update']);
     });	
 
 	$routes->group('guarantee', function ($routes) {
-		$routes->get('/', 'App\Controllers\Extranet\Guaranteecontroller::index');
-		$routes->get('create', 'App\Controllers\Extranet\Guaranteecontroller::create');
-		$routes->post('store', 'App\Controllers\Extranet\Guaranteecontroller::store');
-		$routes->get('show/(:any)', 'App\Controllers\Extranet\Guaranteecontroller::show/$1');
-		$routes->get('edit/(:any)', 'App\Controllers\Extranet\Guaranteecontroller::edit/$1');
-		$routes->post('update/(:any)', 'App\Controllers\Extranet\Guaranteecontroller::update/$1');
-		$routes->get('destroy/(:any)', 'App\Controllers\Extranet\Guaranteecontroller::destroy/$1');
+		$routes->get('/', [\App\Controllers\Extranet\Guaranteecontroller::class, 'index']);
+		$routes->get('create', [\App\Controllers\Extranet\Guaranteecontroller::class, 'create']);
+		$routes->post('store', [\App\Controllers\Extranet\Guaranteecontroller::class, 'store']);
+		$routes->get('show/(:any)', [\App\Controllers\Extranet\Guaranteecontroller::class, 'show']);
+		$routes->get('edit/(:any)', [\App\Controllers\Extranet\Guaranteecontroller::class, 'edit']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Guaranteecontroller::class, 'update']);
+		$routes->get('destroy/(:any)', [\App\Controllers\Extranet\Guaranteecontroller::class, 'destroy']);
     });			
 
 	$routes->group('product', function ($routes) {
-		$routes->get('/', 'App\Controllers\Extranet\Productcontroller::index');
-		$routes->get('create', 'App\Controllers\Extranet\Productcontroller::create');
-		$routes->post('store', 'App\Controllers\Extranet\Productcontroller::store');
-		$routes->get('show/(:any)', 'App\Controllers\Extranet\Productcontroller::show/$1');
-		$routes->get('edit/(:any)', 'App\Controllers\Extranet\Productcontroller::edit/$1');
-		$routes->post('update/(:any)', 'App\Controllers\Extranet\Productcontroller::update/$1');
-		$routes->get('destroy/(:any)', 'App\Controllers\Extranet\Productcontroller::destroy/$1');
+		$routes->get('/', [\App\Controllers\Extranet\Productcontroller::class, 'index']);
+		$routes->get('create', [\App\Controllers\Extranet\Productcontroller::class, 'create']);
+		$routes->post('store', [\App\Controllers\Extranet\Productcontroller::class, 'store']);
+		$routes->get('show/(:any)', [\App\Controllers\Extranet\Productcontroller::class, 'show']);
+		$routes->get('edit/(:any)', [\App\Controllers\Extranet\Productcontroller::class, 'edit']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Productcontroller::class, 'update']);
+		$routes->get('destroy/(:any)', [\App\Controllers\Extranet\Productcontroller::class, 'destroy']);
     });
 
 	$routes->group('promotion', function ($routes) {
-		$routes->get('/', 'App\Controllers\Extranet\Promotioncontroller::index');
-		$routes->get('create', 'App\Controllers\Extranet\Promotioncontroller::create');
-		$routes->post('store', 'App\Controllers\Extranet\Promotioncontroller::store');
-		$routes->get('show/(:any)', 'App\Controllers\Extranet\Promotioncontroller::show/$1');
-		$routes->get('edit/(:any)', 'App\Controllers\Extranet\Promotioncontroller::edit/$1');
-		$routes->post('update/(:any)', 'App\Controllers\Extranet\Promotioncontroller::update/$1');
-		$routes->get('destroy/(:any)', 'App\Controllers\Extranet\Promotioncontroller::destroy/$1');
+		$routes->get('/', [\App\Controllers\Extranet\Promotioncontroller::class, 'index']);
+		$routes->get('create', [\App\Controllers\Extranet\Promotioncontroller::class, 'create']);
+		$routes->post('store', [\App\Controllers\Extranet\Promotioncontroller::class, 'store']);
+		$routes->get('show/(:any)', [\App\Controllers\Extranet\Promotioncontroller::class, 'show']);
+		$routes->get('edit/(:any)', [\App\Controllers\Extranet\Promotioncontroller::class, 'edit']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Promotioncontroller::class, 'update']);
+		$routes->get('destroy/(:any)', [\App\Controllers\Extranet\Promotioncontroller::class, 'destroy']);
     });
 
 	$routes->group('slider', function ($routes) {
-		$routes->get('/', 'App\Controllers\Extranet\Slidercontroller::index');
-		$routes->get('create', 'App\Controllers\Extranet\Slidercontroller::create');
-		$routes->post('store', 'App\Controllers\Extranet\Slidercontroller::store');
-		$routes->get('show/(:any)', 'App\Controllers\Extranet\Slidercontroller::show/$1');
-		$routes->get('edit/(:any)', 'App\Controllers\Extranet\Slidercontroller::edit/$1');
-		$routes->post('update/(:any)', 'App\Controllers\Extranet\Slidercontroller::update/$1');
-		$routes->get('destroy/(:any)', 'App\Controllers\Extranet\Slidercontroller::destroy/$1');
+		$routes->get('/', [\App\Controllers\Extranet\Slidercontroller::class, 'index']);
+		$routes->get('create', [\App\Controllers\Extranet\Slidercontroller::class, 'create']);
+		$routes->post('store', [\App\Controllers\Extranet\Slidercontroller::class, 'store']);
+		$routes->get('show/(:any)', [\App\Controllers\Extranet\Slidercontroller::class, 'show']);
+		$routes->get('edit/(:any)', [\App\Controllers\Extranet\Slidercontroller::class, 'edit']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Slidercontroller::class, 'update']);
+		$routes->get('destroy/(:any)', [\App\Controllers\Extranet\Slidercontroller::class, 'destroy']);
     });
 
 	$routes->group('support', function ($routes) {
-		$routes->get('/', 'App\Controllers\Extranet\Supportcontroller::index');
-		$routes->get('create', 'App\Controllers\Extranet\Supportcontroller::create');
-		$routes->post('store', 'App\Controllers\Extranet\Supportcontroller::store');
-		$routes->get('show/(:any)', 'App\Controllers\Extranet\Supportcontroller::show/$1');
-		$routes->get('edit/(:any)', 'App\Controllers\Extranet\Supportcontroller::edit/$1');
-		$routes->post('update/(:any)', 'App\Controllers\Extranet\Supportcontroller::update/$1');
-		$routes->get('destroy/(:any)', 'App\Controllers\Extranet\Supportcontroller::destroy/$1');
+		$routes->get('/', [\App\Controllers\Extranet\Supportcontroller::class, 'index']);
+		$routes->get('create', [\App\Controllers\Extranet\Supportcontroller::class, 'create']);
+		$routes->post('store', [\App\Controllers\Extranet\Supportcontroller::class, 'store']);
+		$routes->get('show/(:any)', [\App\Controllers\Extranet\Supportcontroller::class, 'show']);
+		$routes->get('edit/(:any)', [\App\Controllers\Extranet\Supportcontroller::class, 'edit']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Supportcontroller::class, 'update']);
+		$routes->get('destroy/(:any)', [\App\Controllers\Extranet\Supportcontroller::class, 'destroy']);
     });
 
 	$routes->group('user', function ($routes) {
-		$routes->get('/', 'App\Controllers\Extranet\Usercontroller::index');
-		$routes->get('create', 'App\Controllers\Extranet\Usercontroller::create');
-		$routes->post('store', 'App\Controllers\Extranet\Usercontroller::store');
-		$routes->get('show/(:any)', 'App\Controllers\Extranet\Usercontroller::show/$1');
-		$routes->get('edit/(:any)', 'App\Controllers\Extranet\Usercontroller::edit/$1');
-		$routes->post('update/(:any)', 'App\Controllers\Extranet\Usercontroller::update/$1');
-		$routes->get('destroy/(:any)', 'App\Controllers\Extranet\Usercontroller::destroy/$1');
+		$routes->get('/', [\App\Controllers\Extranet\Usercontroller::class, 'index']);
+		$routes->get('create', [\App\Controllers\Extranet\Usercontroller::class, 'create']);
+		$routes->post('store', [\App\Controllers\Extranet\Usercontroller::class, 'store']);
+		$routes->get('show/(:any)', [\App\Controllers\Extranet\Usercontroller::class, 'show']);
+		$routes->get('edit/(:any)', [\App\Controllers\Extranet\Usercontroller::class, 'edit']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Usercontroller::class, 'update']);
+		$routes->get('destroy/(:any)', [\App\Controllers\Extranet\Usercontroller::class, 'destroy']);
     });
 
 	$routes->group('order', function ($routes) {
-		$routes->get('/', 'App\Controllers\Extranet\Ordercontroller::index');
-		$routes->get('show/(:any)', 'App\Controllers\Extranet\Ordercontroller::show/$1');
-		$routes->get('edit/(:any)', 'App\Controllers\Extranet\Ordercontroller::edit/$1');
-		$routes->post('update/(:any)', 'App\Controllers\Extranet\Ordercontroller::update/$1');
+		$routes->get('/', [\App\Controllers\Extranet\Ordercontroller::class, 'index']);
+		$routes->get('show/(:any)', [\App\Controllers\Extranet\Ordercontroller::class, 'show']);
+		$routes->get('edit/(:any)', [\App\Controllers\Extranet\Ordercontroller::class, 'edit']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Ordercontroller::class, 'update']);
     });
 });
 
