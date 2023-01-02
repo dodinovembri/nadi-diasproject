@@ -32,6 +32,7 @@
             <li class="nav-item"><a href="<?= base_url('extranet/promotion') ?>"><i class="nav-icon i-Speach-Bubble-2"></i><span class="item-name">Promotion</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/slider') ?>"><i class="nav-icon i-Loading"></i><span class="item-name">Slider</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/support') ?>"><i class="nav-icon i-File-Horizontal-Text"></i><span class="item-name">Support</span></a></li>
+            <li class="nav-item"><a href="<?= base_url('extranet/about') ?>"><i class="nav-icon i-Belt-3"></i><span class="item-name">About Us</span></a></li>
         </ul>
     </div>
     <div class="sidebar-overlay"></div>

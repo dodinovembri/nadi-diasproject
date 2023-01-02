@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Contact - <?= $configuration->title ?></title>
-    <meta name="keywords" content="<?= $configuration->keyword ?>" />
-    <meta name="description" content="<?= $configuration->description ?>">
-    <meta name="author" content="<?= $configuration->author ?>">
+	<title>Contact - <?= $configuration->title ?></title>
+	<meta name="keywords" content="<?= $configuration->keyword ?>" />
+	<meta name="description" content="<?= $configuration->description ?>">
+	<meta name="author" content="<?= $configuration->author ?>">
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="48x48" href="<?= base_url('assets/images/icons/favicon.png') ?>">
 	<script>
@@ -37,20 +38,9 @@
 		<?= $this->include('frontend/components/header') ?>
 
 		<main class="main">
-			<nav aria-label="breadcrumb" class="breadcrumb-nav">
-				<div class="container">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item">
-							<a href="demo4.html"><i class="icon-home"></i></a>
-						</li>
-						<li class="breadcrumb-item active" aria-current="page">
-							Contact Us
-						</li>
-					</ol>
-				</div>
-			</nav>
+			<h5 class="heading-bottom-border text-uppercase" style="text-align: center;">Contact Us</h5>
 
-			<div id="map"></div>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.793091778345!2d104.82541481401974!3d-3.400596042543896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3bee13ace59f3f%3A0x5891905777809a7c!2sDias%20Project%20Kayuagung!5e0!3m2!1sen!2sid!4v1672674953141!5m2!1sen!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 			<div class="container contact-us-container">
 				<div class="contact-info">
@@ -304,4 +294,5 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc3LRykbLB-y8MuomRUIY0qH5S6xgBLX4"></script>
 	<script src="<?= base_url('assets/js/map.js') ?>"></script>
 </body>
+
 </html>

@@ -204,6 +204,11 @@ $routes->group('extranet', ['filter' => 'auth'], function($routes){
 		$routes->get('edit/(:any)', [\App\Controllers\Extranet\Ordercontroller::class, 'edit']);
 		$routes->post('update/(:any)', [\App\Controllers\Extranet\Ordercontroller::class, 'update']);
     });
+
+	$routes->group('about', function ($routes) {
+		$routes->get('/', [\App\Controllers\Extranet\Aboutcontroller::class, 'index']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Aboutcontroller::class, 'update']);
+    });	
 });
 
 /*

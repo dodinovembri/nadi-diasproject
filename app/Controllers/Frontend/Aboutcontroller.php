@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Controllers\Frontend;
+
+use App\Models\AboutModel;
 use App\Models\ConfigurationModel;
 use App\Models\SocialMediaModel;
 use App\Models\ProductCategoryModel;
@@ -14,11 +16,14 @@ class Aboutcontroller extends BaseController
         $social_media = new SocialMediaModel();
         $product_category = new ProductCategoryModel();
         $cart = new CartModel();
+        $about = new AboutModel();
 
         $data['configuration'] = $configuration->get()->getFirstRow();
         $data['social_medias'] = $social_media->get()->getResult();
         $data['product_categories'] = $product_category->get()->getResult();
         $data['count_cart'] = $cart->where('user_id', session()->get('id'))->countAll();
+        $data['about'] = $about->get()->getFirstRow();
+
         
         return view('frontend/about/index', $data);
     }

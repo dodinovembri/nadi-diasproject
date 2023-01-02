@@ -10,3 +10,27 @@ in APPPATH\Views\extranet\blog\index.php on line 49.
  8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-02 09:37:52 --> Attempt to read property "id" on null
+in APPPATH\Views\extranet\about\index.php on line 33.
+ 1 APPPATH\Views\extranet\about\index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'APPPATH\\Views\\extranet\\about\\index.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\about\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/about/index', [], true)
+ 5 APPPATH\Controllers\Extranet\Aboutcontroller.php(13): view('extranet/about/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Aboutcontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Aboutcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-02 09:39:39 --> Undefined property: stdClass::$text4
+in APPPATH\Views\extranet\about\index.php on line 55.
+ 1 APPPATH\Views\extranet\about\index.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$text4', 'APPPATH\\Views\\extranet\\about\\index.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\about\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/about/index', [], true)
+ 5 APPPATH\Controllers\Extranet\Aboutcontroller.php(13): view('extranet/about/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Aboutcontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Aboutcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

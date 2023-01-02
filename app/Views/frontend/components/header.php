@@ -95,8 +95,8 @@
                     <li><a href="<?= base_url('/') ?>">Home</a></li>
                     <li><a href="<?= base_url('category') ?>">Categories</a></li>
                     <li><a href="<?= base_url('product') ?>">Products</a></li>                    
-                    <li class="float-right"><a href="#" rel="noopener" class="pl-5">About Us</a></li>
-                    <li class="float-right"><a href="#" class="pl-5">Contact Us</a></li>
+                    <li class="float-right"><a href="<?= base_url('about') ?>" rel="noopener" class="pl-5">About Us</a></li>
+                    <li class="float-right"><a href="<?= base_url('contact') ?>" class="pl-5">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
