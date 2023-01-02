@@ -26,7 +26,6 @@
             <li class="nav-item"><a href="<?= base_url('extranet/configuration') ?>"><i class="nav-icon i-Bell1"></i><span class="item-name">Configuration</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/social-media') ?>"><i class="nav-icon i-Split-Horizontal-2-Window"></i><span class="item-name">Social Media</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/banner') ?>"><i class="nav-icon i-Cursor-Click"></i><span class="item-name">Banner</span></a></li>
-            <li class="nav-item"><a href="<?= base_url('extranet/blog') ?>"><i class="nav-icon i-Line-Chart-2"></i><span class="item-name">Blog</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/brand') ?>"><i class="nav-icon i-ID-Card"></i><span class="item-name">Brand</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/exclusive') ?>"><i class="nav-icon i-Video-Photographer"></i><span class="item-name">Exclusive</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/guarantee') ?>"><i class="nav-icon i-Belt-3"></i><span class="item-name">Guarantee</span></a></li>

@@ -10,6 +10,7 @@
     <link href="<?= base_url('assets/extranet/css/themes/lite-purple.min.css') ?>" rel="stylesheet" />
     <link href="<?= base_url('assets/extranet/css/plugins/perfect-scrollbar.min.css') ?>" rel="stylesheet" />
     <link rel="stylesheet" href="<?= base_url('assets/extranet/css/plugins/datatables.min.css') ?>" />
+    <link rel="icon" type="image/png" sizes="48x48" href="<?= base_url('assets/images/icons/favicon.png') ?>">
 </head>
 
 <body class="text-left">

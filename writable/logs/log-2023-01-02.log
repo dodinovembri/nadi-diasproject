@@ -1,0 +1,12 @@
+CRITICAL - 2023-01-02 02:39:49 --> Undefined variable $social_medias
+in APPPATH\Views\extranet\blog\index.php on line 49.
+ 1 APPPATH\Views\extranet\blog\index.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $social_medias', 'APPPATH\\Views\\extranet\\blog\\index.php', 49)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\blog\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/blog/index', [], true)
+ 5 APPPATH\Controllers\Extranet\Blogcontroller.php(13): view('extranet/blog/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Blogcontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Blogcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
