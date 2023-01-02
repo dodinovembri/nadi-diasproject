@@ -52,11 +52,11 @@
 					<li class="active">
 						<a href="void::">Shopping Cart</a>
 					</li>
-					<li>
-						<a href="disabled">Checkout</a>
+					<li class="disabled">
+						<a href="void::">Checkout</a>
 					</li>
 					<li class="disabled">
-						<a href="cart.html">Order Complete</a>
+						<a href="void::">Order Complete</a>
 					</li>
 				</ul>
 
@@ -150,11 +150,12 @@
 									</tr>
 								</tfoot>
 							</table>
-
-							<div class="checkout-methods">
-								<a href="<?= base_url('checkout') ?>" class="btn btn-block btn-dark">Checkout
-									<i class="fa fa-arrow-right"></i></a>
-							</div>
+							<?php if ($total_product > 0) { ?>								
+								<div class="checkout-methods">
+									<a href="<?= base_url('checkout') ?>" class="btn btn-block btn-dark">Checkout
+										<i class="fa fa-arrow-right"></i></a>
+								</div>
+							<?php } ?>
 						</div><!-- End .cart-summary -->
 					</div><!-- End .col-lg-4 -->
 				</div><!-- End .row -->
