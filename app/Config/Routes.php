@@ -63,6 +63,7 @@ $routes->get('category/(:any)', '\App\Controllers\Frontend\Productcategorycontro
 // Routes product
 $routes->get('product', [\App\Controllers\Frontend\Productcontroller::class, 'index']);
 $routes->get('product/(:any)', [\App\Controllers\Frontend\Productcontroller::class, 'show']);
+$routes->get('product-search', [\App\Controllers\Frontend\Productcontroller::class, 'search']);
 $routes->get('wishlist', [\App\Controllers\Frontend\Wishlistcontroller::class, 'index']);
 $routes->post('inbox/store', [\App\Controllers\Frontend\Inboxcontroller::class, 'store']);
 
@@ -204,6 +205,16 @@ $routes->group('extranet', ['filter' => 'auth'], function($routes){
 		$routes->get('/', [\App\Controllers\Extranet\Contactcontroller::class, 'index']);
 		$routes->post('update/(:any)', [\App\Controllers\Extranet\Contactcontroller::class, 'update']);
     });
+
+	$routes->group('faq', function ($routes) {
+		$routes->get('/', [\App\Controllers\Extranet\Faqcontroller::class, 'index']);
+		$routes->get('create', [\App\Controllers\Extranet\Faqcontroller::class, 'create']);
+		$routes->post('store', [\App\Controllers\Extranet\Faqcontroller::class, 'store']);
+		$routes->get('show/(:any)', [\App\Controllers\Extranet\Faqcontroller::class, 'show']);
+		$routes->get('edit/(:any)', [\App\Controllers\Extranet\Faqcontroller::class, 'edit']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Faqcontroller::class, 'update']);
+		$routes->get('destroy/(:any)', [\App\Controllers\Extranet\Faqcontroller::class, 'destroy']);
+    });	
 });
 
 /*

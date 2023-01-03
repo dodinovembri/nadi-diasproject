@@ -50,7 +50,7 @@
                 <div class="header-right w-lg-max">
                     <div class="header-icon header-search header-search-inline header-search-category w-lg-max text-right mt-0">
                         <a href="#" class="search-toggle" role="button"><i class="icon-search-3"></i></a>
-                        <form action="#" method="get">
+                        <form action="<?= base_url('product-search') ?>" method="get">
                             <div class="header-search-wrapper">
                                 <input type="search" class="form-control" name="q" id="q" placeholder="Search..." required>
                                 <div class="select-custom">

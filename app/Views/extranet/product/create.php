@@ -86,7 +86,7 @@
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label>Image 2</label>
-                                            <input class="form-control" type="file" name="image2" />
+                                            <input class="form-control" type="file" name="image2" required />
                                             <sub>.jpg or .png file, size: 300x300</sub>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">

@@ -21,6 +21,7 @@
             <li class="nav-item"><a href="<?= base_url('extranet/user') ?>"><i class="nav-icon i-Crop-2"></i><span class="item-name">User Management</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/product-category') ?>"><i class="nav-icon i-Medal-2"></i><span class="item-name">Product Category</span></a></li>
             <li class="nav-item"><a href="<?= base_url('extranet/product') ?>"><i class="nav-icon i-Arrow-Next"></i><span class="item-name">Product</span></a></li>
+            <li class="nav-item"><a href="<?= base_url('extranet/faq') ?>"><i class="nav-icon i-Speach-Bubble-8"></i><span class="item-name">Frequently Asked Questions</span></a></li>
         </ul>
         <ul class="childNav" data-parent="uikits">
             <li class="nav-item"><a href="<?= base_url('extranet/configuration') ?>"><i class="nav-icon i-Bell1"></i><span class="item-name">Configuration</span></a></li>

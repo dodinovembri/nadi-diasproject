@@ -6,6 +6,7 @@ use App\Models\SocialMediaModel;
 use App\Models\ProductCategoryModel;
 use App\Models\CartModel;
 use App\Models\ContactModel;
+use App\Models\FaqModel;
 
 class Contactcontroller extends BaseController
 {
@@ -16,12 +17,14 @@ class Contactcontroller extends BaseController
         $product_category = new ProductCategoryModel();
         $cart = new CartModel();
         $contact = new ContactModel();
+        $faq = new FaqModel();
 
         $data['configuration'] = $configuration->get()->getFirstRow();
         $data['social_medias'] = $social_media->get()->getResult();
         $data['product_categories'] = $product_category->get()->getResult();
         $data['count_cart'] = $cart->where('user_id', session()->get('id'))->countAll();
         $data['contact'] = $contact->get()->getFirstRow();
+        $data['faqs'] = $faq->orderBy('created_at', 'ASC')->get()->getResult();
         
         return view('frontend/contact/index', $data);
     }

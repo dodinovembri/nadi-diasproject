@@ -92,136 +92,17 @@
 					<div class="col-lg-6">
 						<h2 class="mt-6 mb-1">Frequently Asked Questions</h2>
 						<div id="accordion">
-							<div class="card card-accordion">
-								<a class="card-header" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-									Curabitur eget leo at velit imperdiet viaculis
-									vitaes?
-								</a>
-
-								<div id="collapseOne" class="collapse show" data-parent="#accordion">
-									<p>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit. Curabitur eget leo at velit
-										imperdiet varius. In eu ipsum vitae velit
-										congue iaculis vitae at risus. Nullam tortor
-										nunc, bibendum vitae semper a, volutpat eget
-										massa.</p>
+							<?php foreach ($faqs as $key => $value) { ?>
+								<div class="card card-accordion">
+									<a class="card-header <?= $key > 0 ? "collapsed": "" ?>" href="#" data-toggle="collapse" data-target="#collapse<?= $key ?>" aria-expanded="true" aria-controls="collapseOne">
+										<?= $value->question ?>
+									</a>
+	
+									<div id="collapse<?= $key ?>" class="collapse <?= $key == 0 ? "show": "" ?>" data-parent="#accordion">
+										<p style="text-align: justify;"><?= $value->answer ?></p>
+									</div>
 								</div>
-							</div>
-
-							<div class="card card-accordion">
-								<a class="card-header collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
-									Curabitur eget leo at velit imperdiet vague
-									iaculis vitaes?
-								</a>
-
-								<div id="collapseTwo" class="collapse" data-parent="#accordion">
-									<p>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit. Curabitur eget leo at velit
-										imperdiet varius. In eu ipsum vitae velit
-										congue iaculis vitae at risus. Nullam tortor
-										nunc, bibendum vitae semper a, volutpat eget
-										massa. Lorem ipsum dolor sit amet,
-										consectetur adipiscing elit. Integer
-										fringilla, orci sit amet posuere auctor,
-										orci eros pellentesque odio, nec
-										pellentesque erat ligula nec massa. Aenean
-										consequat lorem ut felis ullamcorper posuere
-										gravida tellus faucibus. Maecenas dolor
-										elit, pulvinar eu vehicula eu, consequat et
-										lacus. Duis et purus ipsum. In auctor mattis
-										ipsum id molestie. Donec risus nulla,
-										fringilla a rhoncus vitae, semper a massa.
-										Vivamus ullamcorper, enim sit amet consequat
-										laoreet, tortor tortor dictum urna, ut
-										egestas urna ipsum nec libero. Nulla justo
-										leo, molestie vel tempor nec, egestas at
-										massa. Aenean pulvinar, felis porttitor
-										iaculis pulvinar, odio orci sodales odio, ac
-										pulvinar felis quam sit.</p>
-								</div>
-							</div>
-
-							<div class="card card-accordion">
-								<a class="card-header collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-									Curabitur eget leo at velit imperdiet viaculis
-									vitaes?
-								</a>
-
-								<div id="collapseThree" class="collapse" data-parent="#accordion">
-									<p>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit. Curabitur eget leo at velit
-										imperdiet varius. In eu ipsum vitae velit
-										congue iaculis vitae at risus. Nullam tortor
-										nunc, bibendum vitae semper a, volutpat eget
-										massa.</p>
-								</div>
-							</div>
-
-							<div class="card card-accordion">
-								<a class="card-header collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseThree">
-									Curabitur eget leo at velit imperdiet vague
-									iaculis vitaes?
-								</a>
-
-								<div id="collapseFour" class="collapse" data-parent="#accordion">
-									<p>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit. Curabitur eget leo at velit
-										imperdiet varius. In eu ipsum vitae velit
-										congue iaculis vitae at risus. Nullam tortor
-										nunc, bibendum vitae semper a, volutpat eget
-										massa. Lorem ipsum dolor sit amet,
-										consectetur adipiscing elit. Integer
-										fringilla, orci sit amet posuere auctor,
-										orci eros pellentesque odio, nec
-										pellentesque erat ligula nec massa. Aenean
-										consequat lorem ut felis ullamcorper posuere
-										gravida tellus faucibus. Maecenas dolor
-										elit, pulvinar eu vehicula eu, consequat et
-										lacus. Duis et purus ipsum. In auctor mattis
-										ipsum id molestie. Donec risus nulla,
-										fringilla a rhoncus vitae, semper a massa.
-										Vivamus ullamcorper, enim sit amet consequat
-										laoreet, tortor tortor dictum urna, ut
-										egestas urna ipsum nec libero. Nulla justo
-										leo, molestie vel tempor nec, egestas at
-										massa. Aenean pulvinar, felis porttitor
-										iaculis pulvinar, odio orci sodales odio, ac
-										pulvinar felis quam sit.</p>
-								</div>
-							</div>
-
-							<div class="card card-accordion">
-								<a class="card-header collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseThree">
-									Curabitur eget leo at velit imperdiet varius
-									iaculis vitaes?
-								</a>
-
-								<div id="collapseFive" class="collapse" data-parent="#accordion">
-									<p>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit. Curabitur eget leo at velit
-										imperdiet varius. In eu ipsum vitae velit
-										congue iaculis vitae at risus. Nullam tortor
-										nunc, bibendum vitae semper a, volutpat eget
-										massa. Lorem ipsum dolor sit amet,
-										consectetur adipiscing elit. Integer
-										fringilla, orci sit amet posuere auctor,
-										orci eros pellentesque odio, nec
-										pellentesque erat ligula nec massa. Aenean
-										consequat lorem ut felis ullamcorper posuere
-										gravida tellus faucibus. Maecenas dolor
-										elit, pulvinar eu vehicula eu, consequat et
-										lacus. Duis et purus ipsum. In auctor mattis
-										ipsum id molestie. Donec risus nulla,
-										fringilla a rhoncus vitae, semper a massa.
-										Vivamus ullamcorper, enim sit amet consequat
-										laoreet, tortor tortor dictum urna, ut
-										egestas urna ipsum nec libero. Nulla justo
-										leo, molestie vel tempor nec, egestas at
-										massa. Aenean pulvinar, felis porttitor
-										iaculis pulvinar, odio orci sodales odio, ac
-										pulvinar felis quam sit.</p>
-								</div>
-							</div>
+							<?php } ?>
 						</div>
 					</div>
 				</div>
