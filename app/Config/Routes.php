@@ -38,48 +38,38 @@ $routes->get('/', [\App\Controllers\Frontend\Homecontroller::class, 'index']);
 $routes->get('about', [\App\Controllers\Frontend\Aboutcontroller::class, 'index']);
 $routes->get('account', [\App\Controllers\Frontend\Accountcontroller::class, 'index'], ['filter' => 'user_auth']);
 $routes->post('account/update/(:any)', [\App\Controllers\Frontend\Accountcontroller::class, 'update'], ['filter' => 'user_auth']);
-
 // register
 $routes->get('register', [\App\Controllers\Frontend\Registercontroller::class, 'index']);
 $routes->post('register/store', [\App\Controllers\Frontend\Registercontroller::class, 'store']);
-
 // login
 $routes->get('login', [\App\Controllers\Frontend\Authcontroller::class, 'index']);
 $routes->post('login/auth', [\App\Controllers\Frontend\Authcontroller::class, 'auth']);
 $routes->get('logout', [\App\Controllers\Frontend\Authcontroller::class, 'logout']);
-
 $routes->get('forgot', [\App\Controllers\Frontend\Authcontroller::class, 'forgot']);
 $routes->get('blog', [\App\Controllers\Frontend\Blogcontroller::class, 'index']);
-
 // Routes cart
 $routes->get('cart', [\App\Controllers\Frontend\Cartcontroller::class, 'index'], ['filter' => 'user_auth']);
 $routes->get('cart/store/(:any)', [\App\Controllers\Frontend\Cartcontroller::class, 'store'], ['filter' => 'user_auth']);
 $routes->get('cart/store/(:any)/(:any)/(:any)/(:any)', [\App\Controllers\Frontend\Cartcontroller::class, 'store'], ['filter' => 'user_auth']);
 $routes->get('cart/destroy/(:any)', [\App\Controllers\Frontend\Cartcontroller::class, 'destroy'], ['filter' => 'user_auth']);
 $routes->post('cart/update', [\App\Controllers\Frontend\Cartcontroller::class, 'update'], ['filter' => 'user_auth']);
-
 $routes->get('checkout', [\App\Controllers\Frontend\Checkoutcontroller::class, 'index'], ['filter' => 'user_auth']);
 $routes->get('checkout/store', [\App\Controllers\Frontend\Checkoutcontroller::class, 'store'], ['filter' => 'user_auth']);
-
 $routes->get('order/confirmation', [\App\Controllers\Frontend\Ordercontroller::class, 'confirmation'], ['filter' => 'user_auth']);
-
 $routes->get('contact', [\App\Controllers\Frontend\Contactcontroller::class, 'index']);
-
 // Routes category
 $routes->get('category', [\App\Controllers\Frontend\Productcategorycontroller::class, 'index']);
 $routes->get('category/(:any)', '\App\Controllers\Frontend\Productcategorycontroller::show/$1');
-
 // Routes product
 $routes->get('product', [\App\Controllers\Frontend\Productcontroller::class, 'index']);
 $routes->get('product/(:any)', [\App\Controllers\Frontend\Productcontroller::class, 'show']);
-
 $routes->get('wishlist', [\App\Controllers\Frontend\Wishlistcontroller::class, 'index']);
+$routes->post('inbox/store', [\App\Controllers\Frontend\Inboxcontroller::class, 'store']);
 
 // Routes Backend Website
 $routes->get('ext-login', [\App\Controllers\Extranet\Authcontroller::class, 'login']);
 $routes->post('ext-auth', [\App\Controllers\Extranet\Authcontroller::class, 'auth']);
 $routes->get('ext-logout', [\App\Controllers\Extranet\Authcontroller::class, 'logout']);
-
 $routes->group('extranet', ['filter' => 'auth'], function($routes){
 	$routes->get('/', [\App\Controllers\Extranet\Extranethomecontroller::class, 'index']);
 
@@ -209,6 +199,11 @@ $routes->group('extranet', ['filter' => 'auth'], function($routes){
 		$routes->get('/', [\App\Controllers\Extranet\Aboutcontroller::class, 'index']);
 		$routes->post('update/(:any)', [\App\Controllers\Extranet\Aboutcontroller::class, 'update']);
     });	
+
+	$routes->group('contact', function ($routes) {
+		$routes->get('/', [\App\Controllers\Extranet\Contactcontroller::class, 'index']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Contactcontroller::class, 'update']);
+    });
 });
 
 /*

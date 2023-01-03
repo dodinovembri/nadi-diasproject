@@ -38,65 +38,23 @@
 		<?= $this->include('frontend/components/header') ?>
 
 		<main class="main">
-			<h5 class="heading-bottom-border text-uppercase" style="text-align: center;">Contact Us</h5>
+			<h5 class="heading-bottom text-uppercase" style="text-align: center; margin-top: 20px;">Contact Us</h5>
 
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.793091778345!2d104.82541481401974!3d-3.400596042543896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3bee13ace59f3f%3A0x5891905777809a7c!2sDias%20Project%20Kayuagung!5e0!3m2!1sen!2sid!4v1672674953141!5m2!1sen!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+			
 			<div class="container contact-us-container">
 				<div class="contact-info">
 					<div class="row">
 						<div class="col-12">
+							<iframe src="<?= $contact->iframe_maps_link ?>" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 							<h2 class="ls-n-25 m-b-1">
-								Contact Info
+							<?= $contact->text1 ?>
 							</h2>
 
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing
-								elit. Sed imperdiet libero id nisi euismod, sed
-								porta est consectetur. Vestibulum auctor felis eget
-								orci semper vestibulum. Pellentesque ultricies nibh
-								gravida, accumsan libero luctus, molestie nunc.L
-								orem ipsum dolor sit amet, consectetur adipiscing
-								elit.
+							<?= $contact->description ?>
 							</p>
 						</div>
 
-						<div class="col-sm-6 col-lg-3">
-							<div class="feature-box text-center">
-								<i class="sicon-location-pin"></i>
-								<div class="feature-box-content">
-									<h3>Address</h3>
-									<h5>123 Wall Street, New York / NY</h5>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-lg-3">
-							<div class="feature-box text-center">
-								<i class="fa fa-mobile-alt"></i>
-								<div class="feature-box-content">
-									<h3>Phone Number</h3>
-									<h5>(800) 123-4567</h5>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-lg-3">
-							<div class="feature-box text-center">
-								<i class="far fa-envelope"></i>
-								<div class="feature-box-content">
-									<h3>E-mail Address</h3>
-									<h5>porto@portotheme.com</h5>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-lg-3">
-							<div class="feature-box text-center">
-								<i class="far fa-calendar-alt"></i>
-								<div class="feature-box-content">
-									<h3>Working Days/Hours</h3>
-									<h5>Mon - Sun / 9:00AM - 8:00PM</h5>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 
@@ -104,23 +62,23 @@
 					<div class="col-lg-6">
 						<h2 class="mt-6 mb-2">Send Us a Message</h2>
 
-						<form class="mb-0" action="#">
+						<form class="mb-0" action="<?= base_url('inbox/store') ?>" method="post">
 							<div class="form-group">
 								<label class="mb-1" for="contact-name">Your Name
 									<span class="required">*</span></label>
-								<input type="text" class="form-control" id="contact-name" name="contact-name" required />
+								<input type="text" class="form-control" id="contact-name" name="name" required />
 							</div>
 
 							<div class="form-group">
 								<label class="mb-1" for="contact-email">Your E-mail
 									<span class="required">*</span></label>
-								<input type="email" class="form-control" id="contact-email" name="contact-email" required />
+								<input type="email" class="form-control" id="contact-email" name="email" required />
 							</div>
 
 							<div class="form-group">
 								<label class="mb-1" for="contact-message">Your Message
 									<span class="required">*</span></label>
-								<textarea cols="30" rows="1" id="contact-message" class="form-control" name="contact-message" required></textarea>
+								<textarea cols="30" rows="1" id="contact-message" class="form-control" name="message" required></textarea>
 							</div>
 
 							<div class="form-footer mb-0">
