@@ -72,3 +72,25 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-04 11:08:39 --> Invalid file: extranet/bill/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('extranet/bill/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/bill/index', [], true)
+ 3 APPPATH\Controllers\Extranet\Billcontroller.php(14): view('extranet/bill/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Billcontroller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Billcontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-04 11:10:46 --> Undefined variable $faqs
+in APPPATH\Views\extranet\bill\index.php on line 48.
+ 1 APPPATH\Views\extranet\bill\index.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $faqs', 'APPPATH\\Views\\extranet\\bill\\index.php', 48)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\extranet\\bill\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/bill/index', [], true)
+ 5 APPPATH\Controllers\Extranet\Billcontroller.php(14): view('extranet/bill/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Billcontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Billcontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
