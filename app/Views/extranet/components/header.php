@@ -24,7 +24,7 @@
                         <i class="i-Lock-User mr-1"></i> <?= session()->get('name') ?>
                     </div>
                     <a class="dropdown-item">Account settings</a>
-                    <a class="dropdown-item">Billing history</a>
+                    <a class="dropdown-item" href="<?= base_url('extranet/bill') ?>">Billing history</a>
                     <a class="dropdown-item" href="<?= base_url('ext-logout') ?>">Sign out</a>
                 </div>
             </div>

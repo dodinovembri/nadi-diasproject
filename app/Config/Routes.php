@@ -215,6 +215,10 @@ $routes->group('extranet', ['filter' => 'auth'], function($routes){
 		$routes->post('update/(:any)', [\App\Controllers\Extranet\Faqcontroller::class, 'update']);
 		$routes->get('destroy/(:any)', [\App\Controllers\Extranet\Faqcontroller::class, 'destroy']);
     });	
+
+	$routes->group('bill', function ($routes) {
+		$routes->get('/', [\App\Controllers\Extranet\Billcontroller::class, 'index']);
+    });		
 });
 
 /*

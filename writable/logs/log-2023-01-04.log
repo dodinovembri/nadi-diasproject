@@ -42,3 +42,33 @@ in APPPATH\Views\extranet\components\header.php on line 17.
 CRITICAL - 2023-01-04 03:16:31 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
 in APPPATH\Views\extranet\components\header.php on line 17.
  1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-01-04 10:06:35 --> Invalid file: extranet/bill/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('extranet/bill/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/bill/index', [], true)
+ 3 APPPATH\Controllers\Extranet\Billcontroller.php(14): view('extranet/bill/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Billcontroller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Billcontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-04 10:57:42 --> Invalid file: extranet/bill/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('extranet/bill/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/bill/index', [], true)
+ 3 APPPATH\Controllers\Extranet\Billcontroller.php(14): view('extranet/bill/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Billcontroller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Billcontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-04 10:57:43 --> Invalid file: extranet/bill/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('extranet/bill/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('extranet/bill/index', [], true)
+ 3 APPPATH\Controllers\Extranet\Billcontroller.php(14): view('extranet/bill/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Extranet\Billcontroller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Extranet\Billcontroller))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
