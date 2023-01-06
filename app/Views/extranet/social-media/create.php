@@ -34,15 +34,15 @@
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="firstName1">Name</label>
-                                            <input class="form-control" id="firstName1" type="text" name="name" placeholder="Enter title" />
+                                            <input class="form-control" id="firstName1" type="text" name="name" placeholder="Enter name" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Icon</label>
-                                            <input class="form-control" id="picker2" placeholder="Enter phone" name="icon" />
+                                            <input class="form-control" id="picker2" placeholder="Enter icon" name="icon" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Link</label>
-                                            <input class="form-control" id="picker2" placeholder="Enter email" name="link" />
+                                            <input class="form-control" id="picker2" placeholder="Enter link" name="link" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker1">Status</label>

@@ -48,19 +48,20 @@
                     <!-- End .widget -->
                 </div>
                 <!-- End .col-lg-3 -->
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="widget">
-                        <h4 class="widget-title">Social Media</h4>
-                        <div class="social-icons">
-                            <?php foreach ($social_medias as $key => $value) { ?>
-                                <a href="<?= $value->link ?>" class="social-icon <?= $value->icon ?>" target="_blank"></a>
-                            <?php } ?>
+                <?php if (count($social_medias) > 0) { ?>                    
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget">
+                            <h4 class="widget-title">Social Media</h4>
+                            <div class="social-icons">
+                                <?php foreach ($social_medias as $key => $value) { ?>
+                                    <a href="<?= $value->link ?>" class="social-icon <?= $value->icon ?>" target="_blank"></a>
+                                <?php } ?>
+                            </div>
+                            <!-- End .social-icons -->
                         </div>
-                        <!-- End .social-icons -->
+                        <!-- End .widget -->
                     </div>
-                    <!-- End .widget -->
-                </div>
+                <?php } ?>
                 <!-- End .col-lg-3 -->
             </div>
             <!-- End .row -->

@@ -34,7 +34,7 @@
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="firstName1">Name</label>
-                                            <input class="form-control" id="firstName1" type="text" name="name" value="<?= $social_media->name ?>" placeholder="Enter title" />
+                                            <input class="form-control" id="firstName1" type="text" name="name" value="<?= $social_media->name ?>" placeholder="Enter name" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Icon</label>

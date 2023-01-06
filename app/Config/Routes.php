@@ -82,7 +82,7 @@ $routes->group('extranet', ['filter' => 'auth'], function($routes){
 	$routes->group('social-media', function ($routes) {
 		$routes->get('/', [\App\Controllers\Extranet\Socialmediacontroller::class, 'index']);
 		$routes->get('create', [\App\Controllers\Extranet\Socialmediacontroller::class, 'create']);
-		$routes->post('store', [App\Controllers\Extranet\Socialmediacontroller::class, 'store']);
+		$routes->post('store', [\App\Controllers\Extranet\Socialmediacontroller::class, 'store']);
 		$routes->get('show/(:any)', [\App\Controllers\Extranet\Socialmediacontroller::class, 'show']);
 		$routes->get('edit/(:any)', [\App\Controllers\Extranet\Socialmediacontroller::class, 'edit']);
 		$routes->post('update/(:any)', [\App\Controllers\Extranet\Socialmediacontroller::class, 'update']);
