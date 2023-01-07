@@ -37,8 +37,12 @@
                                             <input class="form-control" id="firstName1" type="text" name="name" placeholder="Enter name" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="picker2">Icon</label>
-                                            <input class="form-control" id="picker2" placeholder="Enter icon" name="icon" />
+                                            <label for="picker1">Icon</label>
+                                            <select class="form-control" name="icon">
+                                                <option value="social-facebook icon-facebook">Facebook</option>
+                                                <option value="social-twitter icon-twitter">Twitter</option>
+                                                <option value="social-instagram icon-instagram">Instagram</option>
+                                            </select>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Link</label>

@@ -33,16 +33,30 @@
                                 <form action="<?= base_url('extranet/social-media/update/' . $social_media->id) ?>" method="post">
                                     <div class="row">
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="firstName1">Name</label>
-                                            <input class="form-control" id="firstName1" type="text" name="name" value="<?= $social_media->name ?>" placeholder="Enter name" />
+                                            <label for="picker2">Name</label>
+                                            <input class="form-control" id="picker2" placeholder="Enter name" value="<?= $social_media->name ?>" name="name" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
-                                            <label for="picker2">Icon</label>
-                                            <input class="form-control" id="picker2" placeholder="Enter icon" value="<?= $social_media->icon ?>" name="icon" />
+                                            <label for="picker1">Icon</label>
+                                            <select class="form-control" name="icon">
+                                                <?php if ($social_media->icon == "social-facebook icon-facebook") { ?>
+                                                    <option value="social-facebook icon-facebook">Facebook</option>
+                                                    <option value="social-twitter icon-twitter">Twitter</option>
+                                                    <option value="social-instagram icon-instagram">Instagram</option>
+                                                <?php } elseif ($social_media->icon == "social-twitter icon-twitter") { ?>
+                                                    <option value="social-twitter icon-twitter">Twitter</option>
+                                                    <option value="social-facebook icon-facebook">Facebook</option>
+                                                    <option value="social-instagram icon-instagram">Instagram</option>
+                                                <?php } elseif ($social_media->icon == "social-instagram icon-instagram") { ?>
+                                                    <option value="social-instagram icon-instagram">Instagram</option>
+                                                    <option value="social-facebook icon-facebook">Facebook</option>
+                                                    <option value="social-twitter icon-twitter">Twitter</option>
+                                                <?php } ?></option>
+                                            </select>
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker2">Link</label>
-                                            <input class="form-control" id="picker2" placeholder="Enter link" name="link" value="<?= $social_media->icon ?>" />
+                                            <input class="form-control" id="picker2" placeholder="Enter link" name="link" value="<?= $social_media->link ?>" />
                                         </div>
                                         <div class="col-md-6 form-group mb-3">
                                             <label for="picker1">Status</label>
