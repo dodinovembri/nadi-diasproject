@@ -218,7 +218,16 @@ $routes->group('extranet', ['filter' => 'auth'], function($routes){
 
 	$routes->group('bill', function ($routes) {
 		$routes->get('/', [\App\Controllers\Extranet\Billcontroller::class, 'index']);
-    });		
+    });	
+
+	$routes->group('ticket', function ($routes) {
+		$routes->get('/', [\App\Controllers\Extranet\Ticketcontroller::class, 'index']);
+		$routes->get('create', [\App\Controllers\Extranet\Ticketcontroller::class, 'create']);
+		$routes->post('store', [\App\Controllers\Extranet\Ticketcontroller::class, 'store']);
+		$routes->get('show/(:any)', [\App\Controllers\Extranet\Ticketcontroller::class, 'show']);
+		$routes->get('edit/(:any)', [\App\Controllers\Extranet\Ticketcontroller::class, 'edit']);
+		$routes->post('update/(:any)', [\App\Controllers\Extranet\Ticketcontroller::class, 'update']);
+    });	
 });
 
 /*
