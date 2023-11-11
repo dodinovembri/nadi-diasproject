@@ -128,7 +128,7 @@
                             <!-- End .price-box -->
 
                             <div class="product-desc">
-                                <p><?= $product->description ?></p>
+                                <p><?= $product->short_description ?></p>
                             </div>
                             <!-- End .product-desc -->
 

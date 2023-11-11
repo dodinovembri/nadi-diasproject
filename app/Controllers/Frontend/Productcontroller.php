@@ -67,6 +67,7 @@ class Productcontroller extends BaseController
             product.image1,
             product.image2,
             product.image3,
+            product.short_description,
             product.description,
             product_category.name as category_name,
             product_category.id as category_id
