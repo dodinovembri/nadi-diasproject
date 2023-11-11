@@ -10,6 +10,15 @@
     <link href="<?= base_url('assets/extranet/css/themes/lite-purple.min.css') ?>" rel="stylesheet" />
     <link href="<?= base_url('assets/extranet/css/plugins/perfect-scrollbar.min.css') ?>" rel="stylesheet" />
     <link rel="icon" type="image/png" sizes="48x48" href="<?= base_url('assets/images/icons/favicon.png') ?>">
+    <script src="https://cdn.tiny.cloud/1/2jbzwltls2lylwk4q1xuri2ge4t1vu8gkt06kksqmvl1iqmx/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: "textarea",
+            plugins: [
+                "insertdatetime"
+            ]
+        })
+    </script>
 </head>
 
 <body class="text-left">
